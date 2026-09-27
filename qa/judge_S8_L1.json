@@ -1,0 +1,9 @@
+{
+ "pass": false,
+ "score": 4,
+ "defects": [
+  "Flames appear smooth and artificial, lacking realistic chaotic detail.",
+  "Charred blanket texture exhibits subtle morphing and a glossy, melted appearance."
+ ],
+ "fix": "Specify photorealistic, chaotic fire with sharp flames. Ensure the charred wool texture is described as completely static, matte, and dry to prevent melting effects."
+}

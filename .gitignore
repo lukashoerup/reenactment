@@ -1,0 +1,35 @@
+# media and bulky outputs (recreate from scripts)
+audio/
+clips/
+kf/
+kfC/
+out/
+render/
+post/
+stock/
+sfx/
+elements/
+tests/
+tmp_seq/
+page/*.mp4
+page/*.jpg
+qa/*.mp4
+qa/*.wav
+qa/*.jpg
+qa/tmp_*
+qa/_*
+gen/A/
+gen/B/
+# environment
+bvenv/
+__pycache__/
+*.pyc
+# logs
+logs_*.txt
+log_*.txt
+*_progress.txt
+postwatch.log
+# secrets never live here
+*.key
+gkey*
+.env

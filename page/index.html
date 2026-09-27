@@ -1,0 +1,187 @@
+<title>Børnene og bålet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Literata:opsz,wght@7..72,400;7..72,500&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* One visual world on purpose: a dark screening room. Colours are set explicitly for both host themes. */
+:root{
+  color-scheme:dark;
+  --ground:#111416; --raise:#191E21; --ink:#DCDFDA; --ink-soft:#A1AAA8; --ink-faint:#717B7B;
+  --rule:#2A3235; --ember:#D2804B; --ember-dim:#8E5431; --rain:#8FA6B2;
+  --display:"Big Shoulders Display","Arial Narrow",Arial,sans-serif;
+  --body:"Literata",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:1.02rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:62rem;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:clamp(1.6rem,5vw,3.2rem) 4rem;display:grid;gap:3.2rem}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:.005em}
+h1{font-weight:800;font-size:clamp(3rem,11vw,6.4rem);line-height:.86;text-transform:uppercase}
+h2{font-weight:800;font-size:clamp(1.7rem,4.6vw,2.5rem);line-height:.95;text-transform:uppercase}
+h3{font-weight:600;font-size:1.25rem;line-height:1.1;text-transform:uppercase;letter-spacing:.02em}
+p{margin:0;max-width:64ch}
+.mono,.tc{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.tc{color:var(--ember)}
+a{color:var(--rain)}
+header{display:grid;gap:1.1rem}
+.lede{font-size:1.14rem;color:var(--ink);max-width:56ch}
+.rules{display:flex;flex-wrap:wrap;gap:.5rem}
+.rules span{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-soft);border:1px solid var(--rule);padding:.25rem .55rem;border-radius:2px}
+/* reels */
+.reel{display:grid;gap:1rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+.reel-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:.4rem 1rem}
+.slate{display:flex;align-items:baseline;gap:.8rem}
+.slate b{font-family:var(--display);font-weight:800;font-size:2.4rem;line-height:.8;color:var(--ember)}
+.pick{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ground);background:var(--ember);padding:.18rem .45rem;border-radius:2px}
+video{display:block;width:100%;max-width:100%;aspect-ratio:16/9;background:#000;border-radius:2px}
+.notes{display:grid;gap:1rem 2rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.notes div{display:grid;gap:.3rem;align-content:start}
+.notes .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+.notes p{font-size:.97rem;color:var(--ink-soft)}
+.notes p strong{color:var(--ink);font-weight:500}
+/* compare */
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:34rem;font-size:.93rem}
+th,td{text-align:left;padding:.62rem .7rem .62rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-weight:400;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td:first-child{font-family:var(--display);font-weight:600;font-size:1.1rem;text-transform:uppercase;white-space:nowrap}
+.small{font-size:.86rem;color:var(--ink-faint);max-width:64ch}
+/* shot list */
+details{border-top:1px solid var(--rule);padding-top:1rem}
+summary{cursor:pointer;font-family:var(--display);font-weight:800;font-size:1.5rem;text-transform:uppercase;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:" +";color:var(--ember)}
+details[open] summary::after{content:" −"}
+summary:focus-visible,video:focus-visible,a:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+ol.shots{list-style:none;padding:0;margin:1rem 0 0;display:grid}
+ol.shots li{display:grid;grid-template-columns:4.2rem 1fr;gap:.2rem 1rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+ol.shots .vo{font-style:italic;color:var(--ink)}
+ol.shots .see{grid-column:2;font-size:.92rem;color:var(--ink-soft)}
+.next{background:var(--raise);border:1px solid var(--rule);padding:1.3rem clamp(1rem,3vw,1.6rem);display:grid;gap:.7rem;border-radius:2px}
+footer{font-family:var(--mono);font-size:.7rem;color:var(--ink-faint);line-height:1.8;border-top:1px solid var(--rule);padding-top:1rem}
+@media (max-width:520px){ol.shots li{grid-template-columns:1fr}ol.shots .see{grid-column:1}}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="mono">Danske Drabssager · Det Brændende Lig · 01:37–01:59 · til Lasse Eskildsen</p>
+  <h1>Børnene og bålet</h1>
+  <p class="lede">De samme 22 sekunder af Stine Bolthers speak, lavet som re-enactment på fire måder. Denne gang spiller nogen scenen: børnene går mod bålet, står stille, trykker sig ind til hinanden, og vi ser bylten, mens hun spørger, hvad det er.</p>
+  <div class="rules" aria-label="Regler for alle versioner">
+    <span>Ingen ansigter</span><span>Intet lig – bylten er kun stof</span><span>Afsnittets egen speak</span><span>Regn og ild lagt lavt under</span>
+  </div>
+</header>
+
+<section class="reel" aria-labelledby="h-a2">
+  <div class="reel-head">
+    <div class="slate"><b>A2</b><h2 id="h-a2">Fotografisk, rettet</h2></div>
+    <span class="pick">Min anbefaling</span>
+  </div>
+  <video id="v-a2" controls playsinline preload="metadata" poster="A2.jpg" src="A2.mp4"></video>
+  <div class="notes">
+    <div><span class="k">Rettet</span><p><strong>Ingen usynlige hænder.</strong> Brændeklodsen, der blev kastet i bålet, og pinden, der rodede i bylten, er væk. Bylten er stof hele vejen og den samme i skud 4 og 8. Ansigtet i hætten er blødt sløret væk.</p></div>
+    <div><span class="k">Rettet i klipningen</span><p>Billedet følger speaken på billedet nøjagtigt. Skud 7 er løftet, så lyset ikke springer. Regnen ligger nu uafbrudt under hele scenen, så lyden ikke falder ud ved klippene.</p></div>
+    <div><span class="k">Står tilbage</span><p>Støvlerne i skud 6 er grønne, og børnene er lige høje. Bylten i skud 3 kan ligne et hoved set bagfra. Hænderne flyder lidt sammen i skud 5. Det kræver nye optagelser og dermed nye kreditter.</p></div>
+  </div>
+</section>
+
+<section class="reel" aria-labelledby="h-loop" style="gap:.9rem">
+  <h2 id="h-loop">Den automatiske løkke</h2>
+  <p>A2 er lavet af et flow uden mennesker i: en AI-dommer (Gemini 3.1 Pro) ser hvert nyt skud med lyd. Består skuddet, bruges det. Dumper det, laves det om med dommerens egen rettelse i prompten. Dumper det igen, bruges stillbilledet med kamerabevægelse i stedet, fordi et stillbillede ikke kan finde på noget.</p>
+  <div class="notes">
+    <div><span class="k">Det lærte vi</span><p><strong>Dommeren er kun så god som sin instruks.</strong> I første runde fik den bylt-referencen med til skud 2, krævede en bylt dér og fodrede kravet tilbage i prompten. Resultatet blev værre. Nu får hvert skud kun sin egen instruks.</p></div>
+    <div><span class="k">Svingende domme</span><p>Samme dommer på samme klip finder ikke de samme ting hver gang. På A2 fandt den nye fejl, der også var i A1, og én påstand var forkert. <strong>Kør den tre gange og saml fundene</strong>, eller bedøm ét skud ad gangen.</p></div>
+    <div><span class="k">Kvoten</span><p>Google tillod kun ti videoer om dagen pr. model på kontoen. Et fuldt afsnit kræver en højere kvote eller at arbejdet spredes over flere dage.</p></div>
+  </div>
+</section>
+
+<section class="reel" aria-labelledby="h-a">
+  <div class="reel-head">
+    <div class="slate"><b>A1</b><h2 id="h-a">Fotografisk, første udgave</h2></div>
+  </div>
+  <video id="v-a" controls playsinline preload="metadata" poster="A.jpg" src="A.mp4"></video>
+  <div class="notes">
+    <div><span class="k">Hvordan</span><p>Otte stillbilleder lavet ud fra en billedliste, der følger speaken linje for linje. Hvert billede sat i bevægelse med Googles videomodel (Veo 3.1 Fast). Samme farve og filmkorn lagt over det hele bagefter.</p></div>
+    <div><span class="k">Det virker</span><p><strong>Børnene går og står troværdigt.</strong> Regn og ild holder.</p></div>
+    <div><span class="k">Det halter</span><p>En brændeklods kastes ind fra højre (6 s), og en pind roder i bylten (12 s). Begge dele antyder en tredje person. Hætten danner et ansigt (10 s), og bylten i sidste skud ligner en krop.</p></div>
+  </div>
+</section>
+
+<section class="reel" aria-labelledby="h-b">
+  <div class="reel-head">
+    <div class="slate"><b>B</b><h2 id="h-b">Stillbilleder i bevægelse</h2></div>
+  </div>
+  <video id="v-b" controls playsinline preload="metadata" poster="B.jpg" src="B.mp4"></video>
+  <div class="notes">
+    <div><span class="k">Hvordan</span><p>De samme otte billeder som A, men ingen videomodel. Langsomme kamerabevægelser, flakkende bållys og regn lagt på her.</p></div>
+    <div><span class="k">Det virker</span><p>Overraskende tæt på A, til under en tredjedel af prisen. <strong>Kan aldrig lave mærkelige bevægelser</strong>, fordi intet bevæger sig.</p></div>
+    <div><span class="k">Det halter</span><p>Ingen spiller scenen. Det er en fortælling i billeder, ikke en re-enactment.</p></div>
+  </div>
+</section>
+
+<section class="reel" aria-labelledby="h-c">
+  <div class="reel-head">
+    <div class="slate"><b>C</b><h2 id="h-c">Tegnet</h2></div>
+  </div>
+  <video id="v-c" controls playsinline preload="metadata" poster="C.jpg" src="C.mp4"></video>
+  <div class="notes">
+    <div><span class="k">Hvordan</span><p>A's billeder tegnet om i kul og blæk med orange pastel til ilden, derefter sat i bevægelse med den billigste videomodel (Veo 3.1 Lite).</p></div>
+    <div><span class="k">Det virker</span><p><strong>Kan ikke forveksles med virkelige optagelser.</strong> Det fjerner det meste af den etiske og juridiske tvivl i ét træk.</p></div>
+    <div><span class="k">Det halter</span><p>Mister noget af gyset. Et par steder bliver gnisterne til tegneserie-krøller, og i støvleskuddet går det ene barn ud af billedet.</p></div>
+  </div>
+</section>
+
+<section class="reel" aria-labelledby="h-d">
+  <div class="reel-head">
+    <div class="slate"><b>D</b><h2 id="h-d">3D i Blender</h2></div>
+  </div>
+  <video id="v-d" controls playsinline preload="metadata" poster="D.jpg" src="D.mp4"></video>
+  <div class="notes">
+    <div><span class="k">Hvordan</span><p>Børn, skov og regn bygget i 3D og renderet her på maskinen. Ilden er rigtige optagelser fra et gratis klipbibliotek, lagt ind bagefter. Ingen AI i billedet. Starter tre sekunder tidligere end de andre.</p></div>
+    <div><span class="k">Det virker</span><p>Fuld kontrol over kamera og timing, og intet kan finde på noget af sig selv. <strong>Koster kun maskintid.</strong></p></div>
+    <div><span class="k">Det halter</span><p>Ligner et computerspil: figurerne er dukker, træerne er rør. Halvanden times rendering for 25 sekunder. Blender er det rigtige værktøj til kort og ruter, fx turen sydpå til tankstationerne, ikke til mennesker i regnvejr.</p></div>
+  </div>
+</section>
+
+<section aria-labelledby="h-cmp" style="display:grid;gap:1rem">
+  <h2 id="h-cmp">Sammenligning</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Version</th><th>Maskintid, denne scene</th><th>Pr. minut færdig film</th><th>Spiller nogen scenen?</th></tr></thead>
+      <tbody>
+        <tr><td>A2 Rettet</td><td class="num">ca. 9 kr ekstra</td><td class="num">–</td><td>Ja</td></tr>
+        <tr><td>A1 Foto</td><td class="num">ca. 33 kr</td><td class="num">ca. 90 kr</td><td>Ja</td></tr>
+        <tr><td>B Stills</td><td class="num">ca. 10 kr</td><td class="num">ca. 25 kr</td><td>Nej</td></tr>
+        <tr><td>C Tegnet</td><td class="num">ca. 30 kr</td><td class="num">ca. 80 kr</td><td>Ja, i tegnet form</td></tr>
+        <tr><td>D 3D</td><td class="num">0 kr</td><td class="num">0 kr + timers rendering</td><td>Ja, men som dukker</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Priserne er Googles listepriser omregnet til kroner, inkl. forkastede forsøg. Hele testen kostede cirka 75 kr inkl. moms, heraf ca. 9 kr til A2-rettelserne. Den faktiske regning står i Google AI Studio. Klipperens og instruktørens tid er ikke med.</p>
+</section>
+
+<details>
+  <summary>Billedlisten</summary>
+  <ol class="shots">
+    <li><span class="tc">01:37.7</span><span class="vo">«Bålets flammer lokker de nysgerrige børn tættere på.»</span><span class="see">Bagfra i barnehøjde: to børn i regntøj går ad skovsporet mod et skær mellem stammerne.</span></li>
+    <li><span class="tc">01:41.9</span><span class="vo">«Selvom regnen står ned i stænger, buldrer ilden lystigt.»</span><span class="see">Bålet i fordybningen, alt for stort til haveaffald. Damp, hvor regnen rammer gløderne.</span></li>
+    <li><span class="tc">01:46.0</span><span class="vo">«Midt i bålet ligger en bylt.»</span><span class="see">Over skuldrene på børnene. En mørk klump inde i ilden.</span></li>
+    <li><span class="tc">01:48.4</span><span class="vo">«På cirka 70 centimeter.»</span><span class="see">Tæt på bylten: forkullet uld, ét hjørne ternet stof tilbage.</span></li>
+    <li><span class="tc">01:51.1</span><span class="vo">«Hvad er det?»</span><span class="see">Silhuetter mod bålet. Den mindste trykker sig ind til den største.</span></li>
+    <li><span class="tc">01:52.8</span><span class="vo">«Et dyr?»</span><span class="see">Gummistøvler i mudderet. En gren falder sammen i bålet, gnister.</span></li>
+    <li><span class="tc">01:55.2</span><span class="vo">«Affald?»</span><span class="see">Højt oppe fra, gennem grenene: bålet er det eneste lys, to små skikkelser ved kanten.</span></li>
+    <li><span class="tc">01:56.6</span><span class="vo">«Eller et menneske?»</span><span class="see">Ind gennem flammerne mod bylten. Hårdt klip til sort.</span></li>
+  </ol>
+</details>
+
+<section class="next" aria-labelledby="h-next">
+  <h3 id="h-next">Næste skridt</h3>
+  <p>Se A2 på et fjernsyn med lyd. Holder retningen, er næste prøve et helt segment på to til tre minutter, hvor Lasse godkender billederne, før de sættes i bevægelse. Det er dér, pengene spares: video koster tre til fire gange så meget som et stillbillede.</p>
+</section>
+
+<footer>
+  Re-enactment-test til Bull House Media · 27. september 2026<br>
+  Alt billede er genereret til lejligheden. Intet er fotografi, og intet gengiver billeder fra sagen. Lyden er afsnittets egen speak.
+</footer>
+</div>

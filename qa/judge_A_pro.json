@@ -1,0 +1,79 @@
+{
+  "defects": [
+    {
+      "t_start": 0.0,
+      "t_end": 5.1,
+      "shot": "S1",
+      "category": "AI Artifact",
+      "severity": "minor",
+      "what": "Children's legs glide and morph; unnatural walking motion.",
+      "fix": "Regenerate with improved motion model or use static shot."
+    },
+    {
+      "t_start": 5.1,
+      "t_end": 9.2,
+      "shot": "S2",
+      "category": "Mismatch",
+      "severity": "minor",
+      "what": "Narration mentions heavy rain, but none is visible.",
+      "fix": "Add rain overlay in post or regenerate with rain prompt."
+    },
+    {
+      "t_start": 5.8,
+      "t_end": 7.0,
+      "shot": "S2",
+      "category": "Story",
+      "severity": "major",
+      "what": "Object thrown into fire from right frame, implying a third person.",
+      "fix": "Trim shot before 5.8s or regenerate without external action."
+    },
+    {
+      "t_start": 9.2,
+      "t_end": 11.7,
+      "shot": "S3",
+      "category": "AI Artifact",
+      "severity": "major",
+      "what": "Red hood has bumpy, morphing texture resembling a face.",
+      "fix": "Regenerate ensuring smooth, stable fabric texture."
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 13.5,
+      "shot": "S4",
+      "category": "Story",
+      "severity": "major",
+      "what": "Stick pokes fire from right, implying a third person.",
+      "fix": "Regenerate bundle burning without external interaction."
+    },
+    {
+      "t_start": 16.0,
+      "t_end": 18.3,
+      "shot": "S6",
+      "category": "Action",
+      "severity": "major",
+      "what": "Sparks fall from above instead of rising; boots do not step back.",
+      "fix": "Regenerate with rising sparks and backward stepping motion."
+    },
+    {
+      "t_start": 18.3,
+      "t_end": 19.9,
+      "shot": "S7",
+      "category": "Continuity",
+      "severity": "minor",
+      "what": "Fire size and children's distance differ drastically from S5.",
+      "fix": "Regenerate to match scale and positioning of previous shots."
+    },
+    {
+      "t_start": 19.9,
+      "t_end": 21.4,
+      "shot": "S8",
+      "category": "Rule Breach",
+      "severity": "major",
+      "what": "Bundle resembles a charred torso, violating 'no body' rule.",
+      "fix": "Regenerate bundle to clearly look like folded fabric."
+    }
+  ],
+  "overall": "Atmospheric sequence marred by AI morphing, continuity errors, and narrative violations (implied third person, body-like bundle).",
+  "best_shot": "S5",
+  "worst_shot": "S8"
+}

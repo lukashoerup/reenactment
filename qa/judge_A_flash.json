@@ -1,0 +1,43 @@
+{
+  "defects": [
+    {
+      "t_start": 0.0,
+      "t_end": 5.0,
+      "shot": "S1",
+      "category": "uncanny motion",
+      "severity": "minor",
+      "what": "The children's walking animation is floaty, and their boots slide across the mud without realistic weight or deformation.",
+      "fix": "Regenerate S1 with a focus on realistic foot-to-ground contact and mud physics."
+    },
+    {
+      "t_start": 5.8,
+      "t_end": 6.3,
+      "shot": "S2",
+      "category": "story mismatch",
+      "severity": "blocker",
+      "what": "A log is thrown into the fire from off-screen right, implying an unseen third person is present.",
+      "fix": "Regenerate S2 to ensure the bonfire burns naturally without external objects being added."
+    },
+    {
+      "t_start": 12.1,
+      "t_end": 13.5,
+      "shot": "S4",
+      "category": "story mismatch",
+      "severity": "blocker",
+      "what": "A stick pokes and moves the burning bundle from the right side, violating the narrative that only the two children are present.",
+      "fix": "Regenerate S4 to show the bundle burning statically without any external manipulation."
+    },
+    {
+      "t_start": 16.0,
+      "t_end": 18.3,
+      "shot": "S6",
+      "category": "impossible physics",
+      "severity": "minor",
+      "what": "The falling sparks look like a flat CGI overlay and fall unnaturally around the boots relative to the fire's position.",
+      "fix": "Regenerate S6 with realistic depth for the spark particles and correct directional lighting."
+    }
+  ],
+  "overall": "The sequence captures a strong, moody atmosphere suitable for a true-crime cold open, but it is severely undermined by AI errors that imply a third person is actively tending the fire.",
+  "best_shot": "S5",
+  "worst_shot": "S4"
+}

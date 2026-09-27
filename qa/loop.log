@@ -1,0 +1,46 @@
+S2 take 1: generating ...
+  judge: pass=False score=3 defects=['The required bundle of blankets shown in the continuity reference is completely missing from the fire.']
+  retry with fix: Ensure a large, charred bundle of woollen blankets with a red-checked corner is clearly visible resting on top of the burning branches in the center of the fire.
+S2 take 2: generating ...
+  judge: pass=False score=4 defects=['The bundle fails continuity; it appears as clean, uncharred red-checked fabric rather than the heavily blackened mass in the reference.', 'The flames exhibit a smooth, slightly slow-motion quality typical of AI generation.', 'Minor morphing is visible in the sticks and logs within the firebed.']
+  retry with fix: Ensure the bundle is heavily charred and blackened, matching the reference image, with only a small red-checked area visible. Increase the photorealism and chaotic movement of the flames to avoid a smooth, AI-generated appearance.
+S2: no take passed -> fallback to still with camera move (method B)
+S2: FINAL clips/S2_B.mp4   spent so far $0.52
+S4 take 1: generating ...
+  HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
+    "stat
+S4: no take passed -> fallback to still with camera move (method B)
+S4: FINAL clips/S4_B.mp4   spent so far $0.52
+S8 take 1: generating ...
+  HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. ",
+    "stat
+S8: no take passed -> fallback to still with camera move (method B)
+S8: FINAL clips/S8_B.mp4   spent so far $0.52
+DONE total $0.52 (~4.2 kr incl. VAT)
+S4 take 1: generating ...
+  rate limited, waiting 75 s
+  rate limited, waiting 75 s
+  HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+S4: no take passed -> fallback to still with camera move (method B)
+S4: FINAL clips/S4_B.mp4   spent so far $0.00
+S8 take 1: generating ...
+  rate limited, waiting 75 s
+  rate limited, waiting 75 s
+  HTTP 429: {
+  "error": {
+    "code": 429,
+    "message": "You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-a
+S8: no take passed -> fallback to still with camera move (method B)
+S8: FINAL clips/S8_B.mp4   spent so far $0.00
+DONE total $0.00 (~0.0 kr incl. VAT)
+S8 take 1: generating ...
+S8 take 1 (Fast) judge: {"pass": false, "score": 4, "defects": ["Flames appear smooth and artificial, lacking realistic chaotic detail.", "Charred blanket texture exhibits subtle morphing and a glossy, melted appearance."], "fix": "Specify photorealistic, chaotic fire with sharp flames. Ensure the charred wool texture is described as completely static, matte, and dry to prevent melting effects."}

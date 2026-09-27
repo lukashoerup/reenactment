@@ -1,0 +1,53 @@
+{
+  "_note": "Cold open of Danske Drabssager 'Det Brændende Lig', episode time 01:34.50-01:59.35. Timings are episode seconds. Prompts are for the machine and stay in English.",
+  "styles": {
+    "A": {
+      "name": "Dokumentar-rekonstruktion (fotografisk)",
+      "look": "Documentary true-crime re-enactment photographed on 35mm motion-picture film, Kodak Vision3 500T, available light only. Denmark, late September 1999, dusk, heavy rain. Beech forest near Koege: smooth grey trunks, wet copper-brown leaf litter, mist between the trees. Muted cold palette; the only warm light is the fire. Natural film grain, slight halation, shallow depth of field, imperfect handheld framing, wide 2.39:1 composition with the action in the middle band of the frame. No text, no logos. No face is ever visible.",
+      "cast": "Two Danish children about 9 and 7 years old in 1999 rain gear: the older in a yellow PU rain jacket with the hood up, navy rain trousers and green rubber boots; the younger in a navy rain jacket with the hood up and red rubber boots. Always seen from behind or as silhouettes.",
+      "motion": "Realistic, slow documentary camera movement, handheld. Rain keeps falling. Flames flicker naturally. People move slowly and naturally.",
+      "negative": "face, visible face, eyes, text, letters, watermark, logo, cartoon, anime, 3d render, cgi, plastic skin, oversaturated, extra limbs, deformed hands, modern clothing, smartphone, sunny, dry ground"
+    },
+    "B": {
+      "name": "Tegnet (kul og blæk)",
+      "look": "Hand-drawn graphic-novel illustration in charcoal and ink wash on textured paper. Limited palette: black, cold blue-grey and a single warm orange for the fire. Loose expressive lines, heavy shadows, cinematic wide 2.39:1 composition with the action in the middle band. Not photographic. No text. No face is ever visible.",
+      "cast": "Two children about 9 and 7 in rain jackets with the hoods up, the older in yellow, the younger in dark blue with red boots. Always seen from behind or as silhouettes.",
+      "motion": "Limited, hand-animated feel: flames, rain and smoke move; figures move minimally; the paper texture and line work stay stable. No morphing.",
+      "negative": "photograph, photorealistic, 3d render, cgi, face, eyes, text, watermark, logo, glossy, smooth gradients"
+    }
+  },
+  "shots": [
+    {"id": "S1", "t": [94.5, 101.9], "vo": "Bålets flammer lokker de nysgerrige børn tættere på.",
+     "da": "Totalbillede bagfra i barnehøjde: de to børn går langsomt ad skovsporet mod et alt for stort bål nede i en lavning.",
+     "key": "Wide shot from behind at child height, thirty metres back on a muddy forest track. The two children walk slowly away from camera along the track towards a large bonfire burning in a shallow hollow between the beech trunks. Flames two metres high, far too big for garden waste. Rain streaks glow orange near the fire.",
+     "move": "The two children walk slowly and cautiously away from camera towards the fire. The camera follows at a distance and falls slightly behind."},
+    {"id": "S2", "t": [101.9, 106.0], "vo": "Selvom regnen står ned i stænger, buldrer ilden lystigt.",
+     "da": "Nært på bålet: det brænder voldsomt, mens regnen vælter ned.",
+     "key": "Close shot of a big bonfire of branches burning fiercely in pouring rain, raindrops streaking through the firelight, steam and smoke rising, dark forest behind.",
+     "move": "Flames roar and sway, heavy rain pours through the firelight, steam rises. Very slow push-in."},
+    {"id": "S3", "t": [106.0, 108.45], "vo": "Midt i bålet ligger en bylt.",
+     "da": "Over skulderen på børnene: i midten af bålet en mørk, indpakket bylt.",
+     "key": "Over-the-shoulder shot from behind the two children, their hooded heads soft and dark in the foreground left and right, the bonfire sharp between them. In the middle of the fire a dark wrapped bundle about seventy centimetres long lies across the burning branches; its shape is hard to read.",
+     "move": "The children stand completely still. Flames lick around the bundle. Rain falls. Slight handheld drift."},
+    {"id": "S4", "t": [108.45, 111.0], "vo": "På cirka 70 centimeter.",
+     "da": "Inde i bålet: bylten, pakket i et svedet tæppe og smeltet plastik, halvt skjult af flammer.",
+     "key": "Close-up inside the fire: a dark bundle wrapped in a scorched wool blanket and melted black plastic lies across burning branches, partly hidden by flames. The shape is ambiguous. Nothing inside it is visible.",
+     "move": "Slow push-in. Flames curl over the bundle, embers drift up, raindrops hiss on the logs."},
+    {"id": "S5", "t": [111.0, 112.8], "vo": "Hvad er det?",
+     "da": "Lav vinkel bagfra: to små silhuetter foran det tårnhøje bål.",
+     "key": "Low angle from behind at ground level: the two small children stand side by side as dark silhouettes against the towering bonfire, rain streaks glowing orange around them.",
+     "move": "The children stand frozen; the younger leans slightly towards the older. Flames flicker. Handheld."},
+    {"id": "S6", "t": [112.8, 115.15], "vo": "Et dyr?",
+     "da": "Helt tæt: kanten af bylten i flammerne – forkullet uld, boblende plastik, gløder.",
+     "key": "Extreme close-up of the edge of the wrapped bundle in the flames: charred wool fabric, bubbling melted black plastic, glowing embers. Abstract, nothing recognisable inside.",
+     "move": "The fabric smoulders, the plastic bubbles, flames lick across. Very slow push-in."},
+    {"id": "S7", "t": [115.15, 116.6], "vo": "Affald?",
+     "da": "I jordhøjde: en lille rød gummistøvle træder baglæns gennem en vandpyt, der spejler ilden.",
+     "key": "Close shot at ground level: a small red rubber boot in a puddle that reflects the orange fire, rain rings spreading across the water, wet leaves.",
+     "move": "The boot steps slowly backwards out of the puddle, a light splash, rain rings keep spreading."},
+    {"id": "S8", "t": [116.6, 119.35], "vo": "Eller et menneske?",
+     "da": "Meget langt ude: bålet i den mørke skov, børnene små foran det. Det ene barn træder et skridt tilbage.",
+     "key": "Very wide shot from far back in the dark forest: the fire burning in the hollow, the two children tiny in front of it, rain and mist, the rest of the frame is darkness and trunks.",
+     "move": "Locked-off camera. Flames flicker, rain falls. The smaller child takes one step backwards."}
+  ]
+}

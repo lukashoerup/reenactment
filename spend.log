@@ -1,0 +1,42 @@
+{"t": "13:58:55", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/master_v1.png", "ok": false, "usage": {"promptTokenCount": 294, "candidatesTokenCount": null, "totalTokenCount": 569}}
+{"t": "13:59:25", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/master_v2.png", "ok": true, "usage": {"promptTokenCount": 251, "candidatesTokenCount": 1326, "totalTokenCount": 1850}}
+{"t": "14:00:10", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/master_v3.png", "ok": false, "usage": {"promptTokenCount": 569, "candidatesTokenCount": null, "totalTokenCount": 815}}
+{"t": "14:00:46", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S2_v1.png", "ok": true, "usage": {"promptTokenCount": 157, "candidatesTokenCount": 1301, "totalTokenCount": 1739}}
+{"t": "14:00:50", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S1_v1.png", "ok": true, "usage": {"promptTokenCount": 469, "candidatesTokenCount": 1349, "totalTokenCount": 2021}}
+{"t": "14:01:36", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S6_v1.png", "ok": true, "usage": {"promptTokenCount": 397, "candidatesTokenCount": 1313, "totalTokenCount": 1925}}
+{"t": "14:01:38", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S5_v1.png", "ok": true, "usage": {"promptTokenCount": 426, "candidatesTokenCount": 1348, "totalTokenCount": 1978}}
+{"t": "14:01:39", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S3_v1.png", "ok": true, "usage": {"promptTokenCount": 704, "candidatesTokenCount": 1335, "totalTokenCount": 2256}}
+{"t": "14:01:40", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S4_v1.png", "ok": true, "usage": {"promptTokenCount": 407, "candidatesTokenCount": 1343, "totalTokenCount": 1962}}
+{"t": "14:02:28", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S7_v1.png", "ok": true, "usage": {"promptTokenCount": 406, "candidatesTokenCount": 1284, "totalTokenCount": 1865}}
+{"t": "14:02:30", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S8_v1.png", "ok": true, "usage": {"promptTokenCount": 658, "candidatesTokenCount": 1330, "totalTokenCount": 2210}}
+{"t": "14:02:30", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S4_v2.png", "ok": true, "usage": {"promptTokenCount": 437, "candidatesTokenCount": 1335, "totalTokenCount": 1971}}
+{"t": "14:02:34", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kf/S6_v2.png", "ok": true, "usage": {"promptTokenCount": 683, "candidatesTokenCount": 1319, "totalTokenCount": 2211}}
+{"t": "14:03:56", "kind": "video", "model": "veo-3.1-fast-generate-preview", "dur": 6, "out": "clips/S1_v1.mp4", "ok": true, "usd_est": 0.6000000000000001}
+{"t": "14:05:18", "kind": "video", "model": "veo-3.1-fast-generate-preview", "dur": 6, "out": "clips/S2_v1.mp4", "ok": true, "usd_est": 0.6000000000000001}
+{"t": "14:05:18", "kind": "video", "model": "veo-3.1-fast-generate-preview", "dur": 4, "out": "clips/S3_v1.mp4", "ok": true, "usd_est": 0.4}
+{"t": "14:05:19", "kind": "video", "model": "veo-3.1-fast-generate-preview", "dur": 4, "out": "clips/S4_v1.png.mp4", "ok": true, "usd_est": 0.4}
+{"t": "14:05:19", "kind": "video", "model": "veo-3.1-fast-generate-preview", "dur": 4, "out": "clips/S5_v1.mp4", "ok": true, "usd_est": 0.4}
+{"t": "14:06:03", "kind": "video", "model": "veo-3.1-fast-generate-preview", "dur": 4, "out": "clips/S8_v1.mp4", "ok": true, "usd_est": 0.4}
+{"t": "14:06:14", "kind": "video", "model": "veo-3.1-fast-generate-preview", "dur": 4, "out": "clips/S6_v1.mp4", "ok": true, "usd_est": 0.4}
+{"t": "14:06:15", "kind": "video", "model": "veo-3.1-fast-generate-preview", "dur": 4, "out": "clips/S7_v1.mp4", "ok": true, "usd_est": 0.4}
+{"t": "14:36:12", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S2.png", "ok": true, "usage": {"promptTokenCount": 372, "candidatesTokenCount": 1268, "totalTokenCount": 1828}}
+{"t": "14:36:12", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S1.png", "ok": true, "usage": {"promptTokenCount": 372, "candidatesTokenCount": 1284, "totalTokenCount": 1882}}
+{"t": "14:36:13", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S3.png", "ok": true, "usage": {"promptTokenCount": 372, "candidatesTokenCount": 1276, "totalTokenCount": 1803}}
+{"t": "14:36:16", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S4.png", "ok": true, "usage": {"promptTokenCount": 372, "candidatesTokenCount": 1311, "totalTokenCount": 1898}}
+{"t": "14:36:40", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S6.png", "ok": true, "usage": {"promptTokenCount": 372, "candidatesTokenCount": 1284, "totalTokenCount": 1796}}
+{"t": "14:36:40", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S8.png", "ok": true, "usage": {"promptTokenCount": 372, "candidatesTokenCount": 1283, "totalTokenCount": 1844}}
+{"t": "14:36:42", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S5.png", "ok": true, "usage": {"promptTokenCount": 372, "candidatesTokenCount": 1302, "totalTokenCount": 1875}}
+{"t": "14:36:45", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S7.png", "ok": true, "usage": {"promptTokenCount": 372, "candidatesTokenCount": 1292, "totalTokenCount": 1833}}
+{"t": "14:37:31", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S2.png", "ok": true, "usage": {"promptTokenCount": 393, "candidatesTokenCount": 1309, "totalTokenCount": 1922}}
+{"t": "14:37:33", "kind": "image", "model": "gemini-3-pro-image", "size": "2K", "out": "kfC/S3.png", "ok": true, "usage": {"promptTokenCount": 445, "candidatesTokenCount": 1317, "totalTokenCount": 1974}}
+{"t": "14:38:41", "kind": "video", "model": "veo-3.1-lite-generate-preview", "dur": 4, "out": "clips/S4_C.mp4", "ok": true, "usd_est": 0.2}
+{"t": "14:38:41", "kind": "video", "model": "veo-3.1-lite-generate-preview", "dur": 4, "out": "clips/S3_C.mp4", "ok": true, "usd_est": 0.2}
+{"t": "14:38:51", "kind": "video", "model": "veo-3.1-lite-generate-preview", "dur": 6, "out": "clips/S2_C.mp4", "ok": true, "usd_est": 0.30000000000000004}
+{"t": "14:38:51", "kind": "video", "model": "veo-3.1-lite-generate-preview", "dur": 6, "out": "clips/S1_C.mp4", "ok": true, "usd_est": 0.30000000000000004}
+{"t": "14:41:09", "kind": "video", "model": "veo-3.1-lite-generate-preview", "dur": 4, "out": "clips/S5_C.mp4", "ok": true, "usd_est": 0.2}
+{"t": "14:41:53", "kind": "video", "model": "veo-3.1-lite-generate-preview", "dur": 4, "out": "clips/S6_C.mp4", "ok": true, "usd_est": 0.2}
+{"t": "14:42:27", "kind": "video", "model": "veo-3.1-lite-generate-preview", "dur": 4, "out": "clips/S7_C.mp4", "ok": true, "usd_est": 0.2}
+{"t": "14:43:00", "kind": "video", "model": "veo-3.1-lite-generate-preview", "dur": 4, "out": "clips/S8_C.mp4", "ok": true, "usd_est": 0.2}
+{"t": "15:18:48", "kind": "judge", "model": "gemini-3.5-flash", "ok": true, "usage": {"promptTokenCount": 10685, "candidatesTokenCount": 519, "thoughtsTokenCount": 1301, "totalTokenCount": 12505}}
+{"t": "15:19:14", "kind": "judge", "model": "gemini-3.1-pro-preview", "ok": true, "usage": {"promptTokenCount": 10685, "candidatesTokenCount": 808, "thoughtsTokenCount": 3587, "totalTokenCount": 15080}}
+{"t": "16:02:10", "kind": "judge", "model": "gemini-3.1-pro-preview", "ok": true, "usage": {"promptTokenCount": 10685, "candidatesTokenCount": 722, "thoughtsTokenCount": 2824, "totalTokenCount": 14231}}

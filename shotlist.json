@@ -1,0 +1,103 @@
+{
+  "episode": "Danske Drabssager S6E5 - Det Brændende Lig",
+  "audio_source": "https://bauernordic-pods.sharp-stream.com/dk/1103/dd_s6_ep5_det_brndende_lig_913db409_normal.mp3",
+  "clip_in": 96.6,
+  "clip_out": 119.3,
+  "fps": 24,
+  "style_bible": {
+    "place_time": "Beech forest near Koege, Denmark, late September 1999, dusk, heavy steady rain",
+    "look": "35mm film, Kodak Vision3 500T pushed one stop, soft halation around the fire, fine grain, desaturated cold greens and blue-grey shadows, the fire is the only warm colour",
+    "camera": "handheld documentary re-enactment, slow deliberate moves, shallow depth of field, 35mm and 50mm lenses, eye level of a child",
+    "people": "two children aged about 10 and 7 in 1990s rubber rainwear (one red, one navy) with hoods up and rubber boots; always seen from behind, in silhouette or below the shoulders",
+    "never": [
+      "a recognisable face (children or adults)",
+      "a body, a limb, blood or injury - the bundle is only ever wrapped fabric",
+      "readable text, logos, modern objects (phones, LED light, modern cars)",
+      "slow-motion glamour, lens flares, orange-and-teal blockbuster grade",
+      "anything that could pass for archive footage of the real case"
+    ]
+  },
+  "shots": [
+    {
+      "id": "S1", "start": 0.00, "end": 5.10,
+      "narration": "Bålets flammer lokker de nysgerrige børn tættere på.",
+      "framing": "Wide, 35mm, behind the children at child height",
+      "action": "Two children walk slowly away from camera along a muddy forest track toward an orange glow between the trunks. The smaller one is half a step behind.",
+      "camera": "Slow handheld push-in, following at a distance",
+      "prompt_image": "Wide shot from behind two children in 1990s rubber rain jackets with hoods up, one red one navy, walking away from camera down a muddy track in a Danish beech forest at dusk in heavy rain, an orange firelight glow far ahead between grey beech trunks, rain streaks visible in the glow, mist between the trees, 35mm film still, Kodak 500T, fine grain, documentary re-enactment, no faces visible",
+      "prompt_motion": "The two children walk slowly forward away from camera toward the glow, boots sinking slightly in the mud, rain falling steadily. Camera follows with a slow handheld push-in. Natural, unhurried movement."
+    },
+    {
+      "id": "S2", "start": 5.10, "end": 9.20,
+      "narration": "Selvom regnen står ned i stænger, bulder ilden lystigt.",
+      "framing": "Medium close on the fire, 50mm",
+      "action": "A large bonfire, far too big for garden waste, burns in a hollow. Rain streaks cut through the firelight and steam hisses off the edges.",
+      "camera": "Locked off, very slight drift",
+      "prompt_image": "Medium close shot of a large bonfire burning fiercely in a shallow hollow in a beech forest at dusk during heavy rain, tall flames, rain streaks lit orange as they fall through the firelight, steam rising where rain hits the embers, wet dark leaves around the edge, 35mm film still, Kodak 500T, halation around the flames, fine grain",
+      "prompt_motion": "Flames roar and flicker, rain falls through the light, steam drifts. Camera almost still with a faint handheld drift."
+    },
+    {
+      "id": "S3", "start": 9.20, "end": 11.70,
+      "narration": "Midt i bålet ligger en bylt.",
+      "framing": "Over the shoulder, 50mm, the children's hoods soft in the foreground",
+      "action": "Past the children's wet hoods we see the fire; in the middle of it lies a dark wrapped bundle.",
+      "camera": "Rack focus from the hoods to the bundle",
+      "prompt_image": "Over-the-shoulder shot from behind two children's wet rain hoods, out of focus in the foreground, looking at a large bonfire in a forest in heavy rain; in the middle of the fire lies a dark bundle of wrapped blankets, about 70 cm long, partly burnt, 35mm film still, shallow depth of field, Kodak 500T, fine grain, no faces",
+      "prompt_motion": "Focus slowly shifts from the rain-soaked hoods in the foreground to the bundle in the fire. Flames flicker. Children stay still."
+    },
+    {
+      "id": "S4", "start": 11.70, "end": 14.10,
+      "narration": "På cirka 70 centimeter.",
+      "framing": "Low close-up on the bundle, 50mm",
+      "action": "The bundle in the flames: layered blanket fabric with a faded check pattern, edges charring and glowing. Nothing inside is visible.",
+      "camera": "Very slow lateral move",
+      "prompt_image": "Low close-up of a bundle of wrapped woollen blankets with a faded check pattern lying in a bonfire, fabric edges charring and glowing orange, flames licking around it, rain drops sizzling, nothing visible inside the fabric, 35mm film still, Kodak 500T, fine grain, shallow depth of field",
+      "prompt_motion": "Flames lick along the fabric, the charred edge glows and curls, rain drops sizzle. Slow lateral camera move."
+    },
+    {
+      "id": "S5", "start": 14.10, "end": 16.00,
+      "narration": "Hvad er det?",
+      "framing": "Low side angle, 35mm, children in silhouette against the fire",
+      "action": "The children stand still as rim-lit silhouettes. The smaller one steps half behind the older one and takes hold of a sleeve.",
+      "camera": "Static",
+      "prompt_image": "Low side angle of two children in hooded rain jackets standing still at the edge of a forest bonfire at dusk in heavy rain, seen as dark silhouettes rim-lit by the fire, hoods hide their faces, the smaller child half behind the older one holding a sleeve, rain streaks, 35mm film still, Kodak 500T, fine grain",
+      "prompt_motion": "The smaller child slowly steps half behind the older one and grips the sleeve. Rain falls. Firelight flickers on the wet rain jackets."
+    },
+    {
+      "id": "S6", "start": 16.00, "end": 18.30,
+      "narration": "Et dyr?",
+      "framing": "Close on rubber boots in the mud, 50mm",
+      "action": "A log shifts in the fire and a burst of sparks rises; a small rubber boot steps back in the mud.",
+      "camera": "Static, low",
+      "prompt_image": "Close-up at ground level of two pairs of children's rubber boots standing in wet mud and brown beech leaves at the edge of a bonfire, firelight flickering on puddles, heavy rain, 35mm film still, Kodak 500T, fine grain",
+      "prompt_motion": "Sparks burst up from the fire as a log shifts; one small boot steps back in the mud, splashing a puddle."
+    },
+    {
+      "id": "S7", "start": 18.30, "end": 19.90,
+      "narration": "Affald?",
+      "framing": "High wide, 24mm, from the trees",
+      "action": "The forest from above: the fire is the only light, the two children tiny at its edge.",
+      "camera": "Slow crane down",
+      "prompt_image": "High wide shot looking down through wet beech branches at a small clearing in a dark forest at dusk in heavy rain, a single bonfire as the only light source, two tiny figures in rain jackets standing at its edge, mist, 35mm film still, Kodak 500T, fine grain",
+      "prompt_motion": "Very slow crane down through the branches. Rain falls. Fire flickers."
+    },
+    {
+      "id": "S8", "start": 19.90, "end": 21.40,
+      "narration": "Eller et menneske?",
+      "framing": "Close, 50mm, through the flames",
+      "action": "A slow push toward the bundle through the flames. Hard cut to black on the last syllable.",
+      "camera": "Slow push-in",
+      "prompt_image": "Close shot through tall flames toward a dark bundle of burning blankets in a bonfire, heat shimmer, rain streaks in the foreground, 35mm film still, Kodak 500T, halation, fine grain",
+      "prompt_motion": "Slow push-in toward the bundle through the flames and heat shimmer."
+    },
+    {
+      "id": "S9", "start": 21.40, "end": 22.70,
+      "narration": "",
+      "framing": "Black",
+      "action": "Black. Rain and the music tail.",
+      "camera": "",
+      "prompt_image": "",
+      "prompt_motion": ""
+    }
+  ]
+}
