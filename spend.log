@@ -40,3 +40,393 @@
 {"t": "15:18:48", "kind": "judge", "model": "gemini-3.5-flash", "ok": true, "usage": {"promptTokenCount": 10685, "candidatesTokenCount": 519, "thoughtsTokenCount": 1301, "totalTokenCount": 12505}}
 {"t": "15:19:14", "kind": "judge", "model": "gemini-3.1-pro-preview", "ok": true, "usage": {"promptTokenCount": 10685, "candidatesTokenCount": 808, "thoughtsTokenCount": 3587, "totalTokenCount": 15080}}
 {"t": "16:02:10", "kind": "judge", "model": "gemini-3.1-pro-preview", "ok": true, "usage": {"promptTokenCount": 10685, "candidatesTokenCount": 722, "thoughtsTokenCount": 2824, "totalTokenCount": 14231}}
+{"t": "18:52:24", "backend": "vertex", "kind": "video", "model": "veo-3.1-fast-generate-001", "ok": false}
+{"t": "18:53:15", "backend": "vertex", "kind": "video", "model": "veo-3.1-fast-generate-001", "ok": false}
+{"t": "18:54:33", "backend": "vertex", "kind": "video", "model": "veo-3.1-fast-generate-001", "dur": 4, "n": 2, "audio": true, "out": ["clips/S2_V_1.mp4", "clips/S2_V_2.mp4"], "ok": true, "usd_est": 0.8}
+{"t": "19:18:53", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s05", "ok": true, "usd_est": 0.134}
+{"t": "19:18:53", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s03", "ok": true, "usd_est": 0.134}
+{"t": "19:19:00", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s05", "ok": true, "usd_est": 0.02}
+{"t": "19:19:03", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s03", "ok": true, "usd_est": 0.02}
+{"t": "19:19:26", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s03", "ok": true, "usd_est": 0.134}
+{"t": "19:19:34", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s03", "ok": true, "usd_est": 0.02}
+{"t": "19:20:25", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s02", "ok": true, "usd_est": 0.134}
+{"t": "19:20:25", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s01", "ok": true, "usd_est": 0.134}
+{"t": "19:20:25", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s04", "ok": true, "usd_est": 0.134}
+{"t": "19:20:26", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s03", "ok": true, "usd_est": 0.134}
+{"t": "19:20:33", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s01", "ok": true, "usd_est": 0.02}
+{"t": "19:20:36", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s04", "ok": true, "usd_est": 0.02}
+{"t": "19:20:36", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s03", "ok": true, "usd_est": 0.02}
+{"t": "19:20:50", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s02", "ok": true, "usd_est": 0.02}
+{"t": "19:21:01", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s07", "ok": true, "usd_est": 0.134}
+{"t": "19:21:02", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s06", "ok": true, "usd_est": 0.134}
+{"t": "19:21:12", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s07", "ok": true, "usd_est": 0.02}
+{"t": "19:21:15", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s06", "ok": true, "usd_est": 0.02}
+{"t": "19:21:54", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s08", "ok": true, "usd_est": 0.134}
+{"t": "19:21:59", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s02", "ok": true, "usd_est": 0.134}
+{"t": "19:22:04", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s08", "ok": true, "usd_est": 0.02}
+{"t": "19:22:09", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s02", "ok": true, "usd_est": 0.02}
+{"t": "19:23:09", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s03", "ok": false, "usd_est": 0}
+{"t": "19:23:13", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s06", "ok": true, "usd_est": 0.134}
+{"t": "19:23:24", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s06", "ok": true, "usd_est": 0.02}
+{"t": "19:24:01", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s08", "ok": true, "usd_est": 0.134}
+{"t": "19:24:34", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s08", "ok": true, "usd_est": 0.02}
+{"t": "19:24:42", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s09", "ok": false, "usd_est": 0}
+{"t": "19:24:57", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s12", "ok": true, "usd_est": 0.134}
+{"t": "19:25:06", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s12", "ok": true, "usd_est": 0.02}
+{"t": "19:25:42", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s10", "ok": false, "usd_est": 0}
+{"t": "19:25:58", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s11", "ok": false, "usd_est": 0}
+{"t": "19:26:07", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s10", "ok": true, "usd_est": 0.134}
+{"t": "19:26:31", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s10", "ok": true, "usd_est": 0.02}
+{"t": "19:27:03", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s14", "ok": true, "usd_est": 0.134}
+{"t": "19:27:14", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s14", "ok": true, "usd_est": 0.02}
+{"t": "19:27:15", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s09", "ok": false, "usd_est": 0}
+{"t": "19:28:24", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s14", "ok": true, "usd_est": 0.134}
+{"t": "19:28:31", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s11", "ok": false, "usd_est": 0}
+{"t": "19:28:32", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s14", "ok": true, "usd_est": 0.02}
+{"t": "19:29:04", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s15", "ok": false, "usd_est": 0}
+{"t": "19:29:11", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s19", "ok": true, "usd_est": 0.134}
+{"t": "19:29:20", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s19", "ok": true, "usd_est": 0.02}
+{"t": "19:29:49", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s18", "ok": false, "usd_est": 0}
+{"t": "19:31:19", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s09", "ok": true, "usd_est": 0.134}
+{"t": "19:31:47", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s09", "ok": true, "usd_est": 0.02}
+{"t": "19:31:47", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s01", "n": 1, "dur": 8, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "19:31:47", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s05", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "19:31:48", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s04", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "19:32:04", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s11", "ok": true, "usd_est": 0.134}
+{"t": "19:32:10", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s02", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "19:32:32", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s06", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "19:32:32", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s07", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "19:32:32", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s11", "ok": true, "usd_est": 0.02}
+{"t": "19:32:41", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s03", "ok": false, "usd_est": 0}
+{"t": "19:32:42", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s13", "ok": false, "usd_est": 0}
+{"t": "19:32:43", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s10", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "19:32:55", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s08", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "19:32:58", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s09", "ok": true, "usd_est": 0.134}
+{"t": "19:33:06", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s14", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "19:33:10", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s09", "ok": true, "usd_est": 0.02}
+{"t": "19:33:16", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s12", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "19:34:21", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s15", "ok": true, "usd_est": 0.134}
+{"t": "19:34:32", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s15", "ok": true, "usd_est": 0.02}
+{"t": "19:35:05", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s11", "ok": false, "usd_est": 0}
+{"t": "19:35:11", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s16", "ok": true, "usd_est": 0.134}
+{"t": "19:35:14", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s03", "ok": false, "usd_est": 0}
+{"t": "19:35:16", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s13", "ok": false, "usd_est": 0}
+{"t": "19:36:07", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s01", "usd_est": 0.05}
+{"t": "19:36:08", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s11", "ok": true, "usd_est": 0.134}
+{"t": "19:36:08", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s04", "usd_est": 0.05}
+{"t": "19:36:10", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s02", "usd_est": 0.05}
+{"t": "19:36:10", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s05", "usd_est": 0.05}
+{"t": "19:36:17", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s06", "usd_est": 0.05}
+{"t": "19:36:18", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s07", "usd_est": 0.05}
+{"t": "19:36:24", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s12", "usd_est": 0.05}
+{"t": "19:36:31", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s10", "usd_est": 0.05}
+{"t": "19:36:33", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s11", "ok": true, "usd_est": 0.02}
+{"t": "19:36:34", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s14", "usd_est": 0.05}
+{"t": "19:36:45", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s08", "usd_est": 0.05}
+{"t": "19:37:28", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s11", "ok": true, "usd_est": 0.134}
+{"t": "19:37:38", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s11", "ok": true, "usd_est": 0.02}
+{"t": "19:38:02", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s13", "ok": true, "usd_est": 0.134}
+{"t": "19:38:11", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s13", "ok": true, "usd_est": 0.02}
+{"t": "19:39:07", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s17", "ok": true, "usd_est": 0.134}
+{"t": "19:39:37", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s17", "ok": true, "usd_est": 0.02}
+{"t": "19:40:01", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s18", "ok": true, "usd_est": 0.134}
+{"t": "19:40:10", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s18", "ok": true, "usd_est": 0.02}
+{"t": "19:41:05", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s18", "ok": true, "usd_est": 0.134}
+{"t": "19:41:16", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s18", "ok": true, "usd_est": 0.02}
+{"t": "19:42:10", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s19", "ok": true, "usd_est": 0.134}
+{"t": "19:42:19", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s19", "ok": true, "usd_est": 0.02}
+{"t": "19:43:09", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s03", "ok": true, "usd_est": 0.134}
+{"t": "19:43:17", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s03", "ok": true, "usd_est": 0.02}
+{"t": "19:44:12", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s21", "ok": true, "usd_est": 0.134}
+{"t": "19:44:26", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s21", "ok": true, "usd_est": 0.02}
+{"t": "19:45:22", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s21", "ok": true, "usd_est": 0.134}
+{"t": "19:45:37", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s21", "ok": true, "usd_est": 0.02}
+{"t": "19:46:17", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "c2", "ok": true, "usd_est": 0.134}
+{"t": "19:46:27", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c2", "ok": true, "usd_est": 0.02}
+{"t": "19:47:25", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "c2", "ok": true, "usd_est": 0.134}
+{"t": "19:47:33", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c2", "ok": true, "usd_est": 0.02}
+{"t": "19:47:58", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "c8", "ok": true, "usd_est": 0.134}
+{"t": "19:48:09", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "19:49:03", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "c8", "ok": true, "usd_est": 0.134}
+{"t": "19:49:15", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "19:50:10", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s23", "ok": true, "usd_est": 0.134}
+{"t": "19:50:24", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s23", "ok": true, "usd_est": 0.02}
+{"t": "19:50:27", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s09", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "19:50:39", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s03", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "19:51:12", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s11", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "19:51:18", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s23", "ok": true, "usd_est": 0.134}
+{"t": "19:51:23", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s13", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "19:51:26", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s23", "ok": true, "usd_est": 0.02}
+{"t": "19:51:56", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s15", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "19:52:18", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s16", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "19:52:23", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s24", "ok": true, "usd_est": 0.134}
+{"t": "19:52:40", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s17", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "19:52:43", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s24", "ok": true, "usd_est": 0.02}
+{"t": "19:52:52", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s18", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "19:53:06", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s27", "ok": true, "usd_est": 0.134}
+{"t": "19:53:19", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s27", "ok": true, "usd_est": 0.02}
+{"t": "19:53:24", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s19", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "19:53:47", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s21", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "19:54:09", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "c2", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "19:54:13", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s27", "ok": true, "usd_est": 0.134}
+{"t": "19:54:21", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s27", "ok": true, "usd_est": 0.02}
+{"t": "19:54:32", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s23", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "19:55:04", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s24", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "19:55:17", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s28", "ok": true, "usd_est": 0.134}
+{"t": "19:55:27", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s20", "ok": false, "usd_est": 0}
+{"t": "19:55:28", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s27", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "19:56:23", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s20", "ok": true, "usd_est": 0.134}
+{"t": "19:56:31", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s20", "ok": true, "usd_est": 0.02}
+{"t": "19:57:26", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s29", "ok": true, "usd_est": 0.134}
+{"t": "19:57:39", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s29", "ok": true, "usd_est": 0.02}
+{"t": "19:58:02", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s29", "ok": true, "usd_est": 0.134}
+{"t": "19:58:18", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s29", "ok": true, "usd_est": 0.02}
+{"t": "19:59:14", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "s32", "ok": true, "usd_est": 0.134}
+{"t": "19:59:23", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s32", "ok": true, "usd_est": 0.02}
+{"t": "19:59:51", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s55-test", "ok": true, "usd_est": 0.1}
+{"t": "20:00:31", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "c8", "ok": true, "usd_est": 0.1}
+{"t": "20:00:41", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:01:00", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s26", "ok": true, "usd_est": 0.1}
+{"t": "20:01:08", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s26", "ok": true, "usd_est": 0.02}
+{"t": "20:01:30", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "c8", "ok": true, "usd_est": 0.134}
+{"t": "20:01:39", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:01:54", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s30", "ok": true, "usd_est": 0.1}
+{"t": "20:02:03", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s30", "ok": true, "usd_est": 0.02}
+{"t": "20:02:16", "backend": "vertex", "kind": "image", "model": "gemini-3-pro-image", "shot": "c8", "ok": true, "usd_est": 0.134}
+{"t": "20:02:25", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:02:52", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s31", "ok": true, "usd_est": 0.1}
+{"t": "20:03:06", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s31", "ok": true, "usd_est": 0.02}
+{"t": "20:03:56", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s31", "ok": true, "usd_est": 0.1}
+{"t": "20:04:05", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s31", "ok": true, "usd_est": 0.02}
+{"t": "20:04:54", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s33", "ok": true, "usd_est": 0.1}
+{"t": "20:05:03", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s33", "ok": true, "usd_est": 0.02}
+{"t": "20:05:52", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s34", "ok": true, "usd_est": 0.1}
+{"t": "20:06:02", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s34", "ok": true, "usd_est": 0.02}
+{"t": "20:06:49", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s34", "ok": true, "usd_est": 0.1}
+{"t": "20:06:56", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s34", "ok": true, "usd_est": 0.02}
+{"t": "20:08:45", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s37", "ok": true, "usd_est": 0.1}
+{"t": "20:09:07", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s37", "ok": true, "usd_est": 0.02}
+{"t": "20:09:24", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s37", "ok": true, "usd_est": 0.1}
+{"t": "20:09:34", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s37", "ok": true, "usd_est": 0.02}
+{"t": "20:09:52", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s38", "ok": true, "usd_est": 0.1}
+{"t": "20:10:04", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s38", "ok": true, "usd_est": 0.02}
+{"t": "20:10:50", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s38", "ok": true, "usd_est": 0.1}
+{"t": "20:11:14", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s38", "ok": true, "usd_est": 0.02}
+{"t": "20:12:01", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s39", "ok": true, "usd_est": 0.1}
+{"t": "20:12:19", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s39", "ok": true, "usd_est": 0.02}
+{"t": "20:13:07", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s39", "ok": true, "usd_est": 0.1}
+{"t": "20:13:18", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s39", "ok": true, "usd_est": 0.02}
+{"t": "20:13:21", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s25", "ok": false, "usd_est": 0}
+{"t": "20:13:22", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s22", "ok": false, "usd_est": 0}
+{"t": "20:14:07", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s40", "ok": true, "usd_est": 0.1}
+{"t": "20:14:20", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s40", "ok": true, "usd_est": 0.02}
+{"t": "20:15:07", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s40", "ok": true, "usd_est": 0.1}
+{"t": "20:15:32", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s40", "ok": true, "usd_est": 0.02}
+{"t": "20:15:50", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s41", "ok": true, "usd_est": 0.1}
+{"t": "20:16:03", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s41", "ok": true, "usd_est": 0.02}
+{"t": "20:16:51", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s41", "ok": true, "usd_est": 0.1}
+{"t": "20:17:20", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s41", "ok": true, "usd_est": 0.02}
+{"t": "20:18:07", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s42", "ok": true, "usd_est": 0.1}
+{"t": "20:18:30", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s42", "ok": true, "usd_est": 0.02}
+{"t": "20:19:17", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s43", "ok": true, "usd_est": 0.1}
+{"t": "20:19:33", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s43", "ok": true, "usd_est": 0.02}
+{"t": "20:19:48", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s43", "ok": true, "usd_est": 0.1}
+{"t": "20:20:08", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s43", "ok": true, "usd_est": 0.02}
+{"t": "20:20:55", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s46", "ok": true, "usd_est": 0.1}
+{"t": "20:21:07", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s46", "ok": true, "usd_est": 0.02}
+{"t": "20:21:53", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s46", "ok": true, "usd_est": 0.1}
+{"t": "20:22:03", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s46", "ok": true, "usd_est": 0.02}
+{"t": "20:22:52", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s47", "ok": true, "usd_est": 0.1}
+{"t": "20:23:05", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s47", "ok": true, "usd_est": 0.02}
+{"t": "20:23:54", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s48", "ok": true, "usd_est": 0.1}
+{"t": "20:24:05", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s48", "ok": true, "usd_est": 0.02}
+{"t": "20:24:39", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s20", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "20:24:50", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s26", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:24:51", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s50", "ok": true, "usd_est": 0.1}
+{"t": "20:25:06", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s50", "ok": true, "usd_est": 0.02}
+{"t": "20:25:34", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s28", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "20:25:35", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s29", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "20:25:53", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s51", "ok": true, "usd_est": 0.1}
+{"t": "20:26:03", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s51", "ok": true, "usd_est": 0.02}
+{"t": "20:26:30", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s31", "n": 1, "dur": 8, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:26:30", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s25", "ok": false, "usd_est": 0}
+{"t": "20:26:31", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s22", "ok": false, "usd_est": 0}
+{"t": "20:26:31", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s30", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:26:53", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s51", "ok": true, "usd_est": 0.1}
+{"t": "20:27:16", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s33", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "20:27:27", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s32", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:27:28", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s51", "ok": true, "usd_est": 0.02}
+{"t": "20:28:00", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s34", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "20:28:11", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s37", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:28:16", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s56", "ok": true, "usd_est": 0.1}
+{"t": "20:28:27", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s56", "ok": true, "usd_est": 0.02}
+{"t": "20:28:44", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s38", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:28:55", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s39", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "20:29:17", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s56", "ok": true, "usd_est": 0.1}
+{"t": "20:29:25", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s56", "ok": true, "usd_est": 0.02}
+{"t": "20:29:40", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s40", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:29:40", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s41", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:29:52", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s54", "ok": true, "usd_est": 0.1}
+{"t": "20:30:27", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s54", "ok": true, "usd_est": 0.02}
+{"t": "20:30:34", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s42", "n": 1, "dur": 8, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:30:35", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s43", "n": 1, "dur": 8, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:31:14", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s57", "ok": true, "usd_est": 0.1}
+{"t": "20:31:22", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s57", "ok": true, "usd_est": 0.02}
+{"t": "20:31:40", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s46", "n": 1, "dur": 8, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:31:41", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s47", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:31:50", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s55", "ok": true, "usd_est": 0.1}
+{"t": "20:31:57", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s55", "ok": true, "usd_est": 0.02}
+{"t": "20:32:25", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s48", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "20:32:36", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s50", "n": 0, "dur": 8, "usd_est": 0.0, "filtered": 0, "reasons": ["Recitation check failed."]}
+{"t": "20:33:12", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s58", "ok": true, "usd_est": 0.1}
+{"t": "20:33:20", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s51", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "20:33:20", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s55", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:34:03", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s58", "ok": true, "usd_est": 0.02}
+{"t": "20:34:19", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s58", "ok": true, "usd_est": 0.1}
+{"t": "20:34:27", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s58", "ok": true, "usd_est": 0.02}
+{"t": "20:35:16", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s59", "ok": true, "usd_est": 0.1}
+{"t": "20:35:28", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s59", "ok": true, "usd_est": 0.02}
+{"t": "20:37:49", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s54", "ok": true, "usd_est": 0.1}
+{"t": "20:37:56", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s54", "ok": true, "usd_est": 0.02}
+{"t": "20:38:13", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s49", "ok": true, "usd_est": 0.1}
+{"t": "20:38:22", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s49", "ok": true, "usd_est": 0.02}
+{"t": "20:39:12", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s52", "ok": true, "usd_est": 0.1}
+{"t": "20:39:27", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s52", "ok": true, "usd_est": 0.02}
+{"t": "20:40:15", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s53", "ok": true, "usd_est": 0.1}
+{"t": "20:40:26", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s53", "ok": true, "usd_est": 0.02}
+{"t": "20:41:15", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s53", "ok": true, "usd_est": 0.1}
+{"t": "20:41:24", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s53", "ok": true, "usd_est": 0.02}
+{"t": "20:43:18", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s44", "ok": true, "usd_est": 0.1}
+{"t": "20:43:19", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s45", "ok": true, "usd_est": 0.1}
+{"t": "20:43:29", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s45", "ok": true, "usd_est": 0.02}
+{"t": "20:43:33", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s44", "ok": true, "usd_est": 0.02}
+{"t": "20:45:18", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s45", "ok": true, "usd_est": 0.1}
+{"t": "20:45:31", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s45", "ok": true, "usd_est": 0.02}
+{"t": "20:47:23", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s25", "ok": true, "usd_est": 0.1}
+{"t": "20:47:25", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "c8", "ok": true, "usd_est": 0.1}
+{"t": "20:47:37", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:48:10", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s25", "ok": true, "usd_est": 0.02}
+{"t": "20:48:25", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "c8", "ok": true, "usd_est": 0.1}
+{"t": "20:48:37", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:50:28", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s22", "ok": true, "usd_est": 0.1}
+{"t": "20:50:36", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s22", "ok": true, "usd_est": 0.02}
+{"t": "20:51:11", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "c8", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "20:51:22", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s22", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:51:24", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:51:32", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s25", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "20:52:03", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "c4", "ok": true, "usd_est": 0.1}
+{"t": "20:52:04", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "c8", "ok": true, "usd_est": 0.1}
+{"t": "20:52:06", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s44", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:52:07", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s45", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "20:52:13", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:52:25", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c4", "ok": true, "usd_est": 0.02}
+{"t": "20:52:27", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s49", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "20:53:01", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s50", "n": 1, "dur": 8, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "20:53:03", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s52", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:53:11", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s53", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "20:53:34", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s54", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "20:53:47", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s56", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "20:53:55", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s57", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "20:54:03", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "c8", "ok": true, "usd_est": 0.1}
+{"t": "20:54:18", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s58", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "20:54:19", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:54:32", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s59", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "20:55:05", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "c8", "ok": true, "usd_est": 0.1}
+{"t": "20:55:12", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:55:29", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "c8", "ok": true, "usd_est": 0.1}
+{"t": "20:55:38", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "c8", "ok": true, "usd_est": 0.02}
+{"t": "20:56:40", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "c4", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "20:56:41", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "c8", "n": 1, "dur": 4, "usd_est": 0.2, "filtered": 0, "reasons": []}
+{"t": "20:56:59", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s02", "usd_est": 0.05}
+{"t": "20:57:01", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s03", "usd_est": 0.05}
+{"t": "20:57:09", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s06", "usd_est": 0.05}
+{"t": "20:57:12", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s05", "usd_est": 0.05}
+{"t": "20:57:32", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s31", "usd_est": 0.05}
+{"t": "20:57:54", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s06", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "20:57:58", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s30", "usd_est": 0.05}
+{"t": "20:58:13", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s06", "usd_est": 0.05}
+{"t": "20:58:18", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s05", "usd_est": 0.05}
+{"t": "20:58:27", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s31", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:58:30", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s07", "usd_est": 0.05}
+{"t": "20:58:55", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s30", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "20:58:55", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s08", "usd_est": 0.05}
+{"t": "20:58:58", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s06", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "20:59:00", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s31", "usd_est": 0.05}
+{"t": "20:59:05", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s09", "usd_est": 0.05}
+{"t": "20:59:16", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s10", "usd_est": 0.05}
+{"t": "20:59:29", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s11", "usd_est": 0.05}
+{"t": "20:59:36", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s12", "usd_est": 0.05}
+{"t": "20:59:45", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s13", "usd_est": 0.05}
+{"t": "20:59:50", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s14", "usd_est": 0.05}
+{"t": "20:59:54", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s32", "usd_est": 0.05}
+{"t": "20:59:57", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s06", "usd_est": 0.05}
+{"t": "20:59:58", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s15", "usd_est": 0.05}
+{"t": "21:00:03", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s30", "usd_est": 0.05}
+{"t": "21:00:11", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s17", "usd_est": 0.05}
+{"t": "21:00:16", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s16", "usd_est": 0.05}
+{"t": "21:00:22", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s33", "usd_est": 0.05}
+{"t": "21:00:22", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s18", "usd_est": 0.05}
+{"t": "21:00:29", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s19", "usd_est": 0.05}
+{"t": "21:00:31", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s34", "usd_est": 0.05}
+{"t": "21:00:36", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s20", "usd_est": 0.05}
+{"t": "21:00:50", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s37", "usd_est": 0.05}
+{"t": "21:00:57", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s21", "usd_est": 0.05}
+{"t": "21:01:12", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s17", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "21:01:14", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s22", "usd_est": 0.05}
+{"t": "21:01:16", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s34", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "21:01:24", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "c2", "usd_est": 0.05}
+{"t": "21:01:32", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s17", "usd_est": 0.05}
+{"t": "21:01:35", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s37", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "21:01:40", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "c4", "usd_est": 0.05}
+{"t": "21:01:46", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "c8", "usd_est": 0.05}
+{"t": "21:01:47", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s34", "usd_est": 0.05}
+{"t": "21:01:56", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s23", "usd_est": 0.05}
+{"t": "21:02:09", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "c2", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "21:02:13", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s24", "usd_est": 0.05}
+{"t": "21:02:16", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s38", "usd_est": 0.05}
+{"t": "21:02:22", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s25", "usd_est": 0.05}
+{"t": "21:02:33", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "c2", "usd_est": 0.05}
+{"t": "21:02:34", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s39", "usd_est": 0.05}
+{"t": "21:02:59", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s27", "usd_est": 0.05}
+{"t": "21:03:02", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s37", "usd_est": 0.05}
+{"t": "21:03:11", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s28", "usd_est": 0.05}
+{"t": "21:03:13", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s26", "usd_est": 0.05}
+{"t": "21:03:19", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s40", "usd_est": 0.05}
+{"t": "21:03:56", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s28", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "21:04:08", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s26", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "21:04:09", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s41", "usd_est": 0.05}
+{"t": "21:04:12", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s28", "usd_est": 0.05}
+{"t": "21:04:24", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s29", "usd_est": 0.05}
+{"t": "21:04:34", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s42", "usd_est": 0.05}
+{"t": "21:04:39", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s26", "usd_est": 0.05}
+{"t": "21:04:54", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s41", "n": 2, "dur": 4, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "21:05:29", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s42", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "21:05:39", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s41", "usd_est": 0.05}
+{"t": "21:06:00", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s43", "usd_est": 0.05}
+{"t": "21:06:31", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s44", "usd_est": 0.05}
+{"t": "21:06:51", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s42", "usd_est": 0.05}
+{"t": "21:07:07", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s45", "usd_est": 0.05}
+{"t": "21:07:11", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s46", "usd_est": 0.05}
+{"t": "21:07:29", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s48", "usd_est": 0.05}
+{"t": "21:07:46", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s47", "usd_est": 0.05}
+{"t": "21:08:02", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s50", "usd_est": 0.05}
+{"t": "21:08:34", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s49", "usd_est": 0.05}
+{"t": "21:08:35", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s51", "usd_est": 0.05}
+{"t": "21:08:50", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s53", "usd_est": 0.05}
+{"t": "21:09:02", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s54", "usd_est": 0.05}
+{"t": "21:09:07", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s52", "usd_est": 0.05}
+{"t": "21:09:18", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s56", "usd_est": 0.05}
+{"t": "21:09:20", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s55", "usd_est": 0.05}
+{"t": "21:09:29", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s57", "usd_est": 0.05}
+{"t": "21:09:34", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s58", "usd_est": 0.05}
+{"t": "21:09:53", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-2.5-pro", "shot": "s59", "usd_est": 0.05}
+{"t": "21:12:26", "backend": "vertex", "kind": "image", "model": "gemini-3.1-flash-image", "shot": "s06", "ok": true, "usd_est": 0.1}
+{"t": "21:12:35", "backend": "vertex", "kind": "judge-image", "model": "gemini-3.1-pro-preview", "shot": "s06", "ok": true, "usd_est": 0.02}
+{"t": "21:13:27", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s06", "n": 1, "dur": 6, "usd_est": 0.30000000000000004, "filtered": 0, "reasons": []}
+{"t": "21:13:38", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s31", "n": 1, "dur": 8, "usd_est": 0.4, "filtered": 0, "reasons": []}
+{"t": "21:13:49", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s06", "usd_est": 0.05}
+{"t": "21:13:54", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s31", "usd_est": 0.05}
+{"t": "21:14:34", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s06", "n": 2, "dur": 6, "usd_est": 0.6000000000000001, "filtered": 0, "reasons": []}
+{"t": "21:14:49", "backend": "vertex", "section": "sec1", "kind": "video", "model": "veo-3.1-lite-generate-001", "shot": "s31", "n": 2, "dur": 8, "usd_est": 0.8, "filtered": 0, "reasons": []}
+{"t": "21:14:50", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s06", "usd_est": 0.05}
+{"t": "21:15:07", "backend": "vertex", "section": "sec1", "kind": "judge-video", "model": "gemini-3.1-pro-preview", "shot": "s31", "usd_est": 0.05}

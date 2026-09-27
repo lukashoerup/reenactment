@@ -27,6 +27,7 @@ House Media. Owner: Lukas. Private repo (real case, client pitch).
 | Cost of a scene / an episode, quotas   | docs/COST.md                |
 | Review of A1 → A2 (defect list)        | docs/REVIEW-2026-09-27.md   |
 | Open work                              | tasks/, QUESTIONS.md        |
+| Section 1 (first 5 min) status         | tasks/T003-section1-first5.md |
 | Cross-project patterns                 | workbench: context/         |
 
 ## Files
@@ -46,6 +47,8 @@ House Media. Owner: Lukas. Private repo (real case, client pitch).
 | `scene.py`, `kid_meta.py`, `comp.py`, `post.py`, `postwatch.py`, `assemble.py`, `render_all.sh`, `fetch_stock.sh` | method D: Blender 3D + stock fire (bpy 4.5, CPU) |
 | `gen/generate.py` | untested fal.ai variant of the pipeline (Kling / nano-banana), kept for reference |
 | `page/` | source of the review page (Artifact "Børnene og bålet") |
+| `sec1/` | section 1 (0:00–5:06, drawn): `shots.py` shot list, `keys.py` keyframes + gate, `clips.py` Veo Lite + judge pick, `edit.py` frame-exact cut; `picks.json`/`keys_report.json` = the machine's verdicts |
+| `page2/` | review page for section 1 (Artifact "Det Brændende Lig 0:00–5:06"): `build.py` + template; video served as HLS (fMP4 `.mp4` segments, `.txt` playlist) |
 
 ## Commands (from repo root, Python 3.11, ffmpeg)
 ```
@@ -55,5 +58,8 @@ python3 gen_video.py clips/S1_v1.mp4 kf/S1.png "<motion prompt>" --dur 6 --model
 python3 qa/loop.py S2 S4 S8            # CAP_USD env caps spend
 python3 edit2.py out/reenact_A2.mp4
 python3 qa/judge.py out/A2_720.mp4 gemini-3.1-pro-preview qa/judge.json 6
+export VERTEX_KEY_FILE=/path/outside/repo/key.json   # section 1 runs on Google Cloud
+python3 sec1/shots.py && python3 sec1/keys.py && python3 sec1/clips.py gen && python3 sec1/clips.py pick
+python3 sec1/edit.py out/sec1_C_v2.mp4 && python3 page2/build.py
 bvenv/bin/python qa/metrics.py out/reenact_A2.mp4
 ```

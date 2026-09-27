@@ -70,3 +70,20 @@ bloom, grain; `assemble.py` cuts. Looked like a game — see LEARNINGS and RESEA
 - `qa/loop.py`: per shot → generate → judge only the window that will be used (12 fps)
   → pass: keep; fail: retry once with the judge's `fix` appended → fail: method B.
   Per-shot brief; reference image only for shots that contain the object.
+
+## 10. Section scale (sec1, first five minutes, drawn)
+1. `sec1/shots.py`: one row per shot on the **episode clock** (start/end from the
+   word timings), narration line, image prompt, motion prompt, `pin` (static:
+   first = last frame), `ref` (match another keyframe's place/objects), `reuse`
+   (existing clip + in-point). A new shot about every 2–8 s, on the words.
+2. `sec1/keys.py`: keyframes in waves (a shot waits for its `ref`), 2 style refs,
+   gate → one redraw with the gate's "avoid" text → keep with a flag.
+3. `sec1/clips.py gen`: Veo 3.1 Lite, 4–8 s, negatives, pinned where possible.
+   `pick`: the judge sees exactly the window the edit will use and either picks a take or
+   fails it with a one-sentence fix → one more round of 2 takes → picks the best.
+4. `sec1/edit.py`: every shot normalised to its exact frame count (slowed only if the
+   clip is short, never sped up), concat, light grain + vignette, label, episode audio,
+   the takes' own ambience ducked under the narration. Cached per shot, so a single
+   replaced shot re-renders in seconds.
+5. `page2/build.py`: review page with a storyboard that seeks the video, tags per shot
+   (redrawn / re-animated / from the test / weakness).

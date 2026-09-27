@@ -33,3 +33,14 @@ postwatch.log
 *.key
 gkey*
 .env
+# section 1 media (recreate: sec1/keys.py, sec1/clips.py, sec1/edit.py; page2/build.py)
+sec1/kf/
+sec1/clips/
+sec1/norm/
+sec1/*.log
+sec1/*.jpg
+sec1/picks_b.json
+page2/hls/
+page2/thumbs/
+page2/*.jpg
+page2/index.html

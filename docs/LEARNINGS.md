@@ -93,3 +93,35 @@ the Gemini API (paid, 10/day) or another provider; everything else can use Verte
   back as two clean static takes — no thrown log, no smoke burst — with noun negatives
   ("thrown object, falling log, flying wood, stick, hand, person, smoke burst").
 - Videos come back inline (`bytesBase64Encoded`) when no `storageUri` is given.
+
+## 2026-09-27 — Section 1 (5 minutes, drawn) at scale: what broke and what held
+- **Trial quotas, not money, set the pace.** A new trial project allowed ≈ 1 image/min
+  on gemini-3-pro-image and a few Pro judge calls/min; parallel runs got 429 storms.
+  Fixes: 2 workers, backoff up to 120 s, `gemini-3.1-flash-image` (own quota; holds the
+  drawn style well enough) for the tail, and `gemini-2.5-pro` as a second judge quota.
+- **A judge 429 was counted as a pass** (the fallback returned `pass: True`). Now it
+  returns `pass: None` + "UNJUDGED" and those picks are re-judged. Never default a gate
+  to "pass" on an error.
+- **Keyframe gate earns its cost** ($2 for ~100 checks): it caught extra people in 10
+  drawings (a figure on a driveway, two men for one), a body-like heap in the fire (c8
+  took five redraws), a skull-like shape in ash, readable text on an evidence bag / map /
+  bottle. It is stochastic: 5 drawings kept failing on trivia (keypad digits) and were
+  kept by hand.
+- **Style references must be content-neutral.** Using a keyframe that contained the
+  bundle as a style reference put bundles into unrelated shots. Style refs now: the
+  fire (kfC/S2) and an empty forest (sec1/kf/s03).
+- **Veo draws rain badly in this style**: in c2 and s06 all four takes had rain streaks
+  that blink on/off, or no rain. Plan: rain as a real overlay in post.
+- **Veo adds colour and sound nobody asked for**: a red smear on the grey newspaper (s30,
+  fixed with `hue=s=0` in post), police radio (s42), a phone that keeps ringing after
+  pick-up (s41), typing sounds. Next run: `generateAudio: false`, all sound in post.
+- "Recitation check failed" on one Veo request (s50): regenerate; nothing to fix.
+- **Pinned static shots (first = last frame) were the most reliable class**: no thrown
+  objects, no invented entrances. Motion shots needed the judge.
+- Ops: long jobs run in the background (`setsid nohup … &`) and are polled — tool calls
+  time out at 10 min. `pkill -f <pattern>` also matches the calling shell; kill by PID.
+  Never "probe" Veo with an empty prompt: it submits a billable job.
+- Artifact delivery: a 180 MB, 5-minute MP4 cannot be attached (15 MB per file, 64 MB per
+  publish, only mp4/txt/json/… served). Worked: HLS with fMP4 segments named `.mp4`
+  (`-hls_segment_type fmp4`), playlist renamed `.txt`, hls.js 1.5.20 from cdnjs, two
+  publishes (≈ 52 + 33 MB).

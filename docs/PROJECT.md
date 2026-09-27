@@ -43,6 +43,9 @@ film-language notes and the machine does the rest.
 - 2026-09-27 — Narration stays the original podcast audio; ambience (rain, fire) under it.
 - 2026-09-27 — Lukas prefers the **drawn style** (page version "C · Tegnet"; he called it
   "B"). Default style for the next round unless Lasse says otherwise.
+- 2026-09-27 — Keep the current children shots (minor issue for now). Make the first
+  ~5 minutes with the new method, **one version, C (drawn + video)**, and let Lukas
+  evaluate before more is spent (tasks/T003).
 - 2026-09-27 — Code and learnings live in this private repo; generic lessons also in
   workbench `context/LEARNINGS.md`.
 
@@ -53,3 +56,6 @@ film-language notes and the machine does the rest.
   blend where they touch. See docs/REVIEW-2026-09-27.md.
 - Gemini credits used up (~79 kr); Veo Lite hit a daily cap of 10 videos.
 - Next: tasks/T001 (fix the scene, drawn style first), tasks/T002 (pipeline v2).
+- **Section 1 (0:00–5:06), drawn, delivered for evaluation** — 68 shots, $55 of the
+  $300 Google Cloud trial credit. Review page: artifact "Det Brændende Lig 0:00–5:06".
+  Waiting on Lukas's verdict (QUESTIONS Q6). Details: tasks/T003.

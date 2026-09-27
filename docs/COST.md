@@ -33,6 +33,19 @@ pairwise judge, 30 % of shots needing another round)
 Moving shots go where something happens; interview passages carry stills. The August
 estimate for a stills-first episode (~2,400 kr) is in the same range.
 
+## Measured: first five minutes, drawn, every shot moving (2026-09-27)
+Google Cloud (Vertex) list prices, paid from the trial credit.
+| Item | USD list | kr incl. VAT |
+|---|---|---|
+| Veo 3.1 Lite, 81 requests, 109 takes | 36.90 | 295 |
+| Keyframes, 95 drawings (35 rejected) | 12.07 | 97 |
+| Keyframe gate (Gemini 3.1 Pro) | 2.04 | 16 |
+| Video judge | 4.25 | 34 |
+| **Total for 5:06** | **55.26** | **≈ 440** |
+≈ $11 (≈ 87 kr) per finished minute ⇒ **≈ 3,900 kr for a whole episode** at this recipe,
+below the 5,000 kr estimate above. The 7 reused children clips were free here; the
+episode will have more of them (Q5).
+
 ## Not included
 - Human time: Lasse approving the shot list (2–3 h) and the contact sheets (3–4 h);
   an editor's finishing pass (1–2 days). Claude session time (counts against Lukas's

@@ -1,0 +1,587 @@
+{
+ "s01": {
+  "pick": "sec1/clips/s01_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s04": {
+  "pick": "sec1/clips/s04_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s02": {
+  "pick": "sec1/clips/s02_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s03": {
+  "pick": "sec1/clips/s03_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s05": {
+  "pick": "sec1/clips/s05_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "no visible rain"
+  ],
+  "fix": "Add heavy rain falling through the frame and the firelight."
+ },
+ "s07": {
+  "pick": "sec1/clips/s07_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The animation is completely static; the rain does not run down the window as requested"
+  ],
+  "fix": "Animate the rain running down the window pane and add subtle movement to the cars outside."
+ },
+ "s08": {
+  "pick": "sec1/clips/s08_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "the walking motion is a bit stiff, resembling sliding",
+   "the light flicker is very subtle"
+  ],
+  "fix": ""
+ },
+ "s09": {
+  "pick": "sec1/clips/s09_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s10": {
+  "pick": "sec1/clips/s10_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s11": {
+  "pick": "sec1/clips/s11_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s12": {
+  "pick": "sec1/clips/s12_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s13": {
+  "pick": "sec1/clips/s13_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The raindrop looks like a solid black drop of ink, but this fits the requested ink drawing style"
+  ],
+  "fix": ""
+ },
+ "s14": {
+  "pick": "sec1/clips/s14_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s15": {
+  "pick": "sec1/clips/s15_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s16": {
+  "pick": "sec1/clips/s16_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [
+   "slight morphing of the fingers during movement"
+  ],
+  "fix": ""
+ },
+ "s17": {
+  "pick": "sec1/clips/s17_t4.mp4",
+  "best": 3,
+  "pass": true,
+  "problems": [],
+  "fix": "",
+  "round": 2,
+  "first": {
+   "best": 0,
+   "pass": false,
+   "problems": [
+    "The suit jacket morphs and changes shape throughout the shot",
+    "The scene appears to be night time rather than daylight",
+    "Cars outside move very fast"
+   ],
+   "fix": "Keep the jacket completely static and prevent it from morphing, ensure the scene is lit by daylight, and make the rain shadows move slowly."
+  }
+ },
+ "s18": {
+  "pick": "sec1/clips/s18_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s19": {
+  "pick": "sec1/clips/s19_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s20": {
+  "pick": "sec1/clips/s20_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s21": {
+  "pick": "sec1/clips/s21_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The on-air lamp is orange/yellow rather than red, but it fits the scene well."
+  ],
+  "fix": ""
+ },
+ "s22": {
+  "pick": "sec1/clips/s22_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "minor morphing of ground textures during the camera move"
+  ],
+  "fix": ""
+ },
+ "c2": {
+  "pick": "sec1/clips/c2_t3.mp4",
+  "best": 0,
+  "pass": false,
+  "problems": [
+   "Take 1 has artificial-looking rain streaks that suddenly appear and disappear.",
+   "Takes 2 and 3 do not have any visible rain, which is a key element of the scene."
+  ],
+  "fix": "Ensure heavy rain falls continuously throughout the entire shot, with rain streaks visible against the dark background and firelight, without popping in or out.",
+  "round": 2,
+  "first": {
+   "best": 0,
+   "pass": false,
+   "problems": [
+    "Rain streaks suddenly appear at 00:01.000 and disappear at 00:02.500",
+    "The rain effect is inconsistent and looks like a glitch"
+   ],
+   "fix": "Ensure the heavy rain effect is consistent throughout the entire shot and does not suddenly appear and disappear."
+  },
+  "note": "chosen by Claude: no rain but no glitch (t1 glitch, t4 no rain)"
+ },
+ "c4": {
+  "pick": "sec1/clips/c4_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "c8": {
+  "pick": "sec1/clips/c8_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s23": {
+  "pick": "sec1/clips/s23_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s24": {
+  "pick": "sec1/clips/s24_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s25": {
+  "pick": "sec1/clips/s25_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s26": {
+  "pick": "sec1/clips/s26_t6.mp4",
+  "best": 4,
+  "pass": true,
+  "problems": [
+   "the doors open and close rather than swinging back and forth to settle"
+  ],
+  "fix": "",
+  "round": 2,
+  "first": {
+   "best": 0,
+   "pass": false,
+   "problems": [
+    "In both takes, a large metal door slides down from above, replacing the double doors, which is illogical and morphing."
+   ],
+   "fix": "The double doors swing gently back and forth on their hinges and come to rest in a closed position, no other doors appear."
+  }
+ },
+ "s27": {
+  "pick": "sec1/clips/s27_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "slight morphing of the paper texture"
+  ],
+  "fix": ""
+ },
+ "s28": {
+  "pick": "sec1/clips/s28_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": "",
+  "round": 2,
+  "first": {
+   "best": 0,
+   "pass": false,
+   "problems": [
+    "The van does not move away in either take."
+   ],
+   "fix": "The delivery van drives away into the distance, getting smaller."
+  }
+ },
+ "s29": {
+  "pick": "sec1/clips/s29_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s30": {
+  "pick": "sec1/clips/s30_t5.mp4",
+  "best": 3,
+  "pass": true,
+  "problems": [],
+  "fix": "",
+  "round": 2,
+  "first": {
+   "best": 1,
+   "pass": false,
+   "problems": [
+    "The drawing is not static; new lines and colors are drawn in over time, which contradicts the 'nothing else moves' instruction."
+   ],
+   "fix": "The drawing of the newspaper should be a single, static image; only the camera should move, performing a very slow push-in."
+  }
+ },
+ "s32": {
+  "pick": "sec1/clips/s32_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "A blue light is visible in the distance, which could be distracting or imply police presence."
+  ],
+  "fix": ""
+ },
+ "s33": {
+  "pick": "sec1/clips/s33_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s34": {
+  "pick": "sec1/clips/s34_t3.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [],
+  "fix": "",
+  "round": 2,
+  "first": {
+   "best": 1,
+   "pass": false,
+   "problems": [
+    "The shot is missing the requested 'heavy rain'.",
+    "No rain is seen falling through the fire's glow, and the branches do not appear wet."
+   ],
+   "fix": "Add animated heavy rain falling throughout the scene, making the branches look wet and the rain visible in the fire's glow."
+  }
+ },
+ "s37": {
+  "pick": "sec1/clips/s37_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The motion of lifting the receiver is slightly abrupt, but acceptable."
+  ],
+  "round": 2,
+  "first": {
+   "best": 1,
+   "pass": false,
+   "problems": [
+    "The man does not complete the action; he lifts the receiver but then hangs it up again within the shot.",
+    "The rain on the glass door is static and does not appear to be running down the pane."
+   ],
+   "fix": "The man lifts the receiver and holds it to his ear for the duration of the shot."
+  }
+ },
+ "s38": {
+  "pick": "sec1/clips/s38_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s39": {
+  "pick": "sec1/clips/s39_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The blue light bar flashes rather than performing a full, smooth rotation.",
+   "The reflection of the blue light on the wet tree trunks is very subtle."
+  ],
+  "fix": ""
+ },
+ "s40": {
+  "pick": "sec1/clips/s40_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The torch beam is static instead of trembling slightly."
+  ]
+ },
+ "s41": {
+  "pick": "sec1/clips/s41_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [
+   "The telephone ring does not stop when the receiver is lifted, which contradicts the audio description."
+  ],
+  "fix": "",
+  "round": 2,
+  "first": {
+   "best": 2,
+   "pass": false,
+   "problems": [
+    "The audio is incorrect; the telephone starts ringing as the receiver is lifted, instead of stopping.",
+    "The receiver slightly stretches and distorts as it is lifted."
+   ],
+   "fix": "The hand lifts the receiver from the cradle, silencing the ringing sound."
+  }
+ },
+ "s42": {
+  "pick": "sec1/clips/s42_t4.mp4",
+  "best": 3,
+  "pass": true,
+  "problems": [
+   "Includes police radio sounds, not just the requested rain and room tone.",
+   "Police car lights are flashing, an unrequested but plausible animated detail."
+  ],
+  "fix": "",
+  "round": 2,
+  "first": {
+   "best": 1,
+   "pass": false,
+   "problems": [
+    "The audio track contains a prominent typing sound effect, but the character is on the phone, not typing.",
+    "The flashing lights on the police car, while atmospheric, are an element of motion not specified in the brief."
+   ],
+   "fix": "To match the generated take, specify that the lights on the police car outside should be flashing."
+  }
+ },
+ "s43": {
+  "pick": "sec1/clips/s43_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "Smoke emanates from the parked car, suggesting it is running or was just turned off."
+  ],
+  "fix": ""
+ },
+ "s44": {
+  "pick": "sec1/clips/s44_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [
+   "No problems."
+  ],
+  "fix": ""
+ },
+ "s45": {
+  "pick": "sec1/clips/s45_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The headlights don't 'sweep' across the hedge; as the car backs out, they move away from it."
+  ],
+  "fix": ""
+ },
+ "s46": {
+  "pick": "sec1/clips/s46_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "Includes some orange lights in addition to the requested blue emergency lights."
+  ],
+  "fix": ""
+ },
+ "s47": {
+  "pick": "sec1/clips/s47_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "No significant problems."
+  ],
+  "fix": ""
+ },
+ "s48": {
+  "pick": "sec1/clips/s48_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The light source is a classic lantern, not a modern work lamp.",
+   "The fire pit contains unburnt logs as well as ash and charred branches."
+  ],
+  "fix": ""
+ },
+ "s49": {
+  "pick": "sec1/clips/s49_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s50": {
+  "pick": "sec1/clips/s50_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": []
+ },
+ "s51": {
+  "pick": "sec1/clips/s51_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "The motion is not a single, slow, continuous action.",
+   "The hand draws the circle with several quick, scratchy strokes instead of one smooth one."
+  ],
+  "fix": "The hand should draw the circle in one single, slow, continuous, and smooth motion."
+ },
+ "s52": {
+  "pick": "sec1/clips/s52_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [
+   "Slight wobble in the drawing.",
+   "Ground texture shifts slightly."
+  ],
+  "fix": ""
+ },
+ "s53": {
+  "pick": "sec1/clips/s53_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s54": {
+  "pick": "sec1/clips/s54_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s55": {
+  "pick": "sec1/clips/s55_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s56": {
+  "pick": "sec1/clips/s56_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s57": {
+  "pick": "sec1/clips/s57_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s58": {
+  "pick": "sec1/clips/s58_t1.mp4",
+  "best": 1,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s59": {
+  "pick": "sec1/clips/s59_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [],
+  "fix": ""
+ },
+ "s06": {
+  "pick": "sec1/clips/s06_t3.mp4",
+  "best": 0,
+  "pass": false,
+  "problems": [
+   "Take 1 has poorly animated, flashing rain lines that appear and disappear abruptly",
+   "Takes 2 and 3 have no rain at all"
+  ],
+  "fix": "Animate continuous, natural-looking rain falling throughout the entire shot, and make the steam wisps drift upwards smoothly.",
+  "round": 2,
+  "first": {
+   "best": 0,
+   "pass": false,
+   "problems": [
+    "Rain lines appear abruptly at 1 second and disappear abruptly at 2 seconds",
+    "Rain is not continuous"
+   ],
+   "fix": "Ensure the rain falls continuously throughout the entire shot without abruptly appearing or disappearing."
+  },
+  "note": "chosen by Claude: no rain, no glitch"
+ },
+ "s31": {
+  "pick": "sec1/clips/s31_t4.mp4",
+  "best": 3,
+  "pass": true,
+  "problems": [],
+  "fix": "",
+  "round": 2,
+  "first": {
+   "best": 0,
+   "pass": false,
+   "problems": [
+    "A second person is partially visible on the right edge of the frame.",
+    "The horizontal lines of the venetian blinds are morphing and merging."
+   ],
+   "fix": "Ensure only one man is in the frame, and keep the horizontal lines of the venetian blinds completely stable without any morphing."
+  }
+ }
+}

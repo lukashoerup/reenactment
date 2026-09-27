@@ -1,0 +1,528 @@
+{
+ "s03": {
+  "id": "s03",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Image contains multiple people who were not asked for in the intended shot",
+     "Image includes an unrequested cabin, campfire, and vehicle"
+    ],
+    "avoid": "Do not include any people, buildings, campfires, or vehicles; focus solely on the empty forest landscape and muddy track."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any people, text, or changing the charcoal and ink style."
+   }
+  ],
+  "final": true
+ },
+ "s05": {
+  "id": "s05",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "adding any recognizable body parts or people to the scene"
+   }
+  ],
+  "final": true
+ },
+ "s22": {
+  "id": "s22",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Avoid adding any people, text, or changing the charcoal and ink style."
+   }
+  ],
+  "final": true
+ },
+ "c8": {
+  "id": "c8",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Visible objects (pile of wood and branches) at the base of the fire",
+     "Does not meet the requirement of 'only fire, smoke and rain, no objects'"
+    ],
+    "avoid": "Avoid drawing any wood, branches, or other objects; fill the frame entirely with just flames, smoke, and rain."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Avoid adding any objects, figures, or faces hidden within the flames or smoke."
+   }
+  ],
+  "final": true
+ },
+ "s25": {
+  "id": "s25",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any people, body parts, blood, or text to the scene."
+   }
+  ],
+  "final": true
+ },
+ "s26": {
+  "id": "s26",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any people, text, or changing the charcoal drawing style."
+   }
+  ],
+  "final": true
+ },
+ "s30": {
+  "id": "s30",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s31": {
+  "id": "s31",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Anatomical errors in the clasped hands, which have merged fingers and an unclear, jumbled structure with too many finger joints visible."
+    ],
+    "avoid": "Avoid generating anatomically incorrect hands with merged, extra, or structurally nonsensical fingers."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "Image shows two men instead of one",
+     "Anatomical errors in the clasped hands of the man on the left (messy knuckles/extra fingers)"
+    ],
+    "avoid": "Do not include extra people; draw only one man from behind, and ensure correct hand anatomy."
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "s33": {
+  "id": "s33",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s34": {
+  "id": "s34",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "There is a body or person wearing a blue and red shirt visible in the center of the bonfire.",
+     "The intended shot explicitly specifies 'no people' and the rules forbid showing a victim's body."
+    ],
+    "avoid": "Do not include any people, bodies, or clothing in the fire; ensure the bonfire consists only of burning wood."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any people, text, or changing the charcoal and ink drawing style."
+   }
+  ],
+  "final": true
+ },
+ "s37": {
+  "id": "s37",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Readable numbers are visible on the telephone keypad"
+    ],
+    "avoid": "Avoid drawing any readable numbers, letters, or text on objects like the telephone keypad; use abstract marks or smudges instead."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "Readable numbers are visible on the telephone keypad"
+    ],
+    "avoid": "Avoid drawing readable numbers on the telephone keypad; use abstract scribbles or blank buttons instead."
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "s38": {
+  "id": "s38",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Readable numbers are visible on the illuminated radio dial.",
+     "A readable number ('40' or '10') is visible in the bottom left corner of the map."
+    ],
+    "avoid": "Do not include any readable text or numbers anywhere in the image, including on the radio dial, clock, or map."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "The image includes two officers (heads and torsos) in the foreground, but the intended shot only requested an officer's hand."
+    ],
+    "avoid": "Do not include the heads or bodies of the officers; frame the shot closely on the desk, radio console, and the hand pressing the microphone."
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "s39": {
+  "id": "s39",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "The intended shot description only asks for a police car on a muddy track, but there are two police officers present in the image who were not asked for."
+    ],
+    "avoid": "Adding any people or characters to the scene when the intended shot description only specifies a vehicle and its environment."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "Visible Volvo logo on the front grille of the car"
+    ],
+    "avoid": "drawing recognizable car brand logos or emblems on the vehicle"
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "s40": {
+  "id": "s40",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Multiple extra people in the background not requested in the intended shot",
+     "Visible facial profile (ear, jawline, cheek) on the police officer on the right",
+     "Shapes in the bonfire resemble a human body or body parts"
+    ],
+    "avoid": "Do not include any extra people or vehicles in the background, ensure no facial features are visible even in profile, and avoid drawing anything that looks like a body in the fire."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s41": {
+  "id": "s41",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Readable numbers are visible on the telephone keypad"
+    ],
+    "avoid": "Do not include any readable numbers, letters, or text on the telephone keypad or anywhere else in the image."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "The hand holding the phone receiver has an anatomical error: there are five fingers wrapping around the right side of the handle, plus the thumb on the left, resulting in six digits."
+    ],
+    "avoid": "Ensure the hand has exactly four fingers and one thumb; avoid drawing extra fingers wrapping around the phone receiver."
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "s42": {
+  "id": "s42",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s43": {
+  "id": "s43",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "The image includes a person walking towards the house, but no person was requested in the intended shot description."
+    ],
+    "avoid": "Do not include any people in the scene; focus strictly on the house, car, hedge, and weather conditions requested."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s46": {
+  "id": "s46",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "The image includes two prominent figures in the foreground, but no people were requested in the intended shot description."
+    ],
+    "avoid": "Do not include any people or figures in the scene; focus solely on the empty forest, heavy rain, mist, and distant blue emergency lights."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any people, distinct vehicles, or losing the charcoal and ink texture."
+   }
+  ],
+  "final": true
+ },
+ "s47": {
+  "id": "s47",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Ensure faces remain completely obscured and no explicit victim details are visible in the hollow."
+   }
+  ],
+  "final": true
+ },
+ "s48": {
+  "id": "s48",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Avoid adding any human figures, body parts, or readable text to the scene."
+   }
+  ],
+  "final": true
+ },
+ "s50": {
+  "id": "s50",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any people, readable text, or altering the charcoal and ink style."
+   }
+  ],
+  "final": true
+ },
+ "s51": {
+  "id": "s51",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "The hand is holding a regular pencil instead of a pencil compass (drafting tool).",
+     "There is a readable letter 'N' on the navigational compass on the right side of the image."
+    ],
+    "avoid": "Avoid drawing a regular pencil when a drafting compass is requested, and ensure absolutely no letters or text are visible on any props."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s54": {
+  "id": "s54",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "There is a silhouette of a person holding a light in the background, but no person was requested in the intended shot description."
+    ],
+    "avoid": "Do not include any people or silhouettes in the background if they are not explicitly requested in the intended shot."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any text, logos, or human figures to the scene."
+   }
+  ],
+  "final": true
+ },
+ "s55": {
+  "id": "s55",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "adding people, text, or changing the charcoal and ink style"
+   }
+  ],
+  "final": true
+ },
+ "s56": {
+  "id": "s56",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Readable number '71' visible on the bottom base of the bottle",
+     "Readable text or signature 'ALS' visible in the leaves on the bottom right"
+    ],
+    "avoid": "Do not include any numbers, letters, text, or signatures anywhere on the bottle or in the environment."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s57": {
+  "id": "s57",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any text or logos to the cigarette packet, or introducing any human elements."
+   }
+  ],
+  "final": true
+ },
+ "s58": {
+  "id": "s58",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Includes people in the background who were not requested in the intended shot",
+     "The smallest figure on the far left appears to be a child",
+     "The squiggles on the discarded paper/bag in the lower right resemble cursive letters or text"
+    ],
+    "avoid": "Do not include any people or children in the background; ensure all rubbish is completely free of anything resembling text, letters, or logos."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Avoid adding any text, logos, or people to the scene."
+   }
+  ],
+  "final": true
+ },
+ "s59": {
+  "id": "s59",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any text to the evidence bag, showing faces, or introducing anatomical errors in the hands."
+   }
+  ],
+  "final": true
+ },
+ "s44": {
+  "id": "s44",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Avoid adding readable numbers to the phone keypad or text to the envelopes."
+   }
+  ],
+  "final": true
+ },
+ "s45": {
+  "id": "s45",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "A person is standing in the driveway, but no person was requested in the intended shot description."
+    ],
+    "avoid": "Do not include any people in the scene; focus only on the house, the rain, and the car backing out of the driveway."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s49": {
+  "id": "s49",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "showing any faces or facial features, adding text, or deviating from the charcoal and ink style"
+   }
+  ],
+  "final": true
+ },
+ "s52": {
+  "id": "s52",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Ensure all figures remain fully faceless and maintain the consistent charcoal style without adding any text."
+   }
+  ],
+  "final": true
+ },
+ "s53": {
+  "id": "s53",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "Two extra people are visible in the background",
+     "A large bonfire is present in the center, which was not requested in the intended shot"
+    ],
+    "avoid": "Adding any extra people in the background or unprompted elements like large bonfires."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Showing any faces, text, or deviating from the charcoal and ink drawing style."
+   }
+  ],
+  "final": true
+ },
+ "c4": {
+  "id": "c4",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "s06": {
+  "id": "s06",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "adding any people, bodies, or text to the scene"
+   }
+  ],
+  "final": true
+ }
+}
