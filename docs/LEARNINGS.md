@@ -74,3 +74,22 @@ forensic-style reconstructions, stylised looks, or as control passes for an AI r
 - C (drawn): Lukas's favourite; forgiving of anomalies; Veo Lite still added cartoon
   swirls in the fire, walked a child out of frame, put figures behind the fire.
 - D (Blender): see above.
+
+## 2026-09-27 — Google Cloud (Vertex AI) blocks children; the Gemini API did not
+New Google Cloud trial project (gmail account; Google auto-created an organization
+`lukasbaddie-org`, so the security baseline blocked service-account keys until the
+two key-creation policies were overridden on the project). On Vertex, Veo 3.1 Fast
+refused both takes of S6 (children's legs and boots only) with support codes 58061214
+and 17301594 = child-related content, which needs `personGeneration: allow_all` —
+allowlist-only (Google points to sales). The Gemini API had accepted the same
+children seen from behind with `allow_adult`. Consequence: shots with children stay on
+the Gemini API (paid, 10/day) or another provider; everything else can use Vertex.
+
+## 2026-09-27 — Vertex Veo: what works
+- `enhancePrompt: false` is rejected for Veo 3 ("prompt enhancement cannot be
+  disabled") — the rewriter is always on.
+- `sampleCount: 2` returns two takes per request; blocked takes are not charged.
+- **Pinning first and last frame to the same keyframe works**: S2 (fire, rain) came
+  back as two clean static takes — no thrown log, no smoke burst — with noun negatives
+  ("thrown object, falling log, flying wood, stick, hand, person, smoke burst").
+- Videos come back inline (`bytesBase64Encoded`) when no `storageUri` is given.

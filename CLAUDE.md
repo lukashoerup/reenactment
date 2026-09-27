@@ -36,6 +36,7 @@ House Media. Owner: Lukas. Private repo (real case, client pitch).
 | `shotlist.json` | the scene: narration timing, style bible, 8 shots with image + motion prompts |
 | `gen_image.py` | keyframe via Gemini image model (`gemini-3-pro-image`), optional `--ref` images |
 | `gen_video.py` | image-to-video via Veo 3.1 (Fast/Lite) on the Gemini API |
+| `vertex.py` | Google Cloud backend (service-account key in `$VERTEX_KEY_FILE`): `check`, `video` with first/last frame, n takes, audio off, noun negatives. **Blocks children.** |
 | `methodB.py` | fallback: still + camera move + fire flicker + rain (no video model) |
 | `edit.py` | v1 cut (A1/B/C): trims, grade (halation, film curve, grain), narration + ducked ambience |
 | `edit2.py` | v2 cut (A2): frame-accurate, hood blur mask, S7 lift, S8 push-in, rain bed |
