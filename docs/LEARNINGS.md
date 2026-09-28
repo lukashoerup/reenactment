@@ -125,3 +125,34 @@ the Gemini API (paid, 10/day) or another provider; everything else can use Verte
   publish, only mp4/txt/json/… served). Worked: HLS with fMP4 segments named `.mp4`
   (`-hls_segment_type fmp4`), playlist renamed `.txt`, hls.js 1.5.20 from cdnjs, two
   publishes (≈ 52 + 33 MB).
+
+## 2026-09-28 — Section 2 (5:06–9:02): slower, subtler, real maps — and no video model at all
+- **Long shots with motion added in post work.** 21 shots, average 11 s (section 1: 4.6 s). Motion
+  toolkit, all free and deterministic (`sec2/move.py`): sub-pixel camera (log zoom + gentle ease,
+  cv2.warpAffine), rain streaks re-drawn 12×/s in screen space (hand-animation "on twos"), brighter
+  where the drawing is lit, slightly slow; orange light sources breathe a few percent; blue beacon
+  pulses. The whole-cut judge: "pacing much improved… fits the sombre tone".
+- **Every Veo attempt failed in this style** and was replaced by a still: raindrops became cartoon
+  teardrops and white splash stars (t05), water streams off a tarp looked like a scrolling texture
+  (t16), smoke "morphs and bubbles" (t02, passed the per-shot judge, failed the whole-cut judge).
+  Result: 0 generated motion in the final cut.
+- **Stills must not show what only looks right moving**: a drawn waterfall or flame reads as frozen.
+  Prompt rule (`STILL_TXT`) + gate rule added. The image model still insists on water pouring off
+  tarpaulins — t06 needed a new composition (tarp taut, man from directly behind).
+- **Procedural rain needs roofs**: overlay rain "falls through" a tarpaulin (judge: blocker). Fix:
+  per-shot `dry` polygons in keyframe coordinates, warped with the camera. Drawn rain under a roof
+  (baked into t08/t11 by the image model) cannot be fixed in post.
+- **Additive light must respect foreground**: the blue pulse lit the dark silhouette of the officer;
+  weight it by the drawing's own brightness.
+- **The gate misses what the whole-cut judge catches**: text on a glove box, mangled trolley wheels,
+  a melting camera, tape ending in mid-air, floating lanterns, active flames on an extinguished fire.
+  Complex mechanical objects (trolleys, cameras, logos on cars) are where the image model fails —
+  prefer simple objects. A brand emblem on the hearse was removed by hand (cv2.inpaint).
+- **Maps from OpenStreetMap** (`sec2/osm.py`, `sec2/maps.py`): Overpass main server gave 504s and
+  resets; the mirror maps.mail.ru worked. Three villages called Ejby in the region — label only what
+  the narration names; the find site is not marked ("en skov nær Køge"). Waterlining by distance
+  transform; fine hatching aliases when the layer is shown downscaled (use ≥ 11 px spacing or flat
+  tone). Region → city zoom = two layers crossfaded at 6–4 km view width, target glides to centre.
+- Sound bed changes (rain ↔ muffled rain indoors) need ~2 s ramps; 0.5 s was judged "jarring".
+- `sec2/clips.py` take numbering counted the judge's `_use.mp4` cuts (new takes became t5/t6 and the
+  judge compared four). Fixed. `pkill -f` killed the calling shell again — kill by PID only.

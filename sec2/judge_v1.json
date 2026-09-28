@@ -1,0 +1,108 @@
+{
+  "defects": [
+    {
+      "t_start": 0.0,
+      "t_end": 9.5,
+      "shot": 1,
+      "category": "rule breach",
+      "severity": "blocker",
+      "what": "Readable text 'REKONSTRUKTION - TEGNET MED AI' appears in the top left corner.",
+      "fix": "Remove the text to comply with the 'no readable text' rule."
+    },
+    {
+      "t_start": 42.3,
+      "t_end": 55.1,
+      "shot": 5,
+      "category": "continuity",
+      "severity": "major",
+      "what": "Active flames are visible on the blanket, contradicting the previous shot and the narration of an extinguished fire in heavy rain.",
+      "fix": "Remove the flames; draw the blanket as charred but completely extinguished."
+    },
+    {
+      "t_start": 55.1,
+      "t_end": 68.2,
+      "shot": 6,
+      "category": "AI artifact",
+      "severity": "major",
+      "what": "The water pouring off the left side of the tarpaulin looks like a solid white mass or a frozen waterfall.",
+      "fix": "Redraw the water to look like liquid rain running off the edge."
+    },
+    {
+      "t_start": 79.2,
+      "t_end": 88.9,
+      "shot": 8,
+      "category": "rule breach",
+      "severity": "blocker",
+      "what": "Readable text is visible on the box of gloves inside the medical case.",
+      "fix": "Remove the text from the box."
+    },
+    {
+      "t_start": 107.2,
+      "t_end": 123.0,
+      "shot": 10,
+      "category": "compositing",
+      "severity": "major",
+      "what": "The blue light from the police car in the background is painted over the dark silhouette of the police officer in the foreground.",
+      "fix": "Mask the officer so the blue light remains behind him."
+    },
+    {
+      "t_start": 131.0,
+      "t_end": 147.8,
+      "shot": 12,
+      "category": "AI artifact",
+      "severity": "major",
+      "what": "The wheels and legs of the stainless steel trolleys are mangled, floating, or merging into each other.",
+      "fix": "Redraw the trolleys with correct, coherent geometry."
+    },
+    {
+      "t_start": 147.8,
+      "t_end": 156.6,
+      "shot": 13,
+      "category": "AI artifact",
+      "severity": "major",
+      "what": "The camera on the desk is severely mangled, with the lens melting into the desk surface.",
+      "fix": "Redraw the camera with a correct, solid shape."
+    },
+    {
+      "t_start": 164.7,
+      "t_end": 177.0,
+      "shot": 15,
+      "category": "AI artifact",
+      "severity": "major",
+      "what": "The police tape ends in mid-air on the right and merges unnaturally into the tree trunk on the left.",
+      "fix": "Redraw the tape so it wraps around the trees logically."
+    },
+    {
+      "t_start": 177.0,
+      "t_end": 187.7,
+      "shot": 16,
+      "category": "AI artifact",
+      "severity": "blocker",
+      "what": "The animated water pouring off the tarp looks like a scrolling solid texture or static, with no splashes or liquid physics.",
+      "fix": "Replace the animation with a realistic water flow."
+    },
+    {
+      "t_start": 208.2,
+      "t_end": 218.2,
+      "shot": 19,
+      "category": "AI artifact",
+      "severity": "major",
+      "what": "The lanterns in the background are floating in mid-air between the trees.",
+      "fix": "Add poles or branches for the lanterns to hang from, or remove them."
+    },
+    {
+      "t_start": 218.2,
+      "t_end": 228.7,
+      "shot": 20,
+      "category": "map accuracy",
+      "severity": "major",
+      "what": "The street label 'Frederik V's Vej' is placed directly over the highlighted building instead of on the street.",
+      "fix": "Move the street label to the actual street area."
+    }
+  ],
+  "pacing": "The pacing is much improved. The longer shots (8-18s) allow the viewer to absorb the atmosphere and match the deliberate, sombre tone of the narration perfectly.",
+  "maps": "The maps are generally good and accurate to OSM data, but the label placement in the second map (shot 20) needs correction as the street name obscures the highlighted building.",
+  "overall": "The charcoal style is highly effective for this grim subject matter, and the slow camera moves work well. However, the AI generation has introduced several unacceptable geometric errors (mangled objects, floating items) and the animated water in shot 16 is very uncanny. The text rule breaches must also be fixed.",
+  "best_shot": 3,
+  "worst_shot": 16
+}

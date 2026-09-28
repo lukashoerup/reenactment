@@ -1,0 +1,81 @@
+{
+  "defects": [
+    {
+      "t_start": 9.5,
+      "t_end": 21.1,
+      "shot": 2,
+      "category": "AI artifact",
+      "severity": "major",
+      "what": "The smoke rising from the bonfire morphs and bubbles unnaturally, showing clear AI video generation artifacts.",
+      "fix": "Replace with a more subtle, realistic smoke animation or use a static drawing."
+    },
+    {
+      "t_start": 31.4,
+      "t_end": 42.3,
+      "shot": 4,
+      "category": "VFX",
+      "severity": "blocker",
+      "what": "The rain overlay is applied globally and falls 'through' the tarpaulin, making it look like it is raining inside the shelter.",
+      "fix": "Mask the rain overlay so it does not appear under the tarpaulin."
+    },
+    {
+      "t_start": 79.2,
+      "t_end": 88.9,
+      "shot": 8,
+      "category": "VFX",
+      "severity": "blocker",
+      "what": "The rain overlay falls directly over and inside the open medical case, which is supposed to be protected under the tarpaulin.",
+      "fix": "Mask the rain overlay to protect the area under the tarpaulin."
+    },
+    {
+      "t_start": 123.0,
+      "t_end": 131.0,
+      "shot": 11,
+      "category": "VFX",
+      "severity": "blocker",
+      "what": "The rain overlay falls directly over the closed medical case under the tarpaulin.",
+      "fix": "Mask the rain overlay."
+    },
+    {
+      "t_start": 131.0,
+      "t_end": 235.2,
+      "shot": 12,
+      "category": "Audio",
+      "severity": "major",
+      "what": "Hard, abrupt cuts in the audio track between scenes (e.g., at 131.0s, 147.8s, 156.6s, 164.7s, 218.2s) cause jarring jumps in the sound bed.",
+      "fix": "Add audio crossfades and ambient room tone to smooth the transitions between exterior, interior, and map shots."
+    },
+    {
+      "t_start": 131.0,
+      "t_end": 147.8,
+      "shot": 12,
+      "category": "Drawing/Physics",
+      "severity": "minor",
+      "what": "The reflection on the wet floor does not match the double doors above it (shows a single solid shape instead of two doors with windows).",
+      "fix": "Correct the drawing of the reflection to match the doors."
+    },
+    {
+      "t_start": 177.0,
+      "t_end": 187.7,
+      "shot": 16,
+      "category": "VFX",
+      "severity": "blocker",
+      "what": "The rain overlay falls uniformly across the screen, passing right through the solid tarpaulin and raining on the ground underneath it.",
+      "fix": "Mask the rain overlay so it respects the physical barrier of the tarpaulin."
+    },
+    {
+      "t_start": 228.7,
+      "t_end": 235.2,
+      "shot": 21,
+      "category": "Drawing/Physics",
+      "severity": "minor",
+      "what": "The light beam from the surgical lamp is drawn as a solid, opaque shape that looks unnatural and obscures the background incorrectly.",
+      "fix": "Make the light beam transparent or redraw it to look like actual light."
+    }
+  ],
+  "pacing": "The pacing is much improved and fits the deliberate, somber tone of the narration. The longer shot durations (8-18s) allow the viewer to absorb the scene and match the producer's request.",
+  "maps": "The maps are legible, period-appropriate in style, and accurately depict the locations (Køge Bugt, Rigshospitalet, Retsmedicinsk Institut on Frederik V's Vej).",
+  "overall": "A strong sequence with excellent atmosphere, but marred by a systemic VFX oversight (rain falling through the tarpaulin) and jarring audio cuts. The AI morphing in the smoke needs addressing to meet the strict 'no AI look' rule.",
+  "best_shot": 19,
+  "worst_shot": 8
+}

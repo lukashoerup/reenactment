@@ -1,0 +1,39 @@
+{
+ "t02": {
+  "pick": "sec2/takes/t02_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [
+   "The rain is quite subtle"
+  ],
+  "fix": ""
+ },
+ "t05": {
+  "pick": "sec2/takes/t05_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [
+   "The water splashes are drawn as slightly cartoonish white outlines"
+  ],
+  "fix": "Make the raindrops and splashes more realistic and less like cartoon symbols.",
+  "round": 2,
+  "first": {
+   "best": 0,
+   "pass": false,
+   "problems": [
+    "In take 1, a raindrop morphs into an eye symbol.",
+    "In take 2, splashes turn into solid white blobs that slide unnaturally across the fabric."
+   ],
+   "fix": "Keep the raindrops subtle and fast, ensuring the splashes disappear immediately and do not turn into persistent white shapes or symbols."
+  }
+ },
+ "t16": {
+  "pick": "sec2/takes/t16_t2.mp4",
+  "best": 2,
+  "pass": true,
+  "problems": [
+   "The thick water streams look slightly solid, almost like cloth, but the motion is acceptable"
+  ],
+  "fix": ""
+ }
+}

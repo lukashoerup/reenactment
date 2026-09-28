@@ -1,0 +1,208 @@
+<title>Det Brændende Lig 5:06–9:02</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800&family=Literata:opsz,wght@7..72,400;7..72,500&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Same screening room as the first review page ("Børnene og bålet"): one dark world on purpose, colours set explicitly. */
+:root{
+  color-scheme:dark;
+  --ground:#111416; --raise:#191E21; --ink:#DCDFDA; --ink-soft:#A1AAA8; --ink-faint:#717B7B;
+  --rule:#2A3235; --ember:#D2804B; --ember-dim:#8E5431; --rain:#8FA6B2; --warn:#C9A25A;
+  --display:"Big Shoulders Display","Arial Narrow",Arial,sans-serif;
+  --body:"Literata",Georgia,"Times New Roman",serif;
+  --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:1.02rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:66rem;margin:0 auto;padding-inline:clamp(16px,4vw,40px);padding-block:clamp(1.6rem,5vw,3.2rem) 4rem;display:grid;gap:3rem}
+h1,h2,h3{font-family:var(--display);margin:0;text-wrap:balance;letter-spacing:.005em}
+h1{font-weight:800;font-size:clamp(3rem,11vw,6.4rem);line-height:.86;text-transform:uppercase}
+h2{font-weight:800;font-size:clamp(1.7rem,4.6vw,2.5rem);line-height:.95;text-transform:uppercase}
+p{margin:0;max-width:64ch}
+.mono{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+a{color:var(--rain)}
+header{display:grid;gap:1.1rem}
+.lede{font-size:1.14rem;max-width:58ch}
+.rules{display:flex;flex-wrap:wrap;gap:.5rem}
+.rules span{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;color:var(--ink-soft);border:1px solid var(--rule);padding:.25rem .55rem;border-radius:2px}
+
+/* player */
+.player{display:grid;gap:.7rem}
+video{display:block;width:100%;max-width:100%;aspect-ratio:16/9;background:#000;border-radius:2px}
+.nowbar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.4rem 1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--ink-faint);font-variant-numeric:tabular-nums}
+.nowbar b{color:var(--ember);font-weight:500}
+.play-fail{font-size:.9rem;color:var(--warn)}
+.facts{display:flex;flex-wrap:wrap;gap:.4rem 1.6rem;margin:0;padding:0;list-style:none;font-size:.93rem;color:var(--ink-soft)}
+.facts li{display:flex;gap:.45rem;align-items:baseline}
+.facts b{font-family:var(--mono);font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+
+/* sections */
+section{display:grid;gap:1.1rem;padding-top:1.4rem;border-top:1px solid var(--rule)}
+.ask{background:var(--raise);border:1px solid var(--rule);padding:1.3rem clamp(1rem,3vw,1.6rem);display:grid;gap:.9rem;border-radius:2px}
+.ask ol{margin:0;padding-left:1.3rem;display:grid;gap:.5rem;max-width:62ch}
+.ask li::marker{font-family:var(--mono);color:var(--ember)}
+.two{display:grid;gap:2rem 2.6rem;grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))}
+.two > div{display:grid;gap:.9rem;align-content:start}
+ul.plain{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
+ul.plain li{font-size:.96rem;color:var(--ink-soft)}
+ul.plain strong{color:var(--ink);font-weight:500}
+.jump{margin-left:.35rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--ember);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* storyboard */
+.board-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:.6rem 1rem}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem}
+ol.board{list-style:none;margin:0;padding:0;display:grid;gap:1.4rem 1rem;grid-template-columns:repeat(auto-fill,minmax(min(14.5rem,calc(50% - .5rem)),1fr))}
+ol.board li{display:grid;gap:.4rem;align-content:start;scroll-margin-top:1rem}
+.shot{position:relative;display:block;padding:0;border:0;background:#000;cursor:pointer;border-radius:2px;overflow:hidden}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;opacity:.92;transition:opacity .15s}
+.shot:hover img{opacity:1}
+.tcode{position:absolute;left:.4rem;bottom:.35rem;font-family:var(--mono);font-size:.68rem;color:var(--ink);background:rgba(17,20,22,.78);padding:.08rem .35rem;border-radius:2px;font-variant-numeric:tabular-nums}
+li.now .shot{outline:2px solid var(--ember);outline-offset:2px}
+.meta{display:flex;flex-wrap:wrap;gap:.3rem .4rem;align-items:center}
+.no{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;color:var(--ink-faint);margin-right:.2rem}
+.tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:.08rem .35rem;border-radius:2px;border:1px solid var(--rule);color:var(--ink-soft)}
+.tag.fix{border-color:var(--ember-dim);color:var(--ember)}
+.tag.old{border-color:#3A4A52;color:var(--rain)}
+.tag.weak{border-color:#6B5A34;color:var(--warn)}
+.tag.cam{border-color:#3A4A52;color:var(--rain)}
+.tag.anim{border-color:var(--ember-dim);color:var(--ember)}
+.tag.map{border-color:#4E5A3A;color:#A9B98A}
+.vo{font-size:.9rem;line-height:1.45;font-style:italic;color:var(--ink)}
+.weak-note{font-size:.82rem;line-height:1.4;color:var(--warn)}
+.cost{display:grid;gap:.9rem}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:30rem;font-size:.93rem}
+th,td{text-align:left;padding:.6rem .8rem .6rem 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-family:var(--mono);font-weight:400;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.small{font-size:.86rem;color:var(--ink-faint);max-width:64ch}
+footer{font-family:var(--mono);font-size:.7rem;color:var(--ink-faint);line-height:1.8;border-top:1px solid var(--rule);padding-top:1rem}
+.shot:focus-visible,.jump:focus-visible,video:focus-visible{outline:2px solid var(--ember);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){.shot img{transition:none}}
+</style>
+
+<div class="wrap">
+<header>
+  <p class="mono">Danske Drabssager · S6E5 · 5:06–9:02 · version C, tegnet · runde 2</p>
+  <h1>Det Brændende Lig</h1>
+  <p class="lede">De næste fire minutter, lavet efter dine noter til første runde: færre og længere skud, rolig bevægelse, ingen hænder i nærbillede og rigtige kort. {{N_SHOTS}} skud, i gennemsnit {{AVG}} sekunder hver. Første runde havde et nyt billede hvert 4.–5. sekund.</p>
+  <div class="rules" aria-label="Regler for hele klippet">
+    <span>Ingen ansigter</span><span>Intet lig</span><span>Ingen hænder der gør noget</span><span>Intet der svæver</span><span>Kort fra rigtige kortdata</span>
+  </div>
+</header>
+
+<div class="player">
+  <video id="film" controls playsinline preload="metadata" poster="poster.jpg"></video>
+  <p class="play-fail" id="play-fail" hidden>Videoen kunne ikke afspilles i denne browser. Sig til, så laver jeg en anden udgave.</p>
+  <div class="nowbar" aria-live="off"><span>Nu: <b id="now-shot">Skud 1</b> · <span id="now-tc">5:06</span> i afsnittet</span><span>Tryk på et billede i storyboardet for at springe dertil</span></div>
+  <ul class="facts">
+    <li><b>{{N_SHOTS}}</b> skud på 3:55</li>
+    <li><b>{{N_STILL}}</b> tegninger med langsom kamerabevægelse</li>
+    <li><b>{{N_MAP}}</b> kort</li>
+    <li><b>0</b> skud animeret af videomodellen</li>
+    <li><b>ca. {{KR}} kr</b> af den gratis Google-kredit</li>
+  </ul>
+</div>
+
+<div class="ask">
+  <h2>Det vil jeg gerne vide</h2>
+  <ol>
+    <li>Er det langsomme tempo bedre, eller er det blevet for langsomt nogle steder?</li>
+    <li>Er bevægelsen nok? Her er kun regn, lys der blafrer og langsomme kamerabevægelser. Ingen animation.</li>
+    <li>Virker kortene? Skal der være flere, og skal vi tegne ruter, når vi ved hvor de kørte?</li>
+    <li>Er der stadig noget, der ser AI-agtigt ud? Skriv skudnummeret.</li>
+  </ol>
+</div>
+
+<section aria-labelledby="h-new">
+  <h2 id="h-new">Hvad er lavet om</h2>
+  <div class="two">
+    <div>
+      <p class="mono">Efter dine noter</p>
+      <ul class="plain">
+        <li><strong>Længere skud.</strong> Et skud varer nu 8–18 sekunder og skifter ved sætningsskift, ikke ved hvert ord.</li>
+        <li><strong>Bevægelsen er lagt på bagefter.</strong> Tegningerne står stille, og kameraet glider langsomt. Regnen tegnes ind 12 gange i sekundet som i håndtegnet animation, og lanternernes lys blafrer en smule. Intet bliver genereret, så intet kan forvandle sig.</li>
+        <li><strong>Ingen skud er animeret af videomodellen.</strong> Jeg prøvede tre: røg fra bålet, regndråber på tæppet og regn, der løber af presenningen. Røgen boblede, dråberne blev til tegnefilmsdråber, og vandet lignede en rullende tekstur. Alle tre er skiftet ud med tegninger.</li>
+        <li><strong>Ingen hænder og intet der svæver.</strong> Maskinens kontrol afviser nu tegninger med hænder, der rører ved noget, og ting, der ikke står på noget.</li>
+        <li><strong>Kort fra rigtige kortdata.</strong> Kyst, søer, skove, gader og bygninger er tegnet ud fra OpenStreetMap, ikke genereret. Teilum-bygningen er markeret præcis hvor den ligger. Findestedet er ikke markeret, fordi afsnittet kun siger "en skov nær Køge".</li>
+        <li><strong>Lyden er lagt på bagefter.</strong> Regn udenfor og den samme regn dæmpet bag vægge indenfor. Videomodellen laver ingen lyd længere.</li>
+      </ul>
+    </div>
+    <div>
+      <p class="mono">Kendte svagheder</p>
+      <ul class="plain">
+{{WEAK_LIST}}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="h-board">
+  <div class="board-head">
+    <h2 id="h-board">Storyboard</h2>
+    <div class="legend" aria-label="Forklaring">
+      <span class="tag cam">Tegning + kamera</span><span class="tag map">Kort</span><span class="tag fix">Tegnet om</span><span class="tag weak">Svaghed</span>
+    </div>
+  </div>
+  <ol class="board" id="board">
+{{CARDS}}
+  </ol>
+</section>
+
+<section class="cost" aria-labelledby="h-cost">
+  <h2 id="h-cost">Pris</h2>
+  <p>De fire minutter brugte ca. {{KR}} kr af den gratis Google-kredit (listepris med moms), omkring {{KR_MIN}} kr pr. minut film. Første runde kostede ca. 87 kr pr. minut. Det er billigere, fordi videomodellen ikke bruges. Tegningerne og maskinens kontrol står for næsten hele beløbet, inklusive en runde, hvor ti tegninger blev lavet om efter maskinens gennemsyn af hele klippet. Kort, kamerabevægelse, regn og lyd koster ingenting.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Hele afsnittet, 45 min</th><th>Pris, listepris</th></tr></thead>
+      <tbody>
+        <tr><td>Som runde 1: alle skud animeret</td><td class="num">ca. 4.000 kr</td></tr>
+        <tr><td>Som her: lange skud, bevægelse lagt på bagefter</td><td class="num">ca. {{KR_EP}} kr</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small">Prøvekreditten er gratis, så indtil videre har det ikke kostet noget.</p>
+</section>
+
+<footer>
+  Tegninger: Gemini 3 Pro Image · Kontrol af billeder og video: Gemini 3.1 Pro · Kort: © OpenStreetMap-bidragydere, tegnet med egen kode · Kamera, regn, lys, klip og lyd: egen kode og ffmpeg<br>
+  Mærket “Rekonstruktion · tegnet med AI” de første syv sekunder. Lyd: afsnittets originale speak, regn fra et lydbibliotek lagt lavt under.
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.20/hls.min.js"></script>
+<script>
+(function(){
+  var v = document.getElementById('film'); var OFF = {{OFF}};
+  var src = 'hls/index.txt';
+  if (window.ManagedMediaSource) v.disableRemotePlayback = true;
+  var fail = document.getElementById('play-fail');
+  if (window.Hls && Hls.isSupported()) {
+    var h = new Hls({maxBufferLength: 30}); h.loadSource(src); h.attachMedia(v);
+    h.on(Hls.Events.ERROR, function(ev, d){ if (d.fatal) fail.hidden = false; });
+  } else { fail.hidden = false; }
+
+  var items = Array.prototype.slice.call(document.querySelectorAll('#board li'));
+  var starts = items.map(function(li){ return parseFloat(li.querySelector('.shot').dataset.t); });
+  var nowShot = document.getElementById('now-shot'), nowTc = document.getElementById('now-tc'), cur = -1;
+  function tc(t){ t = Math.max(0, Math.floor(t)); return Math.floor(t/60) + ':' + String(t%60).padStart(2,'0'); }
+  function seek(t){
+    try { v.currentTime = t + 0.05; } catch(e) {}
+    var p = v.play(); if (p && p.catch) p.catch(function(){});
+    v.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center'});
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.shot, .jump'); if (b) seek(parseFloat(b.dataset.t));
+  });
+  v.addEventListener('timeupdate', function(){
+    var t = v.currentTime, i = 0;
+    while (i + 1 < starts.length && starts[i + 1] <= t + 0.01) i++;
+    nowTc.textContent = tc(t + OFF);
+    if (i !== cur) {
+      if (cur >= 0) items[cur].classList.remove('now');
+      items[i].classList.add('now'); cur = i;
+      nowShot.textContent = 'Skud ' + (i + 1);
+    }
+  });
+})();
+</script>

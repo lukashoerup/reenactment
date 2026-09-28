@@ -87,3 +87,16 @@ bloom, grain; `assemble.py` cuts. Looked like a game — see LEARNINGS and RESEA
    replaced shot re-renders in seconds.
 5. `page2/build.py`: review page with a storyboard that seeks the video, tags per shot
    (redrawn / re-animated / from the test / weakness).
+
+## 11. Section 2 recipe: drawings + motion in post + real maps (sec2, 2026-09-28)
+1. `sec2/shots.py`: one shot per sentence or two (8–18 s), cut in pauses. Each shot is `still`
+   (keyframe + camera move `a→b` + `fx`: rain / flicker / blue / dry polygons) or `map`.
+   Prompts: nothing that must move to look right; no hands; everything rests on something.
+2. `sec2/keys.py`: keyframes + gate (floating objects, hands, incoherent mechanics, text on labels).
+3. `sec2/move.py`: renders each still with 12-frame handles (for dissolves); paper margin never shown.
+4. `sec2/osm.py` → `sec2/maps.py layers` → `sec2/maps.py t14 t20`: OpenStreetMap geometry drawn in
+   the charcoal look, labels only for places the narration names, scale bar, OSM credit on screen.
+5. `sec2/edit.py`: frame-exact on the episode clock, a few 12–16-frame dissolves (scene and map
+   changes), narration from the episode, rain bed / muffled rain indoors ducked under the voice.
+6. `sec2/judge_cut.py`: whole-cut review with the producer's notes in the brief — it found problems
+   the per-shot gate did not (see LEARNINGS 2026-09-28).

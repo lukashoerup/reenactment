@@ -1,0 +1,341 @@
+{
+ "t01": {
+  "id": "t01",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Avoid making the shoe treads look like letters or numbers, and ensure hoofprints look like horse hooves (uncloven) rather than deer tracks."
+   }
+  ],
+  "final": true
+ },
+ "t02": {
+  "id": "t02",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "The fire pit contains glowing orange embers, contradicting the prompt for an 'extinguished' bonfire with 'wet grey ash'.",
+     "There are visible falling rain streaks throughout the image, violating the rule against pouring water in a static shot.",
+     "The lanterns contain visible open flames."
+    ],
+    "avoid": "Avoid drawing glowing embers in the fire pit, visible flames inside the lanterns, and falling rain streaks."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t03": {
+  "id": "t03",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "The car has a visible Volvo logo on the front grille.",
+     "There is a person visible sitting in the driver's seat."
+    ],
+    "avoid": "Avoid drawing any car logos or badges on the grille, and ensure the interior of the car is completely empty with nobody visible."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "The car has a visible Volvo logo on the front grille.",
+     "There are silhouette figures of people visible in the background near the lanterns."
+    ],
+    "avoid": "Avoid drawing any car badges or logos on the vehicle, and ensure there are absolutely no people or figures visible in the scene."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "The car has a visible Volvo logo on the front grille, violating the 'without any badge' and 'no logo' constraints."
+    ],
+    "avoid": "Avoid drawing any car badges, logos, or recognizable brand emblems on the vehicle's grille or body."
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "t04": {
+  "id": "t04",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "There is a distinct reddish bundle or heap visible on the ground near the fire, violating the instruction that nothing on the ash can be made out.",
+     "The distinct bundle could be interpreted as a body shape, which is a specific fail condition."
+    ],
+    "avoid": "Avoid drawing any distinct bundles, heaps, or shapes on or near the ash; the fire pit should only contain charred branches and ash."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "The hurricane lantern is resting on a stump or post in the center instead of hanging from the tarpaulin structure.",
+     "The fire pit contains distinct, large logs rather than being a low flat mound where nothing can be made out."
+    ],
+    "avoid": "Avoid placing the lantern on a surface; ensure it is clearly hanging from the roof or poles of the tarpaulin. Avoid drawing distinct large logs in the fire pit, keeping it a flat mound of ash and charred remains."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "adding any distinct shapes, bundles, or body-like forms to the ash pile"
+   }
+  ],
+  "final": true
+ },
+ "t05": {
+  "id": "t05",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t06": {
+  "id": "t06",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "A stick or tool extends from the man's left side to the ground, contradicting the instruction that his hands must be in his pockets."
+    ],
+    "avoid": "Do not draw the man holding any objects; ensure both hands are completely hidden in his pockets with no extra sticks or tools extending from his silhouette."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t07": {
+  "id": "t07",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Adding any people, text, or changing the charcoal and ink style."
+   }
+  ],
+  "final": true
+ },
+ "t08": {
+  "id": "t08",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t09": {
+  "id": "t09",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "There are four figures present instead of the requested three.",
+     "The figures in the red and blue hoodies appear to be children based on their proportions.",
+     "There are glowing lights in the background forest that appear to be floating without physical support."
+    ],
+    "avoid": "Avoid drawing more than three figures, ensure all figures have adult proportions so they do not look like children, and do not include floating lights or lanterns that are not physically resting on or hanging from a surface."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "Visible hands holding objects (the figure on the left is holding a pole, the foreground figure is holding a stick)",
+     "A glowing blue orb is floating in the air in the background, violating the impossible physics rule"
+    ],
+    "avoid": "Avoid drawing visible hands holding or touching any objects, and ensure no elements are floating in the air."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "There are four figures around the tent, but the intended shot specifically requested three.",
+     "There are glowing lights in the background forest that appear to be floating in the air without hanging from anything or resting on a surface."
+    ],
+    "avoid": "Avoid adding extra figures beyond the requested three and ensure all objects, including background lights, are physically supported or hanging from visible structures."
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "t10": {
+  "id": "t10",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "The officer's hand is visible holding a lantern",
+     "The side profile and ear of the officer's face are slightly visible"
+    ],
+    "avoid": "Do not draw the character holding any objects like a lantern to avoid visible hands, and ensure the head is turned completely away so no facial features or profile are visible."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "Visible facial features on the officer's side profile",
+     "Visible hand holding a lantern",
+     "Readable text on the side of the police car"
+    ],
+    "avoid": "Showing any facial features or side profiles, visible hands holding objects, and any readable text or logos on the vehicles."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t12": {
+  "id": "t12",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t13": {
+  "id": "t13",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Avoid adding any people, text, or altering the requested objects."
+   }
+  ],
+  "final": true
+ },
+ "t15": {
+  "id": "t15",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "There is a visible open flame (campfire) under the tent, which violates the rule against open flames.",
+     "The two small lanterns in the background on the right side are floating in mid-air and not resting physically on a surface."
+    ],
+    "avoid": "Drawing open flames or floating objects; ensure all lanterns are clearly resting on the ground and use only the requested lantern light for illumination."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "The image contains drawn open flames (the campfire and the fire inside the tent), violating the rule against open flames in a static shot.",
+     "The image contains drawn rain streaks, violating the rule against pouring water in a static shot.",
+     "There is a campfire illogically burning inside the small tarpaulin shelter, contradicting the prompt which asked for it to be 'glowing with lantern light'."
+    ],
+    "avoid": "drawing frozen open flames or rain streaks, and placing campfires inside small tarpaulin shelters."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "Open flames are visible in the campfire, violating the negative constraint for static shots.",
+     "Several lanterns (especially on the far left and far right) appear to be floating and are not physically resting on the ground."
+    ],
+    "avoid": "drawing open flames; ensure all objects like lanterns are firmly resting on a surface and not floating."
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "t16": {
+  "id": "t16",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "There is a reddish bundle under the left side of the tarp that strongly resembles a huddled person or a body."
+    ],
+    "avoid": "Avoid drawing any bundles, heaps, sleeping bags, or shapes that could be mistaken for a human body or a person hiding under the shelter."
+   },
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t17": {
+  "id": "t17",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t18": {
+  "id": "t18",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "adding any people, bodies, or text to maintain the empty scene"
+   }
+  ],
+  "final": true
+ },
+ "t19": {
+  "id": "t19",
+  "tries": [
+   {
+    "pass": false,
+    "problems": [
+     "There is a visible car logo (resembling a VW emblem) on the back of the hearse."
+    ],
+    "avoid": "drawing any logos, emblems, or readable text on the vehicle."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "There is a clearly visible Volkswagen (VW) logo on the back of the car."
+    ],
+    "avoid": "Drawing any recognizable car logos, brand emblems, or readable text on the vehicle."
+   },
+   {
+    "pass": false,
+    "problems": [
+     "Visible Volkswagen logo on the back of the car"
+    ],
+    "avoid": "drawing any car brand logos, emblems, or readable text on the vehicle"
+   }
+  ],
+  "final": "kept-despite-gate"
+ },
+ "t21": {
+  "id": "t21",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": ""
+   }
+  ],
+  "final": true
+ },
+ "t11": {
+  "id": "t11",
+  "tries": [
+   {
+    "pass": true,
+    "problems": [],
+    "avoid": "Maintain the current style and composition, ensuring no people, text, or floating objects are introduced."
+   }
+  ],
+  "final": true
+ }
+}

@@ -28,6 +28,7 @@ House Media. Owner: Lukas. Private repo (real case, client pitch).
 | Review of A1 → A2 (defect list)        | docs/REVIEW-2026-09-27.md   |
 | Open work                              | tasks/, QUESTIONS.md        |
 | Section 1 (first 5 min) status         | tasks/T003-section1-first5.md |
+| Section 2 (5:06–9:02) status           | tasks/T004-section2-slow.md |
 | Cross-project patterns                 | workbench: context/         |
 
 ## Files
@@ -48,6 +49,8 @@ House Media. Owner: Lukas. Private repo (real case, client pitch).
 | `gen/generate.py` | untested fal.ai variant of the pipeline (Kling / nano-banana), kept for reference |
 | `page/` | source of the review page (Artifact "Børnene og bålet") |
 | `sec1/` | section 1 (0:00–5:06, drawn): `shots.py` shot list, `keys.py` keyframes + gate, `clips.py` Veo Lite + judge pick, `edit.py` frame-exact cut; `picks.json`/`keys_report.json` = the machine's verdicts |
+| `sec2/` | section 2 (5:06–9:02): `shots.py` (still/map shots, camera moves, fx), `keys.py` keyframes + stricter gate, `move.py` camera + rain/light in post, `osm.py` + `maps.py` OpenStreetMap maps in the drawn look, `edit.py` cut + sound bed, `judge_cut.py` whole-cut review; `clips.py` (Veo, not used in the final cut) |
+| `page3/` | review page for section 2 (Artifact "Det Brændende Lig 5:06–9:02"); `weak.json` = known weaknesses shown on the page |
 | `page2/` | review page for section 1 (Artifact "Det Brændende Lig 0:00–5:06"): `build.py` + template; video served as HLS (fMP4 `.mp4` segments, `.txt` playlist) |
 
 ## Commands (from repo root, Python 3.11, ffmpeg)
@@ -61,5 +64,8 @@ python3 qa/judge.py out/A2_720.mp4 gemini-3.1-pro-preview qa/judge.json 6
 export VERTEX_KEY_FILE=/path/outside/repo/key.json   # section 1 runs on Google Cloud
 python3 sec1/shots.py && python3 sec1/keys.py && python3 sec1/clips.py gen && python3 sec1/clips.py pick
 python3 sec1/edit.py out/sec1_C_v2.mp4 && python3 page2/build.py
+python3 sec2/shots.py && python3 sec2/keys.py && python3 sec2/move.py              # section 2: stills + motion in post
+OVERPASS=https://maps.mail.ru/osm/tools/overpass/api/interpreter python3 sec2/osm.py && python3 sec2/maps.py layers && python3 sec2/maps.py t14 t20
+python3 sec2/edit.py out/sec2_C_v3.mp4 && python3 sec2/judge_cut.py out/sec2_C_v3.mp4 && python3 page3/build.py
 bvenv/bin/python qa/metrics.py out/reenact_A2.mp4
 ```

@@ -1,0 +1,14 @@
+{"cards": {
+  "t08": "Regnen er tegnet hen over kufferten, selvom den står under presenningen.",
+  "t11": "Samme: tegnet regn hen over kufferten under presenningen.",
+  "t15": "Lanternerne omkring presenningen kan se ud, som om de svæver.",
+  "t19": "Tegningen havde et bilmærke bag på. Jeg har fjernet det i hånden. Bilen ligner mere en almindelig stationcar end en ligvogn.",
+  "t21": "Lyskeglen fra operationslampen er tegnet som en fast form."
+ },
+ "list": [
+  {"title": "Tegnet regn under presenningen.", "text": "I to skud har tegneren lagt regnstreger hen over kufferten, der står i ly. Den regn, jeg lægger på bagefter, holder sig nu væk fra presenningerne.", "ids": ["t08", "t11"]},
+  {"title": "Svævende lanterner?", "text": "Lanterner langt væk kan læses, som om de hænger i luften.", "ids": ["t15"]},
+  {"title": "Ligvognen", "text": "ligner en almindelig mørk stationcar, og tegningen havde et bilmærke, som jeg har fjernet i hånden.", "ids": ["t19"]},
+  {"title": "Kortene er nutidige.", "text": "Kortdata er fra OpenStreetMap i dag, ikke fra 1999. Kyststrækningen og havnene ved København har ændret sig lidt siden da.", "ids": ["t14", "t20"]},
+  {"title": "Rummene på instituttet er fri fantasi.", "text": "Gangen og obduktionsstuen er ikke tegnet efter de rigtige rum.", "ids": ["t12", "t21"]}
+ ]}

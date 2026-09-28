@@ -44,3 +44,18 @@ page2/hls/
 page2/thumbs/
 page2/*.jpg
 page2/index.html
+# section 2 media and caches (recreate: sec2/osm.py, keys.py, clips.py, move.py, maps.py, edit.py; page3/build.py)
+sec2/kf/
+sec2/kf_v1/
+sec2/clips/
+sec2/takes/
+sec2/maps/
+sec2/mapdata/
+sec2/fonts/
+sec2/_*
+sec2/*.log
+page3/hls/
+page3/thumbs/
+page3/*.jpg
+page3/*.log
+page3/index.html

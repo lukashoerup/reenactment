@@ -62,4 +62,7 @@ film-language notes and the machine does the rest.
 - Next: tasks/T001 (fix the scene, drawn style first), tasks/T002 (pipeline v2).
 - **Section 1 (0:00–5:06), drawn, delivered for evaluation** — 68 shots, $55 of the
   $300 Google Cloud trial credit. Review page: artifact "Det Brændende Lig 0:00–5:06".
-  Waiting on Lukas's verdict (QUESTIONS Q6). Details: tasks/T003.
+  Lukas's verdict 2026-09-28: style holds; slower, subtler, no hand close-ups, real maps (T003/T004).
+- **Section 2 (5:06–9:02), drawn, long shots, delivered for evaluation** — 21 shots, motion only in
+  post (no video model), two OpenStreetMap maps, ≈ 90 kr. Review page: artifact "Det Brændende Lig
+  5:06–9:02". Waiting on Lukas's verdict (QUESTIONS Q7). Details: tasks/T004.

@@ -46,6 +46,17 @@ Google Cloud (Vertex) list prices, paid from the trial credit.
 below the 5,000 kr estimate above. The 7 reused children clips were free here; the
 episode will have more of them (Q5).
 
+## Measured: section 2, 3:55, long shots + motion in post (2026-09-28)
+| Item | USD list | kr incl. VAT |
+|---|---|---|
+| Keyframes, 53 drawings (17 rejected; 10 shots redrawn after the whole-cut review) | 7.10 | 57 |
+| Keyframe gate | 1.06 | 8 |
+| Veo 3.1 Lite, 4 requests (all later replaced by stills) + judge | 2.60 | 21 |
+| Whole-cut review ×2 | 0.43 | 3 |
+| **Total for 3:55** | **11.20** | **≈ 90** |
+≈ 23 kr per finished minute (section 1: ≈ 87) ⇒ **≈ 1,000 kr for a whole episode** at this recipe,
+including a full redraw round. Maps, camera moves, rain, light and sound cost nothing.
+
 ## Not included
 - Human time: Lasse approving the shot list (2–3 h) and the contact sheets (3–4 h);
   an editor's finishing pass (1–2 days). Claude session time (counts against Lukas's
