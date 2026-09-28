@@ -46,6 +46,10 @@ film-language notes and the machine does the rest.
 - 2026-09-27 — Keep the current children shots (minor issue for now). Make the first
   ~5 minutes with the new method, **one version, C (drawn + video)**, and let Lukas
   evaluate before more is spent (tasks/T003).
+- 2026-09-28 — After section 1: the drawn style holds. Longer, slower shots with much
+  subtler motion (drawings + camera moves, little generated motion); no close-ups of
+  hands doing things; maps for locations only from real map data, never generated.
+  Next: section 2, 5:06 → ~9:00 (tasks/T004).
 - 2026-09-27 — Code and learnings live in this private repo; generic lessons also in
   workbench `context/LEARNINGS.md`.
 
