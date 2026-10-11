@@ -7,6 +7,29 @@
 // code (no scans, no generated images); the layout comes from case.json's `site`
 // (metres: x east, y south). Camera keyframes: [{at, pos:[x, height, y], look:[x, height, y], fov}].
 import * as THREE from "../vendor/three.module.js";
+import { EffectComposer, RenderPass, EffectPass, BloomEffect, DepthOfFieldEffect, ToneMappingEffect, ToneMappingMode, VignetteEffect, SMAAEffect } from "postprocessing";
+import { N8AOPostPass } from "../vendor/n8ao.js";
+// look "v3" (prototype finishing pass): CC0 scanned textures, smooth shading, firelight shadows,
+// HDR pipeline (half-float) with AO, bloom on the fire only, depth of field on the look target,
+// one tone map at the end (ACES by default, p.tonemap: "AGX"/"NEUTRAL") and a vignette.
+// Opt in per shot with p.look = "v3"; the default stays "v2", the original render path.
+let LOOK3 = true, p_flame = null;
+const TL = new THREE.TextureLoader(), TEX = {};
+async function loadTex() {
+  if (TEX.ready) return;
+  const get = async (n, srgb) => { const t = await TL.loadAsync("vendor/tex/" + n + ".jpg"); t.wrapS = t.wrapT = THREE.RepeatWrapping; t.anisotropy = 8; if (srgb) t.colorSpace = THREE.SRGBColorSpace; return t; };
+  Object.assign(TEX, {
+    floor: await get("forest_floor_Diffuse_2k", true), floorN: await get("forest_floor_nor_gl_2k"), floorR: await get("forest_floor_Rough_2k"),
+    bark: await get("bark_brown_02_Diffuse_1k", true), barkN: await get("bark_brown_02_nor_gl_1k"),
+    mud: await get("brown_mud_02_Diffuse_1k", true), mudN: await get("brown_mud_02_nor_gl_1k"), mudR: await get("brown_mud_02_Rough_1k"),
+    rock: await get("rock_boulder_dry_Diffuse_1k", true), rockN: await get("rock_boulder_dry_nor_gl_1k"), ready: true });
+}
+const rep_ = (t, r) => { const c = t.clone(); c.repeat.set(r, r); c.needsUpdate = true; return c; };
+function lumpyRock(r, seed) {
+  const g = new THREE.IcosahedronGeometry(r, 2), a = g.attributes.position, v = new THREE.Vector3();
+  for (let i = 0; i < a.count; i++) { v.fromBufferAttribute(a, i); const k = 1 + 0.22 * (G.rand(seed * 31 + Math.round(v.x * 40) * 7 + Math.round(v.y * 40) * 13 + Math.round(v.z * 40)) - 0.5); v.multiplyScalar(k); v.y *= 0.62; a.setXYZ(i, v.x, v.y, v.z); }
+  g.computeVertexNormals(); return g;
+}
 const G = window.GFX;
 const V = (p) => new THREE.Vector3(p[0], p[1], p[2]);           // [x, h, y] → three (x, y-up, z=south)
 const P2 = (x, y, h = 0) => new THREE.Vector3(x, h, y);
@@ -94,7 +117,7 @@ function distToPolyline(x, z, pts) {
 
 // ---------- flame shader ----------
 const FLAME_FRAG = `
-uniform float uTime; uniform float uIntensity; uniform float uSeed; varying vec2 vUv;
+uniform float uTime; uniform float uGain; uniform float uIntensity; uniform float uSeed; varying vec2 vUv;
 float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7))) * 43758.5453); }
 float noise(vec2 p){ vec2 i = floor(p), f = fract(p); f = f*f*(3.0-2.0*f);
   return mix(mix(hash(i), hash(i+vec2(1.0,0.0)), f.x), mix(hash(i+vec2(0.0,1.0)), hash(i+vec2(1.0,1.0)), f.x), f.y); }
@@ -109,7 +132,7 @@ void main(){
   f = smoothstep(0.28, 0.78, f) * uIntensity;
   vec3 col = mix(vec3(0.75, 0.12, 0.02), vec3(1.0, 0.55, 0.12), smoothstep(0.25, 0.7, f));
   col = mix(col, vec3(1.0, 0.92, 0.7), smoothstep(0.75, 1.0, f));
-  gl_FragColor = vec4(col * f * 1.25, f);
+  gl_FragColor = vec4(col * f * 1.25 * uGain, f);
 }`;
 const FLAME_VERT = `varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }`;
 
@@ -121,9 +144,10 @@ function makeTrees(scene, p, avoid) {
   const spruceCrown = new THREE.ConeGeometry(1.6, 7.5, 8, 3); spruceCrown.translate(0, 5.6, 0);
   const beechTrunk = new THREE.CylinderGeometry(0.16, 0.26, 5.5, 6); beechTrunk.translate(0, 2.75, 0);
   const beechCrown = new THREE.IcosahedronGeometry(2.8, 1); beechCrown.scale(1, 0.85, 1); beechCrown.translate(0, 7.2, 0);
-  const trunkMat = new THREE.MeshStandardMaterial({ color: "#43362a", roughness: 1, flatShading: true });
-  const needleMat = new THREE.MeshStandardMaterial({ color: "#2d4636", roughness: 0.95, flatShading: true });
-  const leafMat = new THREE.MeshStandardMaterial({ color: "#5f6a3a", roughness: 0.95, flatShading: true });
+  const trunkMat = LOOK3 ? new THREE.MeshStandardMaterial({ map: rep_(TEX.bark, 2), normalMap: rep_(TEX.barkN, 2), color: "#8a7a6a", roughness: 0.95 })
+    : new THREE.MeshStandardMaterial({ color: "#43362a", roughness: 1, flatShading: true });
+  const needleMat = new THREE.MeshStandardMaterial({ color: "#2d4636", roughness: 0.95, flatShading: !LOOK3 });
+  const leafMat = new THREE.MeshStandardMaterial({ color: "#5f6a3a", roughness: 0.95, flatShading: !LOOK3 });
   const spots = [];
   for (let i = 0; i < n * 4 && spots.length < n; i++) {
     const x = (G.rand(i * 2.71 + 0.3) * 2 - 1) * ext, z = (G.rand(i * 3.97 + 1.1) * 2 - 1) * ext;
@@ -143,6 +167,7 @@ function makeTrees(scene, p, avoid) {
       c.set(mat.color).multiplyScalar(0.75 + 0.5 * G.rand(i * 13.1));
       ic.setColorAt(i, c);
     });
+    if (LOOK3) { it.castShadow = ic.castShadow = true; }
     scene.add(it, ic);
   }
   return spots;
@@ -154,17 +179,20 @@ function makeFire(scene, x, z, burnt) {
   // burnt patch and stone ring
   const patch = new THREE.Mesh(new THREE.CircleGeometry(2.6, 40), new THREE.MeshStandardMaterial({ map: radial([[0, "#0b0907"], [0.65, "#141009"], [1, "rgba(20,16,10,0)"]]), transparent: true, roughness: 1, depthWrite: false }));
   patch.rotation.x = -Math.PI / 2; patch.position.y = 0.015; g.add(patch);
-  const stoneMat = new THREE.MeshStandardMaterial({ color: "#4a4a44", roughness: 0.9, flatShading: true });
+  const stoneMat = LOOK3 ? new THREE.MeshStandardMaterial({ map: TEX.rock, normalMap: TEX.rockN, color: "#9a968c", roughness: 0.55 })
+    : new THREE.MeshStandardMaterial({ color: "#4a4a44", roughness: 0.9, flatShading: true });
   for (let i = 0; i < 13; i++) {
-    const a = (i / 13) * 6.283 + G.rand(i) * 0.2, s = new THREE.Mesh(new THREE.DodecahedronGeometry(0.18 + 0.08 * G.rand(i * 3), 0), stoneMat);
+    const a = (i / 13) * 6.283 + G.rand(i) * 0.2, s = new THREE.Mesh(LOOK3 ? lumpyRock(0.2 + 0.08 * G.rand(i * 3), i) : new THREE.DodecahedronGeometry(0.18 + 0.08 * G.rand(i * 3), 0), stoneMat);
+    s.castShadow = s.receiveShadow = LOOK3;
     s.position.set(Math.cos(a) * 1.45, 0.08, Math.sin(a) * 1.45); s.rotation.set(G.rand(i * 2), G.rand(i * 4), 0); g.add(s);
   }
   // logs: a stacked bonfire, built deliberately
-  const logMat = new THREE.MeshStandardMaterial({ color: burnt ? "#0e0d0c" : "#1c140e", roughness: 0.95, emissive: "#ff5a14", emissiveIntensity: 0.0, flatShading: true });
+  const logMat = LOOK3 ? new THREE.MeshStandardMaterial({ map: TEX.bark, normalMap: TEX.barkN, color: burnt ? "#262220" : "#5a4a3c", roughness: 0.9, emissive: "#ff5a14", emissiveIntensity: 0.0 })
+    : new THREE.MeshStandardMaterial({ color: burnt ? "#0e0d0c" : "#1c140e", roughness: 0.95, emissive: "#ff5a14", emissiveIntensity: 0.0, flatShading: true });
   for (let i = 0; i < 10; i++) {
     const a = (i / 10) * 6.283;
     const len = (1.9 + 0.4 * G.rand(i)) * (burnt ? 0.55 : 1);
-    const log = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.1, len, 6), logMat);
+    const log = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.1, len, LOOK3 ? 10 : 6), logMat); log.castShadow = LOOK3;
     const lean = burnt ? 1.15 + 0.3 * G.rand(i * 5) : 0.45;           // a burnt-out fire has collapsed
     const rr = burnt ? 0.5 + 0.4 * G.rand(i * 3) : 0.38;
     log.position.set(Math.cos(a) * rr, burnt ? 0.12 : 0.75, Math.sin(a) * rr);
@@ -179,7 +207,7 @@ function makeFire(scene, x, z, burnt) {
   const flames = [];
   for (let i = 0; i < 4; i++) {
     const mat = new THREE.ShaderMaterial({ vertexShader: FLAME_VERT, fragmentShader: FLAME_FRAG, transparent: true, depthWrite: false,
-      blending: THREE.AdditiveBlending, side: THREE.DoubleSide, uniforms: { uTime: { value: 0 }, uIntensity: { value: 1 }, uSeed: { value: i * 3.7 } } });
+      blending: THREE.AdditiveBlending, side: THREE.DoubleSide, uniforms: { uTime: { value: 0 }, uGain: { value: LOOK3 ? (p_flame ?? 0.7) : 1 }, uIntensity: { value: 1 }, uSeed: { value: i * 3.7 } } });
     const pl = new THREE.Mesh(new THREE.PlaneGeometry(2.0, 3.0), mat);
     pl.geometry.translate(0, 1.5, 0);
     pl.rotation.y = (i / 4) * Math.PI;
@@ -203,6 +231,7 @@ function makeFire(scene, x, z, burnt) {
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending }));
   glow.position.y = 1.0; glow.scale.set(9, 9, 1); g.add(glow);
   const light = new THREE.PointLight("#ff8a3d", 120, 0, 2); light.position.y = 1.4; g.add(light);
+  if (LOOK3) { light.castShadow = true; light.shadow.mapSize.set(1024, 1024); light.shadow.bias = -0.004; light.shadow.normalBias = 0.03; light.shadow.camera.near = 0.3; light.position.y = 1.7; }
   scene.add(g);
   return {
     group: g,
@@ -215,7 +244,7 @@ function makeFire(scene, x, z, burnt) {
         f.visible = fire > 0.02;
       });
       light.intensity = 140 * Math.max(0, fire) * fl + ember * smokeAmt;   // ember: what still glows in the ashes
-      glow.material.opacity = Math.min(1, fire * 0.95) * fl;
+      glow.material.opacity = Math.min(1, fire * 0.95) * fl * (LOOK3 ? 0.45 : 1);
       glow.scale.setScalar(5 + 6 * fire);
       logMat.emissiveIntensity = 0.04 * fire + (ember / 3) * 0.05 * Math.max(0, 0.6 - fire) * smokeAmt;   // embers glow faintly in the ashes
       for (let i = 0; i < N; i++) {
@@ -281,11 +310,14 @@ function marker(n) {
 G.register("diorama", {
   async setup(root, p, spec) {
     await document.fonts.load("700 130px Archivo");
+    LOOK3 = (p.look ?? "v2") === "v3"; p_flame = p.flame_gain ?? null;
+    if (LOOK3) await loadTex();
     const W = 1920, H = 1080;
     const renderer = new THREE.WebGLRenderer({ antialias: p.msaa ?? true, preserveDrawingBuffer: true });
     renderer.setPixelRatio(window.devicePixelRatio || 1);
     renderer.setSize(W, H);
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    renderer.toneMapping = LOOK3 ? THREE.NoToneMapping : THREE.ACESFilmicToneMapping;
+    if (LOOK3) { renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; }
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     root.appendChild(renderer.domElement);
     const scene = new THREE.Scene();
@@ -304,12 +336,15 @@ G.register("diorama", {
     const roadPts = site.road ? smoothPath(site.road) : [];
     const pathPts = site.path ? smoothPath(site.path) : [];
     // ground
-    const ground = new THREE.Mesh(new THREE.PlaneGeometry(260, 260, 1, 1), new THREE.MeshStandardMaterial({ map: forestFloor(), roughness: 0.82, metalness: 0.05 }));
-    ground.rotation.x = -Math.PI / 2; scene.add(ground);
+    const ground = new THREE.Mesh(new THREE.PlaneGeometry(260, 260, 1, 1), LOOK3
+      ? new THREE.MeshStandardMaterial({ map: rep_(TEX.floor, 70), normalMap: rep_(TEX.floorN, 70), roughnessMap: rep_(TEX.floorR, 70), roughness: 0.62, color: "#9c9a90", normalScale: new THREE.Vector2(1.3, 1.3) })
+      : new THREE.MeshStandardMaterial({ map: forestFloor(), roughness: 0.82, metalness: 0.05 }));
+    ground.rotation.x = -Math.PI / 2; ground.receiveShadow = LOOK3; scene.add(ground);
     const clearing = new THREE.Mesh(new THREE.CircleGeometry(13, 48), new THREE.MeshStandardMaterial({ map: radial([[0, "#3d3327"], [0.7, "rgba(62,52,38,.8)"], [1, "rgba(58,62,46,0)"]]), transparent: true, roughness: 0.7, depthWrite: false }));
     clearing.rotation.x = -Math.PI / 2; clearing.position.y = 0.008; scene.add(clearing);
     if (roadPts.length) {
-      const mud = new THREE.MeshStandardMaterial({ map: mudTex(), roughness: 0.55, metalness: 0.1, polygonOffset: true, polygonOffsetFactor: -1 });
+      const mud = LOOK3 ? new THREE.MeshStandardMaterial({ map: TEX.mud, normalMap: TEX.mudN, roughnessMap: TEX.mudR, roughness: 0.45, color: "#8d8478", polygonOffset: true, polygonOffsetFactor: -1 })
+        : new THREE.MeshStandardMaterial({ map: mudTex(), roughness: 0.55, metalness: 0.1, polygonOffset: true, polygonOffsetFactor: -1 });
       scene.add(new THREE.Mesh(ribbon(roadPts, 3.2, 0, 0.01), mud));
       const rut = new THREE.MeshStandardMaterial({ color: "#14110d", roughness: 0.25, metalness: 0.2, polygonOffset: true, polygonOffsetFactor: -2 });
       for (const o of [-0.72, 0.72]) scene.add(new THREE.Mesh(ribbon(roadPts, 0.32, o, 0.012), rut));
@@ -327,7 +362,7 @@ G.register("diorama", {
     const RN = p.rain === 0 ? 0 : Math.round(3500 * (p.rain ?? 1));
     const rainPos = new Float32Array(RN * 6);
     const rainGeo = new THREE.BufferGeometry(); rainGeo.setAttribute("position", new THREE.BufferAttribute(rainPos, 3));
-    const rain = new THREE.LineSegments(rainGeo, new THREE.LineBasicMaterial({ color: p.light === "night" ? "#9fb4c2" : "#dde6ea", transparent: true, opacity: p.light === "night" ? 0.32 : 0.28, depthWrite: false }));
+    const rain = new THREE.LineSegments(rainGeo, new THREE.LineBasicMaterial({ color: p.light === "night" ? "#9fb4c2" : "#dde6ea", transparent: true, opacity: (p.light === "night" ? 0.32 : 0.28) * (LOOK3 ? 0.55 : 1), depthWrite: false }));
     rain.frustumCulled = false; scene.add(rain);
 
     // ---------- items on a timeline ----------
@@ -405,7 +440,7 @@ G.register("diorama", {
         const pos = geo.attributes.position;
         for (let i = 0; i < pos.count; i++) pos.setZ(i, 0.08 * Math.sin(pos.getX(i) * 3.1 + pos.getY(i) * 1.7) + 0.05 * G.rand(i));
         geo.computeVertexNormals();
-        const tarp = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ color: "#35577a", roughness: 0.6, metalness: 0.05, transparent: true, opacity: 0, side: THREE.DoubleSide }));
+        const tarp = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ color: "#35577a", roughness: LOOK3 ? 0.9 : 0.6, metalness: 0.05, transparent: true, opacity: 0, side: THREE.DoubleSide }));
         tarp.rotation.x = -Math.PI / 2; tarp.position.set(it.x ?? fire[0], it.lift ?? 2.0, it.y ?? fire[1]); scene.add(tarp);
         for (const [px, pz] of [[-1, -1], [1, -1], [1, 1], [-1, 1]]) {
           const pole = new THREE.Mesh(new THREE.CylinderGeometry(0.03, 0.03, it.lift ?? 2.0, 5), new THREE.MeshStandardMaterial({ color: "#6b6f70", transparent: true, opacity: 0 }));
@@ -450,6 +485,24 @@ G.register("diorama", {
 
     // ---------- camera ----------
     const cam = new THREE.PerspectiveCamera(p.cam[0].fov || 40, W / H, 0.1, 600);
+    let composer = null, dof = null;
+    if (LOOK3) {
+      composer = new EffectComposer(renderer, { frameBufferType: THREE.HalfFloatType, multisampling: (p.msaa ?? true) ? 4 : 0 });
+      composer.addPass(new RenderPass(scene, cam));
+      const ao = new N8AOPostPass(scene, cam, W, H);
+      Object.assign(ao.configuration, { aoRadius: 1.6, distanceFalloff: 0.6, intensity: 2.2, color: new THREE.Color("#050505") });
+      ao.setQualityMode("Medium");
+      composer.addPass(ao);
+      dof = new DepthOfFieldEffect(cam, { worldFocusRange: p.dof_range ?? 7, bokehScale: p.bokeh ?? 2.2 });
+      dof.target = new THREE.Vector3();
+      composer.addPass(new EffectPass(cam, dof));
+      composer.addPass(new EffectPass(cam,
+        new BloomEffect({ mipmapBlur: true, luminanceThreshold: 0.95, luminanceSmoothing: 0.2, intensity: 0.85, radius: 0.8 }),
+        new VignetteEffect({ offset: 0.32, darkness: 0.62 }),
+        new ToneMappingEffect({ mode: ToneMappingMode[p.tonemap || "ACES_FILMIC"] })));
+      composer.addPass(new EffectPass(cam, new SMAAEffect()));
+      composer.setSize(W, H);
+    }
     const keys = p.cam;
     const posCurve = keys.length > 2 ? new THREE.CatmullRomCurve3(keys.map((k) => V(k.pos)), false, "centripetal") : null;
     const lookCurve = keys.length > 2 ? new THREE.CatmullRomCurve3(keys.map((k) => V(k.look)), false, "centripetal") : null;
@@ -549,7 +602,7 @@ G.register("diorama", {
             rec.car.visible = t >= (it.show ?? at - 0.01) && (it.hide === undefined || t < it.hide);
           }
         }
-        renderer.render(scene, cam);
+        if (composer) { dof.target.copy(c.look); composer.render(); } else renderer.render(scene, cam);
         if (cap) {
           const cc = p.caption, a = cc.at ?? 0.4;
           capLines(t, a);
