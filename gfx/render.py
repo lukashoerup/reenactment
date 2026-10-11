@@ -190,7 +190,14 @@ def walk(o, k=None):
 
 # ------------------------------------------------------------------ per-shot render
 def code_hash(kind):
-    """Only the code a shot actually runs: editing one template must not re-render the others."""
+    """Only the code a shot actually runs: editing one template must not re-render the others.
+    A template may pin its key with a `// @render-version <v>` line (bumped by hand when an
+    edit changes existing output), so adding an opt-in parameter does not re-render hours of 3D."""
+    import re
+    tpl = os.path.join(GFX, "web", "templates", f"{'title' if kind == 'card' else kind}.js")
+    m = re.search(r"@render-version\s+(\S+)", open(tpl).read(4000))
+    if m:
+        return m.group(1)
     h = hashlib.sha1()
     files = ["runtime.js", "style.css", f"templates/{'title' if kind == 'card' else kind}.js"]
     if kind == "map":

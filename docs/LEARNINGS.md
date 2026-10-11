@@ -107,3 +107,7 @@ forensic-style reconstructions, stylised looks, or as control passes for an AI r
   with two spotlights; MSAA off saves only ~25 %, so it stays on. Keep cameras out of the
   tree crowns (see CATALOG §Diorama camera rules) — a crown next to the lens is a black frame.
 - A burnt-out fire must look burnt out: logs collapse and char when the shot's fire is 0.
+- Burnt logs glowed red because of the emissive term, not the light: near-black albedo +
+  a little orange emission reads as red after tone mapping. `ember` scales both.
+- Any edit to a template file invalidated every cached shot of that template (an hour of 3D).
+  Templates now pin their cache key with `@render-version`.

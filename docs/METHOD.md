@@ -115,6 +115,8 @@ grain, for an editor), `_web.mp4` (small review copy), `_sheet.jpg` (one frame p
    Aerial imagery (Esri now; SDFI orthophotos incl. 1999 with a free token: `GFX_SAT=sdfi:<layer>`,
    `DF_TOKEN`) uses the same path.
 6. **Cache.** Each shot is cached by a hash of its resolved spec + the code of its template;
-   editing one shot or one template re-renders only what changed.
+   editing one shot or one template re-renders only what changed. Expensive templates pin
+   their key with `// @render-version <v>`: bump it when an edit changes existing shots;
+   an opt-in parameter whose default keeps the old look needs no bump (diorama: `ember`).
 7. **Assembly.** Cuts, crossfades and dips on the episode clock (numpy), narration from the
    episode untouched, a quiet procedural rain bed, grain + vignette on the deliverable only.

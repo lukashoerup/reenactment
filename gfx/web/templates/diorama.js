@@ -1,3 +1,6 @@
+// @render-version 09993cc8f0
+// (Cache key for shots of this template. Bump it whenever an edit changes what existing
+// shots look like; opt-in parameters whose defaults keep the old look need no bump.)
 // diorama — the find site as a 3D miniature: a forest clearing at night in the rain, the
 // bonfire, the road, the tracks. One set, re-used across the whole episode, the way
 // documentary channels like Fern return to a modelled location. Everything is built from
@@ -203,7 +206,7 @@ function makeFire(scene, x, z, burnt) {
   scene.add(g);
   return {
     group: g,
-    update(t, fire, smokeAmt) {
+    update(t, fire, smokeAmt, ember = 3) {
       const fl = 0.86 + 0.14 * Math.sin(t * 9.3) * Math.sin(t * 4.1 + 1.3) + 0.05 * Math.sin(t * 23.0);
       flames.forEach((f, i) => {
         f.material.uniforms.uTime.value = t + i * 0.37;
@@ -211,10 +214,10 @@ function makeFire(scene, x, z, burnt) {
         f.scale.set(0.6 + 0.6 * fire, 0.35 + 0.85 * fire, 1);
         f.visible = fire > 0.02;
       });
-      light.intensity = 140 * Math.max(0, fire) * fl + 3 * smokeAmt;
+      light.intensity = 140 * Math.max(0, fire) * fl + ember * smokeAmt;   // ember: what still glows in the ashes
       glow.material.opacity = Math.min(1, fire * 0.95) * fl;
       glow.scale.setScalar(5 + 6 * fire);
-      logMat.emissiveIntensity = 0.04 * fire + 0.05 * Math.max(0, 0.6 - fire) * smokeAmt;   // embers glow faintly in the ashes
+      logMat.emissiveIntensity = 0.04 * fire + (ember / 3) * 0.05 * Math.max(0, 0.6 - fire) * smokeAmt;   // embers glow faintly in the ashes
       for (let i = 0; i < N; i++) {
         const life = 2.2 + 1.8 * G.rand(i * 1.7), ph = ((t + G.rand(i * 3.3) * life) % life) / life;
         const r = 0.3 + 0.5 * G.rand(i * 2.1);
@@ -495,7 +498,7 @@ G.register("diorama", {
         cam.updateMatrixWorld();
         const fireAmt = p.fire ? G.kf(t, p.fire) : 1;
         const smokeAmt = p.smoke ? G.kf(t, p.smoke) : 0.6;
-        bonfire.update(t, fireAmt, smokeAmt);
+        bonfire.update(t, fireAmt, smokeAmt, p.ember ?? 3);
         // rain around the look target
         const rc = c.look;
         for (let i = 0; i < RN; i++) {

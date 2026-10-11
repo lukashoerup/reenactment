@@ -158,7 +158,8 @@
       "at": 0,
       "v": 0.5
      }
-    ]
+    ],
+    "ember": 0.35
    },
    "rain": 0
   },
@@ -296,7 +297,8 @@
       "at": 0,
       "v": 0.9
      }
-    ]
+    ],
+    "ember": 0.35
    },
    "note": "Breather on the ashes: the words here are unclear in the transcript, so nothing is written."
   },
@@ -482,7 +484,8 @@
       "at": 0,
       "v": 0.5
      }
-    ]
+    ],
+    "ember": 0.35
    },
    "rain": 0
   },
@@ -676,7 +679,8 @@
       "v": 0.4
      }
     ],
-    "fog": 0.012
+    "fog": 0.012,
+    "ember": 0.35
    },
    "rain": 0
   },

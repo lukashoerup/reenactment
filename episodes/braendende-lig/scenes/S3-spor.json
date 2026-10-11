@@ -240,7 +240,8 @@
       "at": 0,
       "v": 0.35
      }
-    ]
+    ],
+    "ember": 0.35
    },
    "rain": 0
   },
@@ -453,7 +454,8 @@
       "at": 0,
       "v": 0.25
      }
-    ]
+    ],
+    "ember": 0.35
    },
    "rain": 0
   },
@@ -618,9 +620,9 @@
       "type": "label",
       "text": "En vej ind til stedet",
       "pos": [
-       -46,
+       -36,
        0.2,
-       46
+       36
       ],
       "side": "up",
       "at": {
@@ -641,9 +643,9 @@
       "width": 0.12,
       "label": "Dækaftryk i den våde skovbund",
       "lpos": [
-       -31,
+       -24,
        0.2,
-       31
+       23
       ],
       "label_at": {
        "word": "dækaftryk",
