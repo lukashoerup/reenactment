@@ -38,6 +38,16 @@ class Transcript:
         return " ".join(w["w"] for w in self.words if a <= w["s"] < b)
 
     def find(self, phrase, near, window=12.0):
+        """Best match for `phrase` near `near`: look within ±2.5 s first, then the full window,
+        so a second Whisper run that hears a phrase twice does not jump to the wrong one."""
+        if window > 2.5:
+            try:
+                return self._find(phrase, near, 2.5)
+            except ValueError:
+                pass
+        return self._find(phrase, near, window)
+
+    def _find(self, phrase, near, window=12.0):
         """Best match for `phrase` (one or more words) near episode time `near`."""
         target = [norm(x) for x in phrase.split() if norm(x)]
         if not target:
@@ -62,7 +72,14 @@ class Transcript:
         if isinstance(v, str):
             return parse_tc(v)
         if isinstance(v, dict) and "word" in v:
-            first, last = self.find(v["word"], parse_tc(v["near"]), v.get("window", 12.0))
+            try:
+                first, last = self.find(v["word"], parse_tc(v["near"]), v.get("window", 12.0))
+            except ValueError as e:
+                # another Whisper run may hear the phrase differently: fall back to the written time
+                if not self.words:
+                    raise
+                self.fallbacks = getattr(self, "fallbacks", []) + [str(e)]
+                return parse_tc(v["near"]) + float(v.get("offset", 0.0))
             t = last["e"] if v.get("edge") == "end" else first["s"]
             return t + float(v.get("offset", 0.0))
         raise ValueError(f"cannot resolve time {v!r}")

@@ -1,4 +1,4 @@
-// @render-version 09993cc8f0
+// @render-version v3-figures-1
 // (Cache key for shots of this template. Bump it whenever an edit changes what existing
 // shots look like; opt-in parameters whose defaults keep the old look need no bump.)
 // diorama — the find site as a 3D miniature: a forest clearing at night in the rain, the
@@ -12,7 +12,7 @@ import { N8AOPostPass } from "../vendor/n8ao.js";
 // look "v3" (prototype finishing pass): CC0 scanned textures, smooth shading, firelight shadows,
 // HDR pipeline (half-float) with AO, bloom on the fire only, depth of field on the look target,
 // one tone map at the end (ACES by default, p.tonemap: "AGX"/"NEUTRAL") and a vignette.
-// Opt in per shot with p.look = "v3"; the default stays "v2", the original render path.
+// Default "v3" on this branch; p.look = "v2" gives the original render path.
 let LOOK3 = true, p_flame = null;
 const TL = new THREE.TextureLoader(), TEX = {};
 async function loadTex() {
@@ -207,7 +207,7 @@ function makeFire(scene, x, z, burnt) {
   const flames = [];
   for (let i = 0; i < 4; i++) {
     const mat = new THREE.ShaderMaterial({ vertexShader: FLAME_VERT, fragmentShader: FLAME_FRAG, transparent: true, depthWrite: false,
-      blending: THREE.AdditiveBlending, side: THREE.DoubleSide, uniforms: { uTime: { value: 0 }, uGain: { value: LOOK3 ? (p_flame ?? 0.7) : 1 }, uIntensity: { value: 1 }, uSeed: { value: i * 3.7 } } });
+      blending: THREE.AdditiveBlending, side: THREE.DoubleSide, uniforms: { uTime: { value: 0 }, uGain: { value: LOOK3 ? (p_flame ?? 0.5) : 1 }, uIntensity: { value: 1 }, uSeed: { value: i * 3.7 } } });
     const pl = new THREE.Mesh(new THREE.PlaneGeometry(2.0, 3.0), mat);
     pl.geometry.translate(0, 1.5, 0);
     pl.rotation.y = (i / 4) * Math.PI;
@@ -307,10 +307,81 @@ function marker(n) {
   return g;
 }
 
+// ---------- faceless figures (Fern-style) ----------
+// Smooth mannequins with no face, hair or likeness: one style for the whole film. Posture and
+// action carry the story. Proportions in metres for a 1.78 m adult; children get a larger head.
+// Every pose is a pure function of t (walk phase comes from distance travelled), so frames stay
+// deterministic. Spec: {cast:{height, colors:{coat, legs, boots, head}, hood}, pos|path, ...}.
+const FIG_HEAD = "#a7a198";
+function makeFigure(scene, cast) {
+  const H = cast.height || 1.78, k = H / 1.78, hs = 1 + Math.max(0, 1.78 - H) * 0.32;
+  const col = Object.assign({ coat: "#3a4148", legs: "#2c3034", boots: "#1e1f20", head: FIG_HEAD }, cast.colors || {});
+  const mats = [];
+  const M = (c, r = 0.82) => { const m = new THREE.MeshStandardMaterial({ color: c, roughness: r, transparent: true, opacity: 1 }); mats.push(m); return m; };
+  const coat = M(col.coat, cast.wet ? 0.45 : 0.75), legs = M(col.legs), boots = M(col.boots, 0.5), head = M(col.head, 0.7);
+  const cap = (r, l, mat) => { const m = new THREE.Mesh(new THREE.CapsuleGeometry(r, l, 6, 14), mat); m.castShadow = LOOK3; m.receiveShadow = LOOK3; return m; };
+  const grp = () => new THREE.Group();
+  const root = grp(), hips = grp(), spine = grp(), neck = grp();
+  root.add(hips); hips.add(spine);
+  hips.position.y = 0.98 * k;
+  const torso = cap(0.16 * k, 0.34 * k, coat); torso.position.y = 0.3 * k; torso.scale.set(1.22, 1, 0.78); spine.add(torso);
+  const pelvis = cap(0.14 * k, 0.06 * k, legs); pelvis.position.y = 0.02 * k; pelvis.scale.set(1.2, 1, 0.8); hips.add(pelvis);
+  neck.position.y = 0.62 * k; spine.add(neck);
+  const hd = new THREE.Mesh(new THREE.SphereGeometry(0.105 * k * hs, 24, 18), head);
+  hd.scale.set(0.92, 1.12, 1.0); hd.position.y = 0.13 * k * hs; hd.castShadow = LOOK3; neck.add(hd);
+  if (cast.hood) {
+    const hood = new THREE.Mesh(new THREE.SphereGeometry(0.122 * k * hs, 24, 18), coat);
+    hood.scale.set(0.98, 1.12, 1.06); hood.position.set(0, 0.135 * k * hs, -0.012 * k); hood.castShadow = LOOK3; neck.add(hood);
+  }
+  const limb = (parent, x, y, r1, l1, r2, l2, m1, m2, end) => {
+    const j1 = grp(); j1.position.set(x, y, 0); parent.add(j1);
+    const a = cap(r1, l1, m1); a.position.y = -(l1 / 2 + r1 * 0.6); j1.add(a);
+    const j2 = grp(); j2.position.y = -(l1 + r1 * 1.2); j1.add(j2);
+    const b = cap(r2, l2, m2); b.position.y = -(l2 / 2 + r2 * 0.6); j2.add(b);
+    if (end) { const e = end(); e.position.y = -(l2 + r2 * 1.3); j2.add(e); }
+    return [j1, j2];
+  };
+  const hand = () => { const m = new THREE.Mesh(new THREE.SphereGeometry(0.048 * k, 14, 10), head); m.castShadow = LOOK3; return m; };
+  const boot = () => { const m = cap(0.058 * k, 0.12 * k, boots); m.rotation.x = Math.PI / 2; m.position.z = 0.05 * k; m.position.y += 0.02 * k; return m; };
+  const [shL, elL] = limb(spine, 0.215 * k, 0.53 * k, 0.055 * k, 0.22 * k, 0.047 * k, 0.2 * k, coat, coat, hand);
+  const [shR, elR] = limb(spine, -0.215 * k, 0.53 * k, 0.055 * k, 0.22 * k, 0.047 * k, 0.2 * k, coat, coat, hand);
+  const [hpL, knL] = limb(hips, 0.095 * k, 0, 0.078 * k, 0.33 * k, 0.062 * k, 0.33 * k, legs, legs, boot);
+  const [hpR, knR] = limb(hips, -0.095 * k, 0, 0.078 * k, 0.33 * k, 0.062 * k, 0.33 * k, legs, legs, boot);
+  scene.add(root);
+  const J = { root, hips, spine, neck, shL, elL, shR, elR, hpL, knL, hpR, knR, k, mats };
+  return J;
+}
+// pose: joint angles (radians). Forward swing of a limb = negative x. phase φ for gaits.
+function poseFigure(J, pose, phi = 0) {
+  const k = J.k, S = Math.sin(phi), C = Math.cos(phi);
+  const z = { hipsY: 0.98, sp: 0.03, nk: 0.04, shL: [0.06, 0.1], shR: [0.06, -0.1], elL: -0.12, elR: -0.12, hpL: 0, hpR: 0, knL: 0.04, knR: 0.04 };
+  if (pose === "walk" || pose === "run") {
+    const run = pose === "run", A = run ? 0.72 : 0.4;
+    Object.assign(z, { hipsY: (run ? 0.93 : 0.97) + (run ? 0.03 : 0.012) * Math.abs(C), sp: run ? 0.22 : 0.06,
+      hpL: -A * S, hpR: A * S, knL: (run ? 0.35 : 0.1) + (run ? 1.1 : 0.55) * Math.max(0, C), knR: (run ? 0.35 : 0.1) + (run ? 1.1 : 0.55) * Math.max(0, -C),
+      shL: [(run ? 0.7 : 0.32) * S, 0.08], shR: [-(run ? 0.7 : 0.32) * S, -0.08], elL: run ? -1.25 : -0.25, elR: run ? -1.25 : -0.25 });
+  } else if (pose === "look_down") {
+    Object.assign(z, { sp: 0.16, nk: 0.5, shL: [0.0, 0.08], shR: [0.0, -0.08] });
+  } else if (pose === "point") {
+    Object.assign(z, { shR: [-1.32, -0.15], elR: 0, nk: 0.08 });
+  } else if (pose === "crouch") {
+    Object.assign(z, { hipsY: 0.36, sp: 0.6, nk: 0.35, hpL: -1.9, hpR: -1.85, knL: 2.3, knR: 2.25, shL: [-0.95, 0.15], shR: [-0.8, -0.15], elL: -0.5, elR: -0.6 });
+  } else if (pose === "kneel") {
+    Object.assign(z, { hipsY: 0.57, sp: 0.42, nk: 0.4, hpL: -1.45, knL: 1.45, hpR: 0.08, knR: 1.52, shL: [-0.9, 0.12], shR: [-1.05, -0.1], elL: -0.5, elR: -0.35 });
+  } else if (pose === "hold") {   // both hands up, holding something (a tarp pole, a cover)
+    Object.assign(z, { shL: [-2.6, 0.2], shR: [-2.6, -0.2], elL: -0.3, elR: -0.3, nk: -0.15 });
+  }
+  J.hips.position.y = z.hipsY * k;
+  J.spine.rotation.x = z.sp; J.neck.rotation.x = z.nk;
+  J.shL.rotation.set(z.shL[0], 0, z.shL[1]); J.shR.rotation.set(z.shR[0], 0, z.shR[1]);
+  J.elL.rotation.x = z.elL; J.elR.rotation.x = z.elR;
+  J.hpL.rotation.x = z.hpL; J.hpR.rotation.x = z.hpR; J.knL.rotation.x = z.knL; J.knR.rotation.x = z.knR;
+}
+
 G.register("diorama", {
   async setup(root, p, spec) {
     await document.fonts.load("700 130px Archivo");
-    LOOK3 = (p.look ?? "v2") === "v3"; p_flame = p.flame_gain ?? null;
+    LOOK3 = (p.look ?? "v3") === "v3"; p_flame = p.flame_gain ?? null;
     if (LOOK3) await loadTex();
     const W = 1920, H = 1080;
     const renderer = new THREE.WebGLRenderer({ antialias: p.msaa ?? true, preserveDrawingBuffer: true });
@@ -464,6 +535,15 @@ G.register("diorama", {
         rec.car = makeCar(scene);
         rec.pts = smoothPath(it.points, 0.3);
         rec.curve = new THREE.CatmullRomCurve3(rec.pts);
+      } else if (it.type === "figure") {
+        // a figure stands at `pos`, or moves along one or more paths: moves:[{path, at, until, gait}]
+        rec.J = makeFigure(scene, it.cast || {});
+        const moves = it.moves || (it.path ? [{ path: it.path, at: it.move_at ?? it.at ?? 0, until: it.move_until, gait: it.gait }] : []);
+        rec.moves = moves.map((m) => {
+          const curve = new THREE.CatmullRomCurve3(m.path.map(([x, y]) => P2(x, y)), false, "centripetal");
+          const len = curve.getLength();
+          return { curve, len, at: m.at, until: m.until ?? m.at + len / (m.gait === "run" ? 3.0 : 1.2), gait: m.gait || "walk" };
+        });
       } else if (it.type === "bottle") {
         const prof = [[0, 0], [0.035, 0], [0.04, 0.06], [0.03, 0.12], [0.012, 0.15], [0, 0.155]].map(([r, h]) => new THREE.Vector2(r, h));
         const b = new THREE.Mesh(new THREE.LatheGeometry(prof, 10), new THREE.MeshStandardMaterial({ color: "#1b1512", roughness: 0.6, flatShading: true }));
@@ -594,6 +674,32 @@ G.register("diorama", {
               m.scale.setScalar(Math.max(0.001, k * (it.scale || 1.6)));
               if (it.glow) m.material.emissiveIntensity = 0.9 * G.seg(t, it.glow, it.glow + 0.6);
             });
+          } else if (it.type === "figure") {
+            const J = rec.J;
+            let x = it.pos ? it.pos[0] : 0, z = it.pos ? it.pos[1] : 0, heading = null, pose = null, phi = 0, dist = 0;
+            for (const m of rec.moves) {            // the last move that has started decides where the figure is
+              if (t < m.at && m === rec.moves[0]) { const p0 = m.curve.getPointAt(0), p1 = m.curve.getPointAt(0.01); x = p0.x; z = p0.z; heading = Math.atan2(p1.x - p0.x, p1.z - p0.z); pose = it.pose_before || "stand"; }
+              if (t < m.at) break;
+              const u = G.seg(t, m.at, m.until), pt = m.curve.getPointAt(u);
+              const a = m.curve.getPointAt(Math.min(1, u + 0.003)), b = m.curve.getPointAt(Math.max(0, u - 0.003));
+              x = pt.x; z = pt.z; heading = Math.atan2(a.x - b.x, a.z - b.z);
+              if (u < 1) { pose = m.gait; phi = (2 * Math.PI * (dist + u * m.len)) / ((m.gait === "run" ? 2.2 : 1.35) * J.k) + (it.phase || 0); }
+              else pose = null;
+              dist += m.len;
+            }
+            if (pose === null) {                     // standing still: timed poses, facing look_at
+              pose = it.pose || "stand";
+              for (const q of it.poses || []) if (t >= q.at) pose = q.pose;
+              if (it.look_at) heading = Math.atan2(it.look_at[0] - x, it.look_at[1] - z);
+            }
+            if (heading === null) heading = ((it.face || 0) * Math.PI) / 180;
+            J.root.position.set(x, 0, z);
+            J.root.rotation.y = heading;
+            poseFigure(J, pose, phi);
+            const fin = it.fade_in ?? 0, fout = it.fade_out ?? 0.6;
+            J.root.visible = t >= at - fin && (it.until === undefined || t < it.until + fout);
+            const op = (fin ? G.seg(t, at - fin, at) : 1) * (it.until !== undefined && fout ? 1 - G.seg(t, it.until, it.until + fout) : 1);
+            J.mats.forEach((m) => { m.opacity = op; m.transparent = op < 0.999; m.depthWrite = op > 0.5; });
           } else if (it.type === "car") {
             const k = (G.ease[it.ease || "inOutSine"])(G.seg(t, at, it.until ?? at + 4));
             const pos = rec.curve.getPointAt(Math.min(0.999, k)), ahead = rec.curve.getPointAt(Math.min(1, k + 0.001));

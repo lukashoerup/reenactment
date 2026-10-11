@@ -2,6 +2,7 @@
 // turntable or push, one warm key light, one cold rim. Models are built from code
 // (lathe profiles, displaced surfaces), so they read as models, never as archive photos.
 import * as THREE from "../vendor/three.module.js";
+import { EffectComposer, RenderPass, EffectPass, BloomEffect, DepthOfFieldEffect, ToneMappingEffect, ToneMappingMode, VignetteEffect, SMAAEffect } from "postprocessing";
 const G = window.GFX;
 
 function labelTexture(lines, colors) {
@@ -104,7 +105,8 @@ G.register("object", {
     renderer.setSize(1920, 1080);
     renderer.shadowMap.enabled = true;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    renderer.toneMapping = THREE.ACESFilmicToneMapping;
+    const LOOK3 = (p.look ?? "v3") === "v3";   // finishing pass: HDR, macro depth of field, bloom on highlights, vignette
+    renderer.toneMapping = LOOK3 ? THREE.NoToneMapping : THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = p.exposure || 0.78;
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     root.appendChild(renderer.domElement);
@@ -127,6 +129,18 @@ G.register("object", {
     scene.add(rim);
     scene.add(new THREE.HemisphereLight("#2a3b45", "#05090c", 0.35));
     const cam = new THREE.PerspectiveCamera(p.fov || 28, 1920 / 1080, 0.01, 20);
+    let composer = null, dof = null;
+    if (LOOK3) {
+      composer = new EffectComposer(renderer, { frameBufferType: THREE.HalfFloatType, multisampling: 4 });
+      composer.addPass(new RenderPass(scene, cam));
+      dof = new DepthOfFieldEffect(cam, { worldFocusRange: model.dist * 0.3, bokehScale: p.bokeh ?? 3.0 });
+      dof.target = new THREE.Vector3();
+      composer.addPass(new EffectPass(cam, dof));
+      composer.addPass(new EffectPass(cam, new BloomEffect({ mipmapBlur: true, luminanceThreshold: 0.85, intensity: 0.5, radius: 0.6 }),
+        new VignetteEffect({ offset: 0.3, darkness: 0.6 }), new ToneMappingEffect({ mode: ToneMappingMode.ACES_FILMIC })));
+      composer.addPass(new EffectPass(cam, new SMAAEffect()));
+      composer.setSize(1920, 1080);
+    }
     const over = G.el("div", "layer", root);
     if (spec.credit) G.el("div", "credit", over, G.esc(spec.credit));
     let cap = null, capLines = null;
@@ -149,7 +163,7 @@ G.register("object", {
         cam.position.set(tg.x + d * Math.sin(az) * Math.cos(el), tg.y + d * Math.sin(el), tg.z + d * Math.cos(az) * Math.cos(el));
         cam.lookAt(tg);
         if (p.flicker) key.intensity = (p.key ?? 9) * (0.9 + 0.1 * Math.sin(t * 8.3) * Math.sin(t * 3.1 + 2));
-        renderer.render(scene, cam);
+        if (composer) { dof.target.copy(tg); composer.render(); } else renderer.render(scene, cam);
         if (cap) {
           capLines(t, p.caption.at ?? 0.4);
           if (cap.sEl) G.show(cap.sEl, t, (p.caption.at ?? 0.4) + 0.6, p.caption.until);

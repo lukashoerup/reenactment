@@ -4,13 +4,20 @@ Shots composite these tiles (gfx/web/templates/map.js), so a map frame renders a
 a text frame, and a place shown in five scenes is drawn once. The cache key is a hash of
 gfx/web/mapstyle.js: change the style and every tile is re-baked.
 """
-import base64, hashlib, io, os, time
+import sys, base64, hashlib, io, os, time
 
 from PIL import Image
 
 GFX = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(os.path.dirname(GFX), "cache", "maptiles")
-GL_ARGS = ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader", "--font-render-hinting=none"]
+# WebGL backend. Mesa llvmpipe (gl-egl) is 2.6-3.5x faster than SwiftShader on CPU-only Linux
+# (measured 2026-10-11); macOS with a GPU: GFX_GL=metal. GFX_GL=swiftshader restores the old path.
+_GL = {
+    "llvmpipe": ["--use-gl=angle", "--use-angle=gl-egl", "--ignore-gpu-blocklist"],
+    "metal": ["--use-gl=angle", "--use-angle=metal", "--enable-gpu-rasterization", "--ignore-gpu-blocklist"],
+    "swiftshader": ["--use-gl=angle", "--use-angle=swiftshader", "--enable-unsafe-swiftshader"],
+}
+GL_ARGS = _GL[os.environ.get("GFX_GL", "metal" if sys.platform == "darwin" else "llvmpipe")] + ["--font-render-hinting=none"]
 BLOCK = 2  # tiles per side per render (1024 px): bigger blocks are much slower in SwiftShader
 
 

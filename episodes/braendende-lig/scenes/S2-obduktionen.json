@@ -89,49 +89,7 @@
      },
      {
       "type": "text3d",
-      "text": "Flere kraniebrud",
-      "pos": [
-       0,
-       2.6,
-       0
-      ],
-      "size": 96,
-      "ref": 12,
-      "at": {
-       "word": "flere",
-       "near": "10:46.8",
-       "offset": -0.2
-      },
-      "until": {
-       "word": "svære",
-       "near": "10:50.5",
-       "offset": -0.2
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Svære skader på hjernen",
-      "pos": [
-       0,
-       2.6,
-       0
-      ],
-      "size": 96,
-      "ref": 12,
-      "at": {
-       "word": "svære",
-       "near": "10:50.5",
-       "offset": -0.1
-      },
-      "until": {
-       "word": "allerede",
-       "near": "10:55.3",
-       "offset": -0.2
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Allerede her: en dødsårsag",
+      "text": "En dødsårsag",
       "hot": true,
       "pos": [
        0,
@@ -144,7 +102,8 @@
        "word": "allerede",
        "near": "10:55.3",
        "offset": -0.1
-      }
+      },
+      "echo_ok": true
      }
     ],
     "fire": [
@@ -177,16 +136,7 @@
     "at": 0.1,
     "items": [
      {
-      "text": "Luftvejene kan undersøges",
-      "sub": "de er ikke helt brændt",
-      "at": {
-       "word": "undersøge",
-       "near": "11:01.8",
-       "offset": -0.2
-      }
-     },
-     {
-      "text": "Ingen spor af sod",
+      "text": "Ingen sod i luftvejene",
       "at": {
        "word": "spor",
        "near": "11:09.6",
@@ -194,15 +144,8 @@
       }
      },
      {
-      "text": "Hun trak ikke vejret under ilden",
-      "at": {
-       "word": "trukket",
-       "near": "11:13.6",
-       "offset": -0.6
-      }
-     },
-     {
-      "text": "Hun var død, da hun blev lagt på bålet",
+      "text": "Død før ilden",
+      "hot": true,
       "at": {
        "word": "død",
        "near": "11:18.5",
@@ -394,28 +337,7 @@
      },
      {
       "type": "text3d",
-      "text": "Voldsomme kvæstelser i hovedet",
-      "pos": [
-       0,
-       2.8,
-       0
-      ],
-      "size": 84,
-      "ref": 10,
-      "at": {
-       "word": "voldsomme",
-       "near": "11:32.0",
-       "offset": -0.3
-      },
-      "until": {
-       "word": "slået",
-       "near": "11:37.8",
-       "offset": -0.4
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Slået med noget tungt",
+      "text": "Et tungt instrument",
       "pos": [
        0,
        2.8,
@@ -428,49 +350,8 @@
        "near": "11:37.8",
        "offset": -0.3
       },
-      "until": {
-       "word": "baseballbad",
-       "near": "11:41.0",
-       "offset": -0.4
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Fx et baseballbat eller lignende",
-      "pos": [
-       0,
-       2.8,
-       0
-      ],
-      "size": 84,
-      "ref": 10,
-      "at": {
-       "word": "baseballbad",
-       "near": "11:41.0",
-       "offset": -0.3
-      },
-      "until": {
-       "word": "impressioner",
-       "near": "11:44.2",
-       "offset": -0.3
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Aftryk i kraniet efter slagene",
       "hot": true,
-      "pos": [
-       0,
-       2.8,
-       0
-      ],
-      "size": 84,
-      "ref": 10,
-      "at": {
-       "word": "impressioner",
-       "near": "11:44.2",
-       "offset": -0.2
-      }
+      "echo_ok": true
      }
     ],
     "fire": [
@@ -492,7 +373,7 @@
   {
    "id": "5",
    "at": {
-    "word": "Og det vil sige",
+    "word": "Vi stuer med",
     "near": "11:50.8",
     "offset": -0.15
    },
@@ -597,65 +478,6 @@
       ],
       "closed": true,
       "at": -1
-     },
-     {
-      "type": "text3d",
-      "text": "Det første spor til politiet",
-      "pos": [
-       0,
-       2.8,
-       0
-      ],
-      "size": 80,
-      "ref": 8,
-      "at": 0.4,
-      "until": {
-       "word": "organer",
-       "near": "12:13.1",
-       "offset": -0.5
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Ud fra organerne",
-      "pos": [
-       0,
-       2.8,
-       0
-      ],
-      "size": 80,
-      "ref": 8,
-      "at": {
-       "word": "organer",
-       "near": "12:13.1",
-       "offset": -0.4
-      },
-      "until": {
-       "word": "intakte",
-       "near": "12:17.5",
-       "offset": -0.7
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "og den del af ansigtet, der er nogenlunde intakt",
-      "pos": [
-       0,
-       3.2,
-       0
-      ],
-      "size": 64,
-      "ref": 10,
-      "at": {
-       "word": "intakte",
-       "near": "12:17.5",
-       "offset": -0.6
-      },
-      "until": {
-       "word": "yngre",
-       "near": "12:21.5",
-       "offset": -0.7
-      }
      }
     ],
     "caption": {
@@ -665,7 +487,8 @@
       "word": "yngre",
       "near": "12:21.5",
       "offset": -0.5
-     }
+     },
+     "echo_ok": true
     },
     "fire": [
      {
@@ -818,7 +641,8 @@
       "near": "12:48.2",
       "offset": -0.2
      },
-     "s": "Hverken i Køge Politikreds eller i resten af landet"
+     "s": "Hverken i Køge Politikreds eller i resten af landet",
+     "echo_ok": true
     }
    }
   },

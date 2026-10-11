@@ -32,8 +32,8 @@ body { font-family: "Archivo", sans-serif; color: var(--papir); font-kerning: no
 /* Type scale (1080p): 30 / 40 / 56 / 84 / 128 / 200 */
 .t-stamp { font-weight: 640; font-stretch: 72%; line-height: .92; letter-spacing: -.01em; }
 .t-display { font-weight: 300; font-stretch: 112%; line-height: 1.02; letter-spacing: -.02em; }
-.t-body { font-weight: 420; font-stretch: 100%; font-size: 40px; line-height: 1.3; }
-.t-small { font-weight: 500; font-stretch: 88%; font-size: 30px; line-height: 1.25; color: var(--taage); }
+.t-body { font-weight: 420; font-stretch: 100%; font-size: 46px; line-height: 1.3; }
+.t-small { font-weight: 500; font-stretch: 88%; font-size: 32px; line-height: 1.25; color: var(--taage); }
 .t-quote { font-family: "Newsreader", serif; font-style: italic; font-weight: 340; font-variation-settings: "opsz" 72;
   line-height: 1.18; letter-spacing: -.005em; }
 .t-serif { font-family: "Newsreader", serif; font-weight: 400; font-variation-settings: "opsz" 24; line-height: 1.35; }

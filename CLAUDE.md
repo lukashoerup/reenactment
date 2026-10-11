@@ -69,4 +69,5 @@ python3 transcribe.py 03:15-06:15            # or --all
 python3 -m gfx.render episodes/braendende-lig/scenes/S1-fundet.json --lint
 python3 -m gfx.render episodes/braendende-lig/scenes/S1-fundet.json --preview
 python3 -m gfx.review_page episodes/braendende-lig/scenes/*.json
+bash gfx/run_mac.sh                          # Mac: set up + render S1–S4 on the GPU (--draft 960x540)
 ```

@@ -48,49 +48,7 @@
     "items": [
      {
       "type": "text3d",
-      "text": "Han begik fejl",
-      "pos": [
-       -34,
-       2.6,
-       34
-      ],
-      "size": 96,
-      "ref": 30,
-      "at": {
-       "word": "begik",
-       "near": "36:28.4",
-       "offset": -0.3
-      },
-      "until": {
-       "word": "opdager",
-       "near": "36:32.6",
-       "offset": -0.6
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Dem, vi opdager, begår jo fejl",
-      "pos": [
-       -34,
-       2.6,
-       34
-      ],
-      "size": 84,
-      "ref": 30,
-      "at": {
-       "word": "opdager",
-       "near": "36:32.6",
-       "offset": -0.5
-      },
-      "until": {
-       "word": "organiseret",
-       "near": "36:39.1",
-       "offset": -1.0
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Men det var velorganiseret",
+      "text": "Velorganiseret",
       "pos": [
        -30,
        2.6,
@@ -103,28 +61,7 @@
        "near": "36:39.1",
        "offset": -0.9
       },
-      "until": {
-       "word": "forklaring",
-       "near": "36:41.0",
-       "offset": -0.7
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Og han havde en god forklaring parat",
-      "hot": true,
-      "pos": [
-       -28,
-       2.6,
-       28
-      ],
-      "size": 84,
-      "ref": 30,
-      "at": {
-       "word": "forklaring",
-       "near": "36:41.0",
-       "offset": -0.6
-      }
+      "hot": true
      }
     ],
     "fire": [
@@ -298,7 +235,8 @@
        "word": "fremmed",
        "near": "37:11.8",
        "offset": -0.6
-      }
+      },
+      "echo_ok": true
      },
      {
       "type": "text3d",
@@ -320,7 +258,8 @@
        "word": "risikoen",
        "near": "37:14.5",
        "offset": -0.3
-      }
+      },
+      "echo_ok": true
      },
      {
       "type": "text3d",
@@ -343,7 +282,8 @@
        "word": "ekskæreste",
        "near": "37:20.4",
        "offset": -0.4
-      }
+      },
+      "echo_ok": true
      },
      {
       "type": "text3d",
@@ -360,7 +300,8 @@
        "word": "ekskæreste",
        "near": "37:20.4",
        "offset": -0.3
-      }
+      },
+      "echo_ok": true
      }
     ],
     "fire": [

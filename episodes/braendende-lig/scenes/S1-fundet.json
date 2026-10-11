@@ -102,113 +102,165 @@
      {
       "at": 4.0,
       "pos": [
-       -2,
-       18,
-       6
+       17,
+       8,
+       -13
       ],
       "look": [
-       0,
-       0,
-       0
+       4,
+       0.6,
+       -2
       ],
-      "fov": 40
+      "fov": 38
      },
      {
       "at": 7.5,
       "pos": [
-       -6.5,
-       2.6,
-       7.5
+       10.4,
+       1.25,
+       -5.7
       ],
       "look": [
        0,
-       1.3,
+       1.0,
        0
       ],
-      "fov": 40
+      "fov": 34
      },
      {
       "at": 11.6,
       "pos": [
-       -5.2,
-       2.2,
-       6.2
+       9.6,
+       1.2,
+       -5.1
       ],
       "look": [
-       0.5,
-       1.4,
+       0,
+       1.1,
        0
       ],
-      "fov": 40
+      "fov": 31
      }
     ],
     "items": [
      {
-      "type": "steps",
-      "points": "@site:children_in",
-      "at": 1.8,
-      "draw": 3.5,
-      "label": "To børn leger i regnen",
-      "lpos": [
-       17,
-       0.2,
-       -7.5
-      ],
-      "label_at": 3.0
-     },
-     {
-      "type": "label",
-      "text": "Et bål med høje flammer",
-      "pos": [
+      "type": "figure",
+      "cast": "@cast:child_red",
+      "look_at": [
        0,
-       3.4,
        0
       ],
-      "hot": true,
-      "at": {
-       "word": "høje",
-       "near": "03:05.4",
-       "offset": -0.3
-      }
+      "moves": [
+       {
+        "path": [
+         [
+          21,
+          -9.8
+         ],
+         [
+          14,
+          -7
+         ],
+         [
+          6.9,
+          -3.3
+         ]
+        ],
+        "at": 0.8,
+        "until": 6.4,
+        "gait": "run"
+       },
+       {
+        "path": [
+         [
+          6.9,
+          -3.3
+         ],
+         [
+          9.6,
+          0.4
+         ],
+         [
+          15.5,
+          4.6
+         ]
+        ],
+        "at": {
+         "word": "kontakter",
+         "near": "03:13.2",
+         "offset": -0.6
+        },
+        "until": {
+         "word": "kontakter",
+         "near": "03:13.2",
+         "offset": 2.4
+        },
+        "gait": "run"
+       }
+      ]
      },
      {
-      "type": "label",
-      "text": "Der ligger noget i flammerne",
-      "pos": [
-       0.3,
-       0.9,
-       0.2
+      "type": "figure",
+      "cast": "@cast:child_navy",
+      "look_at": [
+       0,
+       0
       ],
-      "side": "right",
-      "leader": 70,
-      "at": {
-       "word": "noget",
-       "near": "03:09.8",
-       "offset": -0.2
-      }
-     },
-     {
-      "type": "steps",
-      "points": "@site:children_out",
-      "at": {
-       "word": "kontakter",
-       "near": "03:13.2",
-       "offset": -0.6
-      },
-      "draw": 1.6,
-      "color": "taage",
-      "label": "Børnene henter voksne",
-      "lpos": [
-       17,
-       0.2,
-       -10
+      "phase": 1.7,
+      "moves": [
+       {
+        "path": [
+         [
+          22.5,
+          -11.2
+         ],
+         [
+          15,
+          -8.3
+         ],
+         [
+          7.7,
+          -4.4
+         ]
+        ],
+        "at": 1.1,
+        "until": 7.0,
+        "gait": "run"
+       },
+       {
+        "path": [
+         [
+          7.7,
+          -4.4
+         ],
+         [
+          10.6,
+          -0.6
+         ],
+         [
+          16.5,
+          3.6
+         ]
+        ],
+        "at": {
+         "word": "kontakter",
+         "near": "03:13.2",
+         "offset": -0.3
+        },
+        "until": {
+         "word": "kontakter",
+         "near": "03:13.2",
+         "offset": 2.8
+        },
+        "gait": "run"
+       }
       ]
      }
     ],
     "fog": 0.02
    },
    "transition": "fade:0.6",
-   "note": "The map dives into the modelled clearing. Children are shown only as footprints.",
+   "note": "The map dives into the clearing; two faceless children run in, stop at the fire, then run for help. No on-screen text: the voice tells it.",
    "rain": 0
   },
   {
@@ -322,38 +374,6 @@
     ],
     "items": [
      {
-      "type": "label",
-      "text": "Der ligger noget i bålet",
-      "pos": [
-       0.2,
-       0.7,
-       0.1
-      ],
-      "side": "right",
-      "leader": 80,
-      "at": {
-       "word": "ligger",
-       "near": "03:24.1",
-       "offset": -0.2
-      }
-     },
-     {
-      "type": "label",
-      "text": "Et dyr? Et menneske?",
-      "pos": [
-       0,
-       1.7,
-       0
-      ],
-      "side": "left",
-      "leader": 90,
-      "at": {
-       "word": "mennesker",
-       "near": "03:26.2",
-       "offset": -0.3
-      }
-     },
-     {
       "type": "text3d",
       "text": "Bålet er bygget med vilje",
       "hot": true,
@@ -368,7 +388,52 @@
        "word": "arrangeret",
        "near": "03:28.8",
        "offset": -0.4
-      }
+      },
+      "echo_ok": true
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:police",
+      "pos": [
+       3.4,
+       2.6
+      ],
+      "look_at": [
+       0,
+       0
+      ],
+      "pose": "look_down"
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:police",
+      "pos": [
+       -3.4,
+       -1.7
+      ],
+      "look_at": [
+       0,
+       0
+      ],
+      "pose": "stand",
+      "poses": [
+       {
+        "at": {
+         "word": "ligger",
+         "near": "03:24.1",
+         "offset": -0.2
+        },
+        "pose": "point"
+       },
+       {
+        "at": {
+         "word": "mennesker",
+         "near": "03:26.2",
+         "offset": 0.4
+        },
+        "pose": "stand"
+       }
+      ]
      }
     ]
    },
@@ -719,8 +784,7 @@
      },
      {
       "type": "label",
-      "text": "Overdækket",
-      "sub": "Beredskab og Falck",
+      "text": "Beredskab og Falck",
       "pos": [
        2.0,
        2.05,
@@ -769,20 +833,49 @@
       }
      },
      {
-      "type": "label",
-      "text": "Spor sikres",
+      "type": "figure",
+      "cast": "@cast:rescue",
       "pos": [
-       7,
-       1.05,
-       8
+       2.7,
+       -2.5
       ],
-      "side": "up",
-      "leader": 60,
+      "look_at": [
+       0,
+       0
+      ],
+      "pose": "stand"
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:rescue",
+      "pos": [
+       -2.6,
+       2.7
+      ],
+      "look_at": [
+       0,
+       0
+      ],
+      "pose": "look_down"
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:police",
+      "pos": [
+       6.2,
+       7.0
+      ],
+      "look_at": [
+       0,
+       0
+      ],
+      "pose": "stand",
       "at": {
        "word": "spor",
        "near": "04:18.4",
-       "offset": -0.4
-      }
+       "offset": -0.7
+      },
+      "fade_in": 0.6
      }
     ],
     "fire": [
@@ -1385,56 +1478,14 @@
      },
      {
       "type": "text3d",
-      "text": "Bålet dæmmes ind og slukkes",
-      "pos": [
-       0,
-       3.4,
-       0
-      ],
-      "size": 80,
-      "ref": 9,
-      "at": {
-       "word": "dæmmet",
-       "near": "05:18.7",
-       "offset": -0.5
-      },
-      "until": {
-       "word": "sikret",
-       "near": "05:21.3",
-       "offset": -0.1
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Sporene sikres",
-      "pos": [
-       0,
-       3.2,
-       0
-      ],
-      "size": 80,
-      "ref": 9,
-      "at": {
-       "word": "sikret",
-       "near": "05:21.3",
-       "offset": -0.1
-      },
-      "until": {
-       "word": "kriminelle",
-       "near": "05:23.2",
-       "offset": -0.2
-      }
-     },
-     {
-      "type": "text3d",
-      "text": "Kriminalteknikerne gennemgår skovbunden",
+      "text": "Kriminalteknikere",
       "hot": true,
       "pos": [
        0,
        3.0,
        -1
       ],
-      "size": 72,
+      "size": 80,
       "ref": 12,
       "at": {
        "word": "kriminelle",
@@ -1500,6 +1551,100 @@
         10.8
        ]
       ]
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:rescue",
+      "pos": [
+       2.3,
+       -2.3
+      ],
+      "look_at": [
+       0,
+       0
+      ],
+      "pose": "look_down",
+      "until": {
+       "word": "sikret",
+       "near": "05:21.3",
+       "offset": 0.0
+      }
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:technician",
+      "pos": [
+       3.7,
+       2.9
+      ],
+      "look_at": [
+       3,
+       2
+      ],
+      "pose": "crouch",
+      "at": {
+       "word": "kriminelle",
+       "near": "05:23.2",
+       "offset": -0.2
+      },
+      "fade_in": 0.6
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:technician",
+      "pos": [
+       -4.7,
+       3.5
+      ],
+      "look_at": [
+       -4,
+       3
+      ],
+      "pose": "crouch",
+      "at": {
+       "word": "kriminelle",
+       "near": "05:23.2",
+       "offset": -0.2
+      },
+      "fade_in": 0.8
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:technician",
+      "pos": [
+       5.6,
+       -4.9
+      ],
+      "look_at": [
+       5,
+       -4
+      ],
+      "pose": "kneel",
+      "at": {
+       "word": "kriminelle",
+       "near": "05:23.2",
+       "offset": -0.2
+      },
+      "fade_in": 1.0
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:technician",
+      "pos": [
+       -1.4,
+       -6.7
+      ],
+      "look_at": [
+       1,
+       -7
+      ],
+      "pose": "look_down",
+      "at": {
+       "word": "kriminelle",
+       "near": "05:23.2",
+       "offset": -0.2
+      },
+      "fade_in": 1.2
      }
     ],
     "fire": [

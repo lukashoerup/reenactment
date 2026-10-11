@@ -40,3 +40,4 @@ gfx/web/vendor/
 __pycache__/
 page/gfx/*.mp4
 page/gfx/*.jpg
+.gfxenv/

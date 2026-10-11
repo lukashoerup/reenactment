@@ -62,7 +62,18 @@ the word (`offset` −0.3 to −0.6) so the eye arrives as the ear does.
 | `timeline` | dated events | `events:[{when, label, sub, at, hot}]`, `gap`, `focus` |
 | `photo` | a real photograph with its credit | `src` (in the episode folder), `credit`, `from/to:{x, y, s}`, `caption` |
 | `object` | an object modelled in code (bottle, plaster cast) | `model:"bottle"/"cast"`, `orbit:[{at, az, el, dist}]`, `shift`, `flicker`, `caption`; credit must say it is a model |
-| `diorama` | the find site in 3D: forest clearing, bonfire, road, rain (Fern-style re-usable set) | `site:"@site"`, `cam:[{at, pos:[x,h,y], look:[x,h,y], fov}]` (spline through all keys), `fire`/`smoke:[{at, v}]` (0 = out; a fire at 0 for the whole shot is drawn burnt-out), `light:"overcast"/"night"`, `fog`, `items:[label, text3d, steps, tracks, ring, markers, tape, tarp, litter, car, bottle]`, `caption`; credit defaults to "Model af fundstedet, ikke målfast" |
+| `diorama` | the find site in 3D: forest clearing, bonfire, road, rain, faceless figures (Fern-style re-usable set); `look:"v3"` finishing pass by default | `site:"@site"`, `cam:[{at, pos:[x,h,y], look:[x,h,y], fov}]` (spline through all keys), `fire`/`smoke:[{at, v}]` (0 = out; a fire at 0 for the whole shot is drawn burnt-out), `light:"overcast"/"night"`, `fog`, `items:[label, text3d, steps, tracks, ring, markers, tape, tarp, litter, car, bottle]`, `caption`; credit defaults to "Model af fundstedet, ikke målfast" |
+
+### People in the diorama (faceless figures, Fern style)
+`{"type": "figure", "cast": "@cast:child_red", ...}`. The cast lives in `case.json` → `cast`
+(height, colours, hood), so a person looks the same in every shot. A figure has no face,
+hair or likeness; posture and action carry the story.
+- Standing: `pos:[x, y]`, `pose` (`stand`, `look_down`, `point`, `crouch`, `kneel`, `hold`),
+  `look_at:[x, y]` or `face` (degrees), timed changes `poses:[{at, pose}]`.
+- Moving: `moves:[{path:[[x, y], …], at, until, gait:"walk"/"run"}]`; between and after
+  moves the figure stands at the end of the last path, facing `look_at`.
+- `at` / `until` / `fade_in` / `fade_out` show and hide it.
+- Frame backs, profiles and silhouettes; never a blank face filling the frame.
 
 ### Diorama camera rules
 Trees stand everywhere except the clearing (13 m around the fire), the road (3.4 m) and the
@@ -73,7 +84,8 @@ at which it has its set size); one statement at a time reads best (`until` = nex
 
 ## House rules (also in docs/PROJECT.md)
 
-- Never a body, an injury or a face. Findings are words. The fire is a point of light.
+- Never a body, an injury or a face. People appear as faceless figures (2026-10-11). Injury details stay in the audio.
+- No echo: on-screen text adds names, places, numbers or the one key statement; it never repeats the narration (`--lint` warns; `echo_ok:true` marks a deliberate exception).
 - A schematic is labelled as one ("Skitse, ikke målfast"); a model is labelled as one.
 - No invented precision: an unnamed place is a dashed zone, not a pin.
 - Unclear words in the transcript are not put on screen — use a breather shot instead.

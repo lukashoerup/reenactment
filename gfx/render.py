@@ -45,6 +45,8 @@ def ref(case, s):
     kind, _, key = s[1:].partition(":") if ":" in s else ("place", None, s[1:])
     if kind == "site":
         return case["site"][key]
+    if kind == "cast":
+        return case["cast"][key]
     table = {"place": "places", "route": "routes", "area": "areas"}[kind]
     item = case[table][key]
     if kind == "place":
@@ -130,6 +132,8 @@ def lint(scene, case, tx, a0, a1, shots):
     errs, warns = [], []
     if not tx.words:
         errs.append("no transcript: run transcribe.py first")
+    for f in sorted(set(getattr(tx, "fallbacks", []))):
+        warns.append(f"anchor fallback: {f} — used the written time")
     prev_end = a0
     for s in shots:
         sid = s["id"]
@@ -170,11 +174,64 @@ def lint(scene, case, tx, a0, a1, shots):
                 warns.append(f"{sid}: only {ratio:.0%} of the quote matches what is said — check the wording or the window")
             if max(w[1] for w in ws) > s["dur"] + 0.3:
                 warns.append(f"{sid}: the quote is still being spoken after the shot ends")
+        if s["type"] != "quote":
+            for text, t_rel in screen_texts(s["spec"]["p"]):
+                hit = echo(tx, text, s["start"] + t_rel)
+                if hit:
+                    warns.append(f"{sid}: echo — '{text}' repeats the narration ('{hit}')")
         for k, v in walk(s["spec"]["p"]):
             if k == "src" and isinstance(v, str) and not v.startswith("http"):
                 if not os.path.exists(os.path.join(os.path.dirname(os.path.dirname(scene["_path"])), v)):
                     errs.append(f"{sid}: missing asset {v}")
     return errs, warns
+
+
+def screen_texts(p):
+    """(text, seconds after shot start) for words shown on screen, skipping items marked echo_ok."""
+    out = []
+    def at_of(d):
+        v = d.get("label_at", d.get("at", 0))
+        return float(v) if isinstance(v, (int, float)) else 0.0
+    def visit(d):
+        if isinstance(d, dict):
+            if not d.get("echo_ok"):
+                for key in ("text", "label", "h", "heading"):
+                    v = d.get(key)
+                    if isinstance(v, str) and len(v.split()) >= 2:
+                        out.append((v, at_of(d)))
+                for v in d.get("lines", []) if isinstance(d.get("lines"), list) else []:
+                    if isinstance(v, str) and len(v.split()) >= 2:
+                        out.append((v, at_of(d)))
+            for kk, v in d.items():
+                if kk not in ("words",) and isinstance(v, (dict, list)):
+                    visit(v)
+        elif isinstance(d, list):
+            for v in d:
+                visit(v)
+    visit(p)
+    return out
+
+
+def echo(tx, text, t, window=5.0, thresh=0.78):
+    """The spoken phrase near t that this on-screen text restates, or None."""
+    import difflib
+    from .timing import norm
+    words = [w for w in text.split() if len(w.strip(".,?!»«")) > 2]
+    if words and all(w.strip(".,?!»«")[:1].isupper() for w in words):
+        return None   # a name (place, person, institution, car): names belong on screen
+    mine = [norm(w) for w in text.split() if norm(w)]
+    spoken = tx.words_between(t - window, t + window)
+    n = len(mine)
+    if n < 2 or len(spoken) < n:
+        return None
+    a = " ".join(mine)
+    best, best_s = 0.0, None
+    for i in range(len(spoken) - n + 1):
+        seg = spoken[i:i + n]
+        r = difflib.SequenceMatcher(None, a, " ".join(w["n"] for w in seg)).ratio()
+        if r > best:
+            best, best_s = r, " ".join(w["w"] for w in seg)
+    return best_s if best >= thresh else None
 
 
 def walk(o, k=None):
@@ -219,6 +276,11 @@ def _open(pw, kind, base, size):
     pg.on("pageerror", lambda e: print("  [page error]", e, flush=True))
     pg.goto(base + "/web/index.html")
     pg.wait_for_function("window.GFX && Object.keys(GFX.templates).length >= (%d)" % (10 if kind == "gl" else 8), timeout=60000)
+    if kind == "gl" and not getattr(_open, "logged", False):
+        gl = pg.evaluate("""() => { const g = document.createElement('canvas').getContext('webgl2');
+            const e = g && g.getExtension('WEBGL_debug_renderer_info'); return g ? (e ? g.getParameter(e.UNMASKED_RENDERER_WEBGL) : g.getParameter(g.RENDERER)) : 'no webgl'; }""")
+        print(f"  WebGL: {gl}", flush=True)
+        _open.logged = True
     return br, pg, pg.context.new_cdp_session(pg)
 
 
@@ -403,7 +465,7 @@ def assemble(scene, a0, a1, shots, out, size, ep_dir, web=True, graded=True):
                     "-movflags", "+faststart", "-shortest", out], check=True)
     if web:  # small review copy: no grain, 720p
         subprocess.run(["ffmpeg", "-v", "error", "-y", *audio_in, "-filter_complex",
-                        mix + f";[{vin}:v]scale=1280:720,vignette=angle=0.42[v]", "-map", "[v]", "-map", "[a]",
+                        mix + f";[{vin}:v]scale={min(1280, size[0])}:{min(720, size[1])},vignette=angle=0.42[v]", "-map", "[v]", "-map", "[a]",
                         "-c:v", "libx264", "-preset", "medium", "-crf", "25", "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "128k",
                         "-movflags", "+faststart", "-shortest", out.replace(".mp4", "_web.mp4")], check=True)
 
@@ -449,6 +511,7 @@ def main():
     ap.add_argument("--only")
     ap.add_argument("--workers", type=int, default=max(1, (os.cpu_count() or 2)))
     ap.add_argument("--preview", action="store_true", help="1280x720")
+    ap.add_argument("--draft", action="store_true", help="960x540 review copy, rendered at that size (about half the 720p cost)")
     ap.add_argument("--force", action="store_true")
     args = ap.parse_args()
     scene, case, tx, ep_dir = load_scene(args.scene)
@@ -468,7 +531,7 @@ def main():
             print(f"  {s['id']:>4} {fmt_tc(s['start'])} {s['dur']:5.2f}s {s['type']:9s} "
                   f"| {tx.text_between(s['start'], s['end'])[:90]}")
         return
-    size = (1280, 720) if args.preview else (W, H)
+    size = (960, 540) if args.draft else (1280, 720) if args.preview else (W, H)
     if args.still:
         jobs = []
         for item in args.still.split(","):
@@ -488,10 +551,10 @@ def main():
     render_shots(shots, ep_dir, size, args.workers, only, args.force)
     if only:
         return
-    tag = "_720" if args.preview else ""
+    tag = "_540" if args.draft else "_720" if args.preview else ""
     out = os.path.join(REPO, "out", "gfx", f"{scene['id']}{tag}.mp4")
     t = time.time()
-    assemble(scene, a0, a1, shots, out, size, ep_dir, graded=not args.preview)
+    assemble(scene, a0, a1, shots, out, size, ep_dir, graded=not (args.preview or args.draft))
     contact_sheet(scene, shots, out.replace(".mp4", "_sheet.jpg"), size)
     cue_sheet(scene, shots, out.replace(".mp4", "_cues.json"))
     print(f"assembled {out} in {time.time() - t:.0f}s")

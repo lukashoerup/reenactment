@@ -57,6 +57,11 @@ film-language notes and the machine does the rest.
   into the campfire and show it in 3D. → `diorama` template (3D model of the site) replaces
   the findings lists; the site is a grey rainy day ("en regnvejrsdag", 03:06), not night.
 
+- 2026-10-11 — Lukas: people may appear as faceless 3D figures in the style of Fern; the line
+  is no faces (rule 1 holds). → `figure` item in the diorama, cast in case.json.
+- 2026-10-11 — Lukas: the repo stays public for now (Claude Code could not reach it when private).
+- 2026-10-11 — Rendering moves to the MacBook (GPU through ANGLE/Metal): `gfx/run_mac.sh`.
+
 ## Status (2026-09-27)
 - A2 is the best photographic cut. Known defects left: S6 log swings in as if thrown
   (my prompt asked for "a branch collapses"), S6 boots green + children equal height

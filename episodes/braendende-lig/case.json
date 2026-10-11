@@ -1335,5 +1335,55 @@
     12
    ]
   ]
+ },
+ "cast": {
+  "note": "Faceless figures (Fern style). One look for the whole film; continuity per person. Children from the cold-open bible: about 10 and 7, 1990s rainwear, hoods up, one red with red boots, one navy. Adults are generic roles, never a likeness.",
+  "child_red": {
+   "height": 1.38,
+   "hood": true,
+   "wet": true,
+   "colors": {
+    "coat": "#8a2d24",
+    "legs": "#2d333c",
+    "boots": "#7a1d17"
+   }
+  },
+  "child_navy": {
+   "height": 1.22,
+   "hood": true,
+   "wet": true,
+   "colors": {
+    "coat": "#25314a",
+    "legs": "#33363b",
+    "boots": "#1d2228"
+   }
+  },
+  "police": {
+   "height": 1.82,
+   "colors": {
+    "coat": "#1d2731",
+    "legs": "#1a2129",
+    "boots": "#111316"
+   }
+  },
+  "rescue": {
+   "height": 1.8,
+   "wet": true,
+   "colors": {
+    "coat": "#2b3238",
+    "legs": "#23292e",
+    "boots": "#151719"
+   }
+  },
+  "technician": {
+   "height": 1.78,
+   "hood": true,
+   "colors": {
+    "coat": "#d9d8d1",
+    "legs": "#d0cfc8",
+    "boots": "#3a4038",
+    "head": "#a7a198"
+   }
+  }
  }
 }

@@ -39,7 +39,7 @@
         frame(t) {
           spans.forEach((s, i) => {
             const k = G.seg(t, words[i][1] - lead, words[i][1] - lead + 0.22);
-            s.style.opacity = 0.17 + 0.83 * k;
+            s.style.opacity = 0.45 + 0.55 * k;   // unspoken words stay readable (was 0.17)
           });
           const o = G.show(box, t, p.at ?? -0.2, p.until, 0.4, 0.4);
           bar.style.transform = `scaleY(${G.ease.out(G.seg(t, (p.at ?? -0.2), (p.at ?? -0.2) + 0.8))})`;

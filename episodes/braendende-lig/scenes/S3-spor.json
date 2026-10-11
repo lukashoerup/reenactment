@@ -108,7 +108,7 @@
      }
     ],
     "caption": {
-     "h": "Mistænkelige køb af tændvæske?",
+     "h": "Hvor er flasken købt?",
      "at": {
       "word": "mistænkelige",
       "near": "14:39.5",
@@ -198,22 +198,7 @@
      },
      {
       "type": "label",
-      "text": "Spor af brandbar væske",
-      "pos": [
-       -0.3,
-       0.5,
-       0
-      ],
-      "side": "left",
-      "at": {
-       "word": "brandbare",
-       "near": "14:53.5",
-       "offset": -0.3
-      }
-     },
-     {
-      "type": "label",
-      "text": "Resterne af en flaske tændvæske",
+      "text": "Tændvæske",
       "hot": true,
       "pos": [
        0.9,
@@ -227,6 +212,19 @@
        "near": "15:03.1",
        "offset": -0.3
       }
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:technician",
+      "pos": [
+       1.9,
+       -1.3
+      ],
+      "look_at": [
+       0.7,
+       0.3
+      ],
+      "pose": "crouch"
      }
     ],
     "fire": [
@@ -392,7 +390,7 @@
      },
      {
       "type": "label",
-      "text": "Brandprøver fra bålet",
+      "text": "Brandprøver",
       "pos": [
        0.4,
        0.3,
@@ -406,41 +404,17 @@
       }
      },
      {
-      "type": "text3d",
-      "text": "Forseglet i nylonposer",
+      "type": "figure",
+      "cast": "@cast:technician",
       "pos": [
-       0,
-       2.0,
-       0
+       -0.4,
+       -1.7
       ],
-      "size": 72,
-      "ref": 5.5,
-      "at": {
-       "word": "nylonposer",
-       "near": "15:24.2",
-       "offset": -0.4
-      },
-      "until": {
-       "word": "flaske",
-       "near": "15:26.7",
-       "offset": -0.3
-      }
-     },
-     {
-      "type": "label",
-      "text": "Flasken med tændvæske",
-      "hot": true,
-      "pos": [
-       0.9,
-       0.15,
-       0.5
+      "look_at": [
+       0.4,
+       -0.6
       ],
-      "side": "right",
-      "at": {
-       "word": "flaske",
-       "near": "15:26.7",
-       "offset": -0.3
-      }
+      "pose": "kneel"
      }
     ],
     "fire": [
@@ -617,21 +591,6 @@
       "at": -1
      },
      {
-      "type": "label",
-      "text": "En vej ind til stedet",
-      "pos": [
-       -36,
-       0.2,
-       36
-      ],
-      "side": "up",
-      "at": {
-       "word": "vej",
-       "near": "15:42.8",
-       "offset": -0.3
-      }
-     },
-     {
       "type": "tracks",
       "points": "@site:road",
       "at": {
@@ -641,7 +600,7 @@
       },
       "draw": 2.2,
       "width": 0.12,
-      "label": "Dækaftryk i den våde skovbund",
+      "label": "Dækaftryk",
       "lpos": [
        -24,
        0.2,
@@ -652,6 +611,19 @@
        "near": "15:49.4",
        "offset": 0.4
       }
+     },
+     {
+      "type": "figure",
+      "cast": "@cast:technician",
+      "pos": [
+       -31.9,
+       32.7
+      ],
+      "look_at": [
+       -33,
+       31.6
+      ],
+      "pose": "kneel"
      }
     ],
     "fire": [
@@ -853,7 +825,7 @@
      }
     ],
     "caption": {
-     "h": "Vidner ser en Golf eller Polo køre fra stedet",
+     "h": "Set af vidner",
      "s": "kort før bålet bliver opdaget",
      "size": 60,
      "at": {
@@ -972,7 +944,8 @@
        "word": "skovfrueden",
        "near": "16:49.8",
        "offset": -0.4
-      }
+      },
+      "echo_ok": true
      },
      {
       "type": "text3d",
@@ -988,11 +961,12 @@
        "word": "jæger",
        "near": "16:51.2",
        "offset": -0.4
-      }
+      },
+      "echo_ok": true
      },
      {
       "type": "label",
-      "text": "Men sporene ligger lige der, hvor bålet er bygget",
+      "text": "Sporene ender ved bålet",
       "hot": true,
       "pos": [
        -9,
@@ -1089,7 +1063,8 @@
        "word": "helt",
        "near": "16:59.8",
        "offset": -0.6
-      }
+      },
+      "echo_ok": true
      },
      {
       "type": "ring",
@@ -1104,7 +1079,7 @@
      },
      {
       "type": "label",
-      "text": "Meget brandbar væske",
+      "text": "Tændvæske",
       "pos": [
        0,
        2.6,
