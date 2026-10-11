@@ -24,8 +24,8 @@ REPO = os.path.dirname(GFX)
 FPS = 25
 W, H = 1920, 1080
 TIME_KEYS = {"at", "until", "out", "words_until", "draw_until", "label_at", "sub_at", "who_at"}
-TEMPLATES = {"map", "title", "quote", "facts", "timeline", "siteplan", "photo", "object", "card"}
-GL_TEMPLATES = {"object"}  # need WebGL; everything else renders in software (much faster on CPU)
+TEMPLATES = {"map", "title", "quote", "facts", "timeline", "siteplan", "photo", "object", "card", "diorama"}
+GL_TEMPLATES = {"object", "diorama"}  # need WebGL; everything else renders in software (much faster on CPU)
 SOFT_ARGS = ["--disable-gpu", "--disable-gpu-compositing", "--font-render-hinting=none"]
 
 
@@ -40,6 +40,8 @@ def load_scene(path):
 
 def ref(case, s):
     """'@site' → [lon, lat]; '@route:id' → coordinates; '@area:id' → ring."""
+    if s == "@site":
+        return case["site"]
     kind, _, key = s[1:].partition(":") if ":" in s else ("place", None, s[1:])
     if kind == "site":
         return case["site"][key]
@@ -143,7 +145,7 @@ def lint(scene, case, tx, a0, a1, shots):
                                               if k in TIME_KEYS and isinstance(v, (int, float)) and 0 < v < s["dur"]}
                            | {w[1] for w in s["spec"]["p"].get("words", []) if isinstance(w, list) and 0 < w[1] < s["dur"]})
             gap = max(b - a for a, b in zip(beats, beats[1:]))
-            moving = s["type"] in ("map", "siteplan", "object") and len(s["spec"]["p"].get("cam", s["spec"]["p"].get("orbit", []))) > 1
+            moving = s["type"] in ("map", "siteplan", "object", "diorama") and len(s["spec"]["p"].get("cam", s["spec"]["p"].get("orbit", []))) > 1
             if gap > (12 if moving else 8):
                 warns.append(f"{sid}: nothing new on screen for {gap:.1f}s of {s['dur']:.1f}s")
         if abs(s["start"] - prev_end) > 0.01 and s is shots[0] and s["start"] - a0 > 0.05:
@@ -209,7 +211,7 @@ def _open(pw, kind, base, size):
     pg = br.new_page(viewport={"width": W, "height": H}, device_scale_factor=size[0] / W)
     pg.on("pageerror", lambda e: print("  [page error]", e, flush=True))
     pg.goto(base + "/web/index.html")
-    pg.wait_for_function("window.GFX && Object.keys(GFX.templates).length >= (%d)" % (9 if kind == "gl" else 8), timeout=60000)
+    pg.wait_for_function("window.GFX && Object.keys(GFX.templates).length >= (%d)" % (10 if kind == "gl" else 8), timeout=60000)
     return br, pg, pg.context.new_cdp_session(pg)
 
 
@@ -282,7 +284,7 @@ def render_shots(shots, ep_dir, size, workers, only=None, force=False):
         if os.path.exists(s["file"]) and not force:
             continue
         jobs.append({"id": s["id"], "spec": s["spec"], "pre": s["pre"], "dur": s["dur"], "post": s["post"],
-                     "out": s["file"], "cost": s["dur"] * (4 if s["type"] == "object" else 1.5 if s["type"] == "map" else 1)})
+                     "out": s["file"], "cost": s["dur"] * (4 if s["type"] in ("object", "diorama") else 1.5 if s["type"] == "map" else 1)})
     if not jobs:
         print("all shots cached")
         return

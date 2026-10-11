@@ -11,7 +11,7 @@
   {
    "id": "1",
    "at": "10:44.70",
-   "type": "facts",
+   "type": "diorama",
    "fade_in": 0.5,
    "lt": {
     "who": "hougen",
@@ -20,36 +20,147 @@
     "top": true
    },
    "p": {
-    "heading": "Obduktionen",
-    "at": -0.5,
+    "site": "@site",
+    "cam": [
+     {
+      "at": 0,
+      "pos": [
+       -8,
+       2.0,
+       9.5
+      ],
+      "look": [
+       0,
+       1.4,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "at": 13.7,
+      "pos": [
+       -4.8,
+       1.8,
+       5.6
+      ],
+      "look": [
+       0,
+       1.4,
+       0
+      ],
+      "fov": 40
+     }
+    ],
     "items": [
      {
+      "type": "tarp",
+      "at": -1
+     },
+     {
+      "type": "tape",
+      "points": [
+       [
+        -9,
+        -6
+       ],
+       [
+        2,
+        -10
+       ],
+       [
+        9.5,
+        -2
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        -4,
+        9.5
+       ],
+       [
+        -10,
+        3
+       ]
+      ],
+      "closed": true,
+      "at": -1
+     },
+     {
+      "type": "text3d",
       "text": "Flere kraniebrud",
+      "pos": [
+       0,
+       2.6,
+       0
+      ],
+      "size": 96,
+      "ref": 12,
       "at": {
        "word": "flere",
        "near": "10:46.8",
-       "offset": -0.1
+       "offset": -0.2
+      },
+      "until": {
+       "word": "svære",
+       "near": "10:50.5",
+       "offset": -0.2
       }
      },
      {
+      "type": "text3d",
       "text": "Svære skader på hjernen",
+      "pos": [
+       0,
+       2.6,
+       0
+      ],
+      "size": 96,
+      "ref": 12,
       "at": {
        "word": "svære",
        "near": "10:50.5",
        "offset": -0.1
+      },
+      "until": {
+       "word": "allerede",
+       "near": "10:55.3",
+       "offset": -0.2
       }
      },
      {
+      "type": "text3d",
       "text": "Allerede her: en dødsårsag",
       "hot": true,
+      "pos": [
+       0,
+       2.6,
+       0
+      ],
+      "size": 96,
+      "ref": 12,
       "at": {
        "word": "allerede",
        "near": "10:55.3",
        "offset": -0.1
       }
      }
+    ],
+    "fire": [
+     {
+      "at": 0,
+      "v": 0.0
+     }
+    ],
+    "smoke": [
+     {
+      "at": 0,
+      "v": 0.5
+     }
     ]
-   }
+   },
+   "rain": 0
   },
   {
    "id": "2",
@@ -107,60 +218,87 @@
     "near": "11:20.4",
     "offset": -0.1
    },
-   "type": "siteplan",
-   "note": "Breather: the words here are unclear in the transcript, so nothing is written on screen.",
-   "rain": 0.4,
+   "type": "diorama",
+   "rain": 0,
    "p": {
-    "extent": [
-     -80,
-     -60,
-     80,
-     60
-    ],
+    "site": "@site",
     "cam": [
      {
       "at": 0,
-      "x": 0,
-      "y": 0,
-      "zoom": 30
+      "pos": [
+       3,
+       1.0,
+       -3
+      ],
+      "look": [
+       0,
+       0.4,
+       0
+      ],
+      "fov": 38
      },
      {
-      "at": 10.5,
-      "x": 0,
-      "y": 0,
-      "zoom": 44
+      "at": 10.3,
+      "pos": [
+       2.2,
+       0.9,
+       -2.2
+      ],
+      "look": [
+       0,
+       0.4,
+       0
+      ],
+      "fov": 38
      }
     ],
     "items": [
      {
-      "type": "trees",
-      "box": [
-       -80,
-       -60,
-       80,
-       60
-      ],
-      "n": 160,
-      "clear": [
+      "type": "tape",
+      "points": [
        [
-        0,
-        0,
-        9
+        -9,
+        -6
+       ],
+       [
+        2,
+        -10
+       ],
+       [
+        9.5,
+        -2
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        -4,
+        9.5
+       ],
+       [
+        -10,
+        3
        ]
       ],
-      "at": -1,
-      "draw": false
-     },
-     {
-      "type": "fire",
-      "x": 0,
-      "y": 0,
-      "r": 2.2,
+      "closed": true,
       "at": -1
      }
     ],
-    "credit": "Skitse, ikke målfast"
-   }
+    "fire": [
+     {
+      "at": 0,
+      "v": 0.0
+     }
+    ],
+    "smoke": [
+     {
+      "at": 0,
+      "v": 0.9
+     }
+    ]
+   },
+   "note": "Breather on the ashes: the words here are unclear in the transcript, so nothing is written."
   },
   {
    "id": "4",
@@ -169,46 +307,184 @@
     "near": "11:30.8",
     "offset": -0.15
    },
-   "type": "facts",
+   "type": "diorama",
    "p": {
-    "heading": "Et tungt instrument",
-    "at": 0.0,
+    "site": "@site",
+    "cam": [
+     {
+      "at": 0,
+      "pos": [
+       8,
+       3,
+       -6
+      ],
+      "look": [
+       0,
+       1,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "at": 10,
+      "pos": [
+       9.5,
+       3.2,
+       2
+      ],
+      "look": [
+       0,
+       1,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "at": 20,
+      "pos": [
+       6,
+       3,
+       8
+      ],
+      "look": [
+       0,
+       1,
+       0
+      ],
+      "fov": 40
+     }
+    ],
     "items": [
      {
+      "type": "tarp",
+      "at": -1
+     },
+     {
+      "type": "tape",
+      "points": [
+       [
+        -9,
+        -6
+       ],
+       [
+        2,
+        -10
+       ],
+       [
+        9.5,
+        -2
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        -4,
+        9.5
+       ],
+       [
+        -10,
+        3
+       ]
+      ],
+      "closed": true,
+      "at": -1
+     },
+     {
+      "type": "text3d",
       "text": "Voldsomme kvæstelser i hovedet",
+      "pos": [
+       0,
+       2.8,
+       0
+      ],
+      "size": 84,
+      "ref": 10,
       "at": {
        "word": "voldsomme",
        "near": "11:32.0",
-       "offset": -0.2
+       "offset": -0.3
+      },
+      "until": {
+       "word": "slået",
+       "near": "11:37.8",
+       "offset": -0.4
       }
      },
      {
+      "type": "text3d",
       "text": "Slået med noget tungt",
+      "pos": [
+       0,
+       2.8,
+       0
+      ],
+      "size": 84,
+      "ref": 10,
       "at": {
        "word": "slået",
        "near": "11:37.8",
        "offset": -0.3
+      },
+      "until": {
+       "word": "baseballbad",
+       "near": "11:41.0",
+       "offset": -0.4
       }
      },
      {
+      "type": "text3d",
       "text": "Fx et baseballbat eller lignende",
+      "pos": [
+       0,
+       2.8,
+       0
+      ],
+      "size": 84,
+      "ref": 10,
       "at": {
        "word": "baseballbad",
        "near": "11:41.0",
        "offset": -0.3
+      },
+      "until": {
+       "word": "impressioner",
+       "near": "11:44.2",
+       "offset": -0.3
       }
      },
      {
+      "type": "text3d",
       "text": "Aftryk i kraniet efter slagene",
       "hot": true,
+      "pos": [
+       0,
+       2.8,
+       0
+      ],
+      "size": 84,
+      "ref": 10,
       "at": {
        "word": "impressioner",
        "near": "11:44.2",
        "offset": -0.2
       }
      }
+    ],
+    "fire": [
+     {
+      "at": 0,
+      "v": 0.0
+     }
+    ],
+    "smoke": [
+     {
+      "at": 0,
+      "v": 0.5
+     }
     ]
-   }
+   },
+   "rain": 0
   },
   {
    "id": "5",
@@ -235,40 +511,174 @@
     "near": "12:08.5",
     "offset": -0.15
    },
-   "type": "facts",
+   "type": "diorama",
    "transition": "fade:0.6",
    "p": {
-    "heading": "Det første spor til politiet",
-    "at": 0.2,
+    "site": "@site",
+    "cam": [
+     {
+      "at": 0,
+      "pos": [
+       -5,
+       2.2,
+       6
+      ],
+      "look": [
+       0,
+       1.5,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "at": 11,
+      "pos": [
+       -4,
+       8,
+       9
+      ],
+      "look": [
+       0,
+       1,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "at": 20,
+      "pos": [
+       0,
+       45,
+       8
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ],
     "items": [
      {
+      "type": "tarp",
+      "at": -1
+     },
+     {
+      "type": "tape",
+      "points": [
+       [
+        -9,
+        -6
+       ],
+       [
+        2,
+        -10
+       ],
+       [
+        9.5,
+        -2
+       ],
+       [
+        7,
+        8
+       ],
+       [
+        -4,
+        9.5
+       ],
+       [
+        -10,
+        3
+       ]
+      ],
+      "closed": true,
+      "at": -1
+     },
+     {
+      "type": "text3d",
+      "text": "Det første spor til politiet",
+      "pos": [
+       0,
+       2.8,
+       0
+      ],
+      "size": 80,
+      "ref": 8,
+      "at": 0.4,
+      "until": {
+       "word": "organer",
+       "near": "12:13.1",
+       "offset": -0.5
+      }
+     },
+     {
+      "type": "text3d",
       "text": "Ud fra organerne",
+      "pos": [
+       0,
+       2.8,
+       0
+      ],
+      "size": 80,
+      "ref": 8,
       "at": {
        "word": "organer",
        "near": "12:13.1",
        "offset": -0.4
+      },
+      "until": {
+       "word": "intakte",
+       "near": "12:17.5",
+       "offset": -0.7
       }
      },
      {
+      "type": "text3d",
       "text": "og den del af ansigtet, der er nogenlunde intakt",
+      "pos": [
+       0,
+       3.2,
+       0
+      ],
+      "size": 64,
+      "ref": 10,
       "at": {
        "word": "intakte",
        "near": "12:17.5",
        "offset": -0.6
-      }
-     },
-     {
-      "text": "En yngre kvinde",
-      "hot": true,
-      "size": 96,
-      "at": {
+      },
+      "until": {
        "word": "yngre",
        "near": "12:21.5",
-       "offset": -0.5
+       "offset": -0.7
       }
      }
-    ]
-   }
+    ],
+    "caption": {
+     "h": "En yngre kvinde",
+     "size": 110,
+     "at": {
+      "word": "yngre",
+      "near": "12:21.5",
+      "offset": -0.5
+     }
+    },
+    "fire": [
+     {
+      "at": 0,
+      "v": 0.0
+     }
+    ],
+    "smoke": [
+     {
+      "at": 0,
+      "v": 0.4
+     }
+    ],
+    "fog": 0.012
+   },
+   "rain": 0
   },
   {
    "id": "7",

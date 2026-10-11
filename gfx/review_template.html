@@ -58,8 +58,8 @@ a:focus-visible, video:focus-visible { outline: 2px solid var(--glod); outline-o
 <div class="wrap">
   <header>
     <h1>Kort, spor og ord</h1>
-    <p class="lede">Fire scener fra »Det Brændende Lig« uden et eneste genereret billede: de rigtige steder på kort, skitser af fundstedet, fundene som tekst, ordene i det øjeblik de bliver sagt, og to genstande bygget som modeller. Lyden er episodens egen.</p>
-    <div class="meta"><span>Danske Drabssager, sæson 6, afsnit 5</span><span>Metode E, test 11. oktober 2026</span><span>Lasses tidskoder</span></div>
+    <p class="lede">Fire scener fra »Det Brændende Lig« uden et eneste genereret billede: de rigtige steder på kort, fundstedet bygget som en model i 3D, fundene skrevet ind der, hvor de hører til, og ordene i det øjeblik de bliver sagt. Lyden er episodens egen.</p>
+    <div class="meta"><span>Danske Drabssager, sæson 6, afsnit 5</span><span>Metode E, version 2, 11. oktober 2026</span><span>Lasses tidskoder</span></div>
   </header>
 
   <div id="scenes" style="display:grid;gap:80px"></div>
@@ -74,7 +74,8 @@ a:focus-visible, video:focus-visible { outline: 2px solid var(--glod); outline-o
       </ul></div>
       <div><h3>Tegnet eller bygget, og skrevet på</h3><ul>
         <li>Skitserne af fundstedet er opfundet til forklaring. Episoden giver intet kort over stedet, så de siger »Skitse, ikke målfast«.</li>
-        <li>Flasken og gipsafstøbningen er modeller. De siger det selv på skærmen.</li>
+        <li>Flasken, gipsafstøbningen, bilen og hele lysningen med bålet er modeller. De siger det selv på skærmen.</li>
+        <li>Lysningen er en grå regnvejrsdag, sådan som episoden beskriver den. Bilen er en almindelig lille hatchback, ikke den rigtige.</li>
         <li>Episoden nævner ingen skov, så fundstedet er en stiplet zone mellem Køge og Ejby, ikke et punkt.</li>
       </ul></div>
       <div><h3>Holdt væk fra billedet</h3><ul>
@@ -113,7 +114,7 @@ a:focus-visible, video:focus-visible { outline: 2px solid var(--glod); outline-o
 
 <script>
 const SCENES = /*SCENES*/[];
-const kind = { map: "kort", siteplan: "skitse", facts: "fund", quote: "citat", title: "titel", object: "model", card: "kapitel", timeline: "tidslinje", photo: "foto" };
+const kind = { map: "kort", siteplan: "skitse", facts: "fund", quote: "citat", title: "titel", object: "model", diorama: "3D", card: "kapitel", timeline: "tidslinje", photo: "foto" };
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 document.getElementById("scenes").innerHTML = SCENES.map((s, i) => `
   <article class="scene" id="${esc(s.id)}">

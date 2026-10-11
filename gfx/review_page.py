@@ -45,6 +45,13 @@ def what(s):
         return "Citat" + (f" ({p['who']})" if p.get("who") else "") + ": »" + (words[:110] + ("…" if len(words) > 110 else "")) + "«"
     if t == "title":
         return " ".join(p.get("lines", []))
+    if t == "diorama":
+        bits = [i.get("text") or i.get("label") for i in p.get("items", []) if i.get("type") in ("label", "text3d", "steps", "tracks") and (i.get("text") or i.get("label"))]
+        if p.get("caption"):
+            bits.insert(0, p["caption"].get("h"))
+        if any(i.get("type") == "car" for i in p.get("items", [])):
+            bits.append("bilen kører fra stedet")
+        return "3D-model af fundstedet" + (": " + ", ".join(b for b in bits if b) if bits else " (ingen tekst)")
     if t == "object":
         return {"bottle": "Model: flaske tændvæske", "cast": "Model: gipsafstøbning af dækspor"}.get(p.get("model"), "Model")
     return t

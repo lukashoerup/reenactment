@@ -95,3 +95,15 @@ forensic-style reconstructions, stylised looks, or as control passes for an AI r
   whenever any template changed.
 - Shots of 10–15 s work in graphics if something changes inside them (a word, a route,
   a ring); re-enactment wanted 4–6 s.
+
+## 2026-10-11 — From lists to a modelled place (Fern direction)
+- Findings read as "bullet points slowly appearing" when they sit on an empty background.
+  Putting each finding on the place it is about (a label at the fire, text along the road)
+  turns the same words into a scene. A re-usable 3D set of the site is the cheapest way to
+  do that for a whole episode.
+- Check the time of day in the transcript before lighting a set: the first diorama was night
+  by habit; the episode says "sådan en regnvejrsdag".
+- SwiftShader costs ≈ 0.45 s per 720p frame for a diorama shot without headlights, ≈ 0.9 s
+  with two spotlights; MSAA off saves only ~25 %, so it stays on. Keep cameras out of the
+  tree crowns (see CATALOG §Diorama camera rules) — a crown next to the lens is a black frame.
+- A burnt-out fire must look burnt out: logs collapse and char when the shot's fire is 0.

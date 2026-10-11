@@ -11,47 +11,136 @@
   {
    "id": "1",
    "at": "36:27.70",
-   "type": "facts",
+   "type": "diorama",
    "fade_in": 0.5,
    "p": {
-    "heading": "Gerningsmanden",
-    "at": -0.3,
+    "site": "@site",
+    "cam": [
+     {
+      "at": 0,
+      "pos": [
+       -60,
+       1.7,
+       62
+      ],
+      "look": [
+       -28,
+       1.2,
+       28
+      ],
+      "fov": 40
+     },
+     {
+      "at": 14.8,
+      "pos": [
+       -46,
+       1.7,
+       48
+      ],
+      "look": [
+       -14,
+       1.0,
+       14
+      ],
+      "fov": 40
+     }
+    ],
     "items": [
      {
+      "type": "text3d",
       "text": "Han begik fejl",
+      "pos": [
+       -34,
+       2.6,
+       34
+      ],
+      "size": 96,
+      "ref": 30,
       "at": {
        "word": "begik",
        "near": "36:28.4",
-       "offset": -0.2
+       "offset": -0.3
+      },
+      "until": {
+       "word": "opdager",
+       "near": "36:32.6",
+       "offset": -0.6
       }
      },
      {
+      "type": "text3d",
       "text": "Dem, vi opdager, begår jo fejl",
+      "pos": [
+       -34,
+       2.6,
+       34
+      ],
+      "size": 84,
+      "ref": 30,
       "at": {
        "word": "opdager",
        "near": "36:32.6",
        "offset": -0.5
+      },
+      "until": {
+       "word": "organiseret",
+       "near": "36:39.1",
+       "offset": -1.0
       }
      },
      {
+      "type": "text3d",
       "text": "Men det var velorganiseret",
+      "pos": [
+       -30,
+       2.6,
+       30
+      ],
+      "size": 84,
+      "ref": 30,
       "at": {
        "word": "organiseret",
        "near": "36:39.1",
        "offset": -0.9
+      },
+      "until": {
+       "word": "forklaring",
+       "near": "36:41.0",
+       "offset": -0.7
       }
      },
      {
+      "type": "text3d",
       "text": "Og han havde en god forklaring parat",
       "hot": true,
+      "pos": [
+       -28,
+       2.6,
+       28
+      ],
+      "size": 84,
+      "ref": 30,
       "at": {
        "word": "forklaring",
        "near": "36:41.0",
        "offset": -0.6
       }
      }
+    ],
+    "fire": [
+     {
+      "at": 0,
+      "v": 0.0
+     }
+    ],
+    "smoke": [
+     {
+      "at": 0,
+      "v": 0.0
+     }
     ]
-   }
+   },
+   "rain": 0
   },
   {
    "id": "2",
@@ -160,41 +249,135 @@
     "near": "37:08.0",
     "offset": -0.15
    },
-   "type": "facts",
+   "type": "diorama",
    "p": {
-    "heading": "Hvem slår kvinder ihjel?",
-    "at": 0.0,
+    "site": "@site",
+    "cam": [
+     {
+      "at": 0,
+      "pos": [
+       10,
+       30,
+       30
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     },
+     {
+      "at": 16,
+      "pos": [
+       -12,
+       28,
+       30
+      ],
+      "look": [
+       0,
+       0,
+       0
+      ],
+      "fov": 40
+     }
+    ],
     "items": [
      {
+      "type": "text3d",
+      "text": "Hvem slår kvinder ihjel?",
+      "pos": [
+       0,
+       6,
+       0
+      ],
+      "size": 88,
+      "ref": 40,
+      "at": 0.2,
+      "until": {
+       "word": "fremmed",
+       "near": "37:11.8",
+       "offset": -0.6
+      }
+     },
+     {
+      "type": "text3d",
       "text": "En fremmed",
       "sub": "Det skal man normalt slet ikke bekymre sig om",
+      "pos": [
+       0,
+       6,
+       0
+      ],
+      "size": 88,
+      "ref": 40,
       "at": {
        "word": "fremmed",
        "near": "37:11.8",
        "offset": -0.4
+      },
+      "until": {
+       "word": "risikoen",
+       "near": "37:14.5",
+       "offset": -0.3
       }
      },
      {
+      "type": "text3d",
       "text": "Hendes mand",
       "sub": "Her er risikoen klart størst",
       "hot": true,
+      "pos": [
+       0,
+       6,
+       0
+      ],
+      "size": 96,
+      "ref": 40,
       "at": {
        "word": "risikoen",
        "near": "37:14.5",
        "offset": -0.2
+      },
+      "until": {
+       "word": "ekskæreste",
+       "near": "37:20.4",
+       "offset": -0.4
       }
      },
      {
+      "type": "text3d",
       "text": "Ekskæresten eller eksmanden",
       "hot": true,
+      "pos": [
+       0,
+       6,
+       0
+      ],
+      "size": 96,
+      "ref": 40,
       "at": {
        "word": "ekskæreste",
        "near": "37:20.4",
        "offset": -0.3
       }
      }
-    ]
-   }
+    ],
+    "fire": [
+     {
+      "at": 0,
+      "v": 0.0
+     }
+    ],
+    "smoke": [
+     {
+      "at": 0,
+      "v": 0.0
+     }
+    ],
+    "fog": 0.012
+   },
+   "rain": 0
   },
   {
    "id": "6",
@@ -203,60 +386,56 @@
     "near": "37:23.9",
     "offset": -0.1
    },
-   "type": "siteplan",
+   "type": "diorama",
    "transition": "fade:0.6",
-   "note": "Breather on the fire: the words here are unclear in the transcript, so nothing is written.",
-   "rain": 0.35,
+   "rain": 0,
    "p": {
-    "extent": [
-     -80,
-     -60,
-     80,
-     60
-    ],
+    "site": "@site",
     "cam": [
      {
       "at": 0,
-      "x": 0,
-      "y": 0,
-      "zoom": 34
+      "pos": [
+       -6,
+       1.2,
+       6
+      ],
+      "look": [
+       0,
+       0.3,
+       0
+      ],
+      "fov": 40
      },
      {
-      "at": 8.3,
-      "x": 0,
-      "y": 0,
-      "zoom": 46
+      "at": 8.2,
+      "pos": [
+       -5,
+       1.1,
+       4.6
+      ],
+      "look": [
+       0,
+       0.3,
+       0
+      ],
+      "fov": 40
      }
     ],
-    "items": [
+    "items": [],
+    "fire": [
      {
-      "type": "trees",
-      "box": [
-       -80,
-       -60,
-       80,
-       60
-      ],
-      "n": 160,
-      "clear": [
-       [
-        0,
-        0,
-        9
-       ]
-      ],
-      "at": -1,
-      "draw": false
-     },
+      "at": 0,
+      "v": 0.0
+     }
+    ],
+    "smoke": [
      {
-      "type": "fire",
-      "x": 0,
-      "y": 0,
-      "r": 2.2,
-      "at": -1
+      "at": 0,
+      "v": 0.0
      }
     ]
-   }
+   },
+   "note": "Breather on the empty clearing: the words here are unclear in the transcript, so nothing is written."
   },
   {
    "id": "7",

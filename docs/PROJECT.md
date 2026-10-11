@@ -52,6 +52,10 @@ film-language notes and the machine does the rest.
   models and real material, because generated images will almost always read as AI.
   Method E (graphics rendered from code) built for this; must scale to a full 45-min episode.
 - 2026-10-11 — Lukas: readable text in frame is allowed (rule 4 changed).
+- 2026-10-11 — Lukas, on the first E cut: maps work well; too many parts are bullet points
+  slowly appearing; more on the visuals, in the direction of the YouTube channel Fern; zoom
+  into the campfire and show it in 3D. → `diorama` template (3D model of the site) replaces
+  the findings lists; the site is a grey rainy day ("en regnvejrsdag", 03:06), not night.
 
 ## Status (2026-09-27)
 - A2 is the best photographic cut. Known defects left: S6 log swings in as if thrown

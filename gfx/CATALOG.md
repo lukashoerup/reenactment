@@ -62,6 +62,14 @@ the word (`offset` −0.3 to −0.6) so the eye arrives as the ear does.
 | `timeline` | dated events | `events:[{when, label, sub, at, hot}]`, `gap`, `focus` |
 | `photo` | a real photograph with its credit | `src` (in the episode folder), `credit`, `from/to:{x, y, s}`, `caption` |
 | `object` | an object modelled in code (bottle, plaster cast) | `model:"bottle"/"cast"`, `orbit:[{at, az, el, dist}]`, `shift`, `flicker`, `caption`; credit must say it is a model |
+| `diorama` | the find site in 3D: forest clearing, bonfire, road, rain (Fern-style re-usable set) | `site:"@site"`, `cam:[{at, pos:[x,h,y], look:[x,h,y], fov}]` (spline through all keys), `fire`/`smoke:[{at, v}]` (0 = out; a fire at 0 for the whole shot is drawn burnt-out), `light:"overcast"/"night"`, `fog`, `items:[label, text3d, steps, tracks, ring, markers, tape, tarp, litter, car, bottle]`, `caption`; credit defaults to "Model af fundstedet, ikke målfast" |
+
+### Diorama camera rules
+Trees stand everywhere except the clearing (13 m around the fire), the road (3.4 m) and the
+path. Keep the camera inside the clearing (< 9 m from the fire), on the road at eye height
+(1.5–2 m, a couple of metres to the side if a car will pass), or above 25 m. Anywhere else
+the lens ends up inside a tree crown. `text3d` scales with distance (`ref` = the distance
+at which it has its set size); one statement at a time reads best (`until` = next `at`).
 
 ## House rules (also in docs/PROJECT.md)
 
@@ -73,6 +81,9 @@ the word (`offset` −0.3 to −0.6) so the eye arrives as the ear does.
 - Readable text is allowed (decision 2026-10-11) but must be designed graphics, never a
   fake document, newspaper page or police record (rule 3 still holds).
 - Average shot 6–12 s is fine for graphics if something changes inside the shot.
+- Prefer showing over listing: a finding belongs on the place it is about (a label in the
+  diorama, a ring on the ground) or as one statement in space. `facts` lists are a last resort.
+- The day of the find is "en regnvejrsdag": the diorama defaults to overcast rain, not night.
 
 ## Workflow for a full episode
 

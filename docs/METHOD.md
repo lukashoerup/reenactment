@@ -100,13 +100,15 @@ grain, for an editor), `_web.mp4` (small review copy), `_sheet.jpg` (one frame p
    (OSRM), the schematic site layout and every on-screen fact with the timecode where it
    is said. Scenes refer to it (`@koege`, `@route:kbh-koege`, `@site:road`).
 3. **Templates** (`gfx/web/templates/`): map, siteplan, facts, quote, title, card,
-   timeline, photo, object. One design system (`gfx/web/style.css`): night palette,
+   timeline, photo, object, diorama (the find site in 3D: clearing, bonfire with a noise
+   shader, embers, smoke, firelight, road, rain, tape, tarp, markers, a car; labels and
+   text anchored in 3D). One design system (`gfx/web/style.css`): night palette,
    Archivo for facts and places, Newsreader italic for spoken words, one ember colour for
    the fire and the fact that matters.
 4. **Frames.** Headless Chromium renders one deterministic frame per 1/25 s
    (`setupShot(spec)`, `renderFrame(t)`), captured over CDP and piped to ffmpeg.
    Software rendering (`--disable-gpu`) is ~8× faster than SwiftShader GPU emulation for
-   2D; only `object` (three.js) uses WebGL.
+   2D; only `object` and `diorama` (three.js) use WebGL.
 5. **Maps.** The MapLibre style (`mapstyle.js`, OpenFreeMap vector tiles) is baked once
    into 512-px raster tiles (`gfx/maptiles.py`, cache keyed by the style's hash); map
    shots composite those tiles on a canvas with a van Wijk fly camera and trilinear zoom.
