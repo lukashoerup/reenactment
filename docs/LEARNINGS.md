@@ -74,3 +74,24 @@ forensic-style reconstructions, stylised looks, or as control passes for an AI r
 - C (drawn): Lukas's favourite; forgiving of anomalies; Veo Lite still added cartoon
   swirls in the fire, walked a child out of frame, put figures behind the fire.
 - D (Blender): see above.
+
+## 2026-10-11 — Method E (graphics from code)
+- **Grounding beats generation.** Every map, place, date and quote on screen comes from
+  the episode or OpenStreetMap — nothing to "look AI". The risk moves from AI tells to
+  false precision: the episode names no forest, so the site is a dashed zone, the site plan
+  says "Skitse, ikke målfast", the bottle says "Model, ikke den fundne flaske".
+- **Whisper misspells names** (Hougen → "Håken", Isager → "Isar"/"Især", Lynnerup →
+  "Lønnerup"). Names on screen come from case.json, checked; quotes are written in correct
+  Danish and aligned to the misspelt transcript. Unclear passages get no text (breather shot).
+- **SwiftShader is the bottleneck.** Headless Chromium with GPU emulation: 0.4–1 s per 2D
+  frame and 2.5–4 s per live MapLibre frame. With `--disable-gpu` 2D frames take ~0.07 s;
+  maps baked to raster tiles and composited take ~0.13 s. Bake tiles in 2×2 blocks
+  (1024 px): 4×4 blocks (2048 px) took 20–30 s each.
+- **Playwright `wait_for_function("GFX.mapPlan")` calls the function** if the expression is a
+  function. Test with `typeof … === 'function'`.
+- **Grain is expensive to encode**: 720p with temporal grain = 9 Mbps at CRF 19. Keep grain
+  for the deliverable; the review copy has none. A procedural rain overlay also costs bitrate.
+- **Cache per template**, not per code base: one global code hash re-rendered every shot
+  whenever any template changed.
+- Shots of 10–15 s work in graphics if something changes inside them (a word, a route,
+  a ring); re-enactment wanted 4–6 s.

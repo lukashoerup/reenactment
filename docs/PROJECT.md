@@ -20,6 +20,7 @@ film-language notes and the machine does the rest.
 |---|---|---|
 | 2026-08-20 | Visual test "Våd aske": 24 mood stills + 4 clips for Lasse's 5 timecodes, **no people**. Lukas: missed the brief — it should have been re-enactment. | https://claude.ai/code/artifact/680baded-fbae-4dc3-940c-6cf7c3eca4af · list: https://claude.ai/code/artifact/964a1bfc-7103-4ac4-9e06-8534e2b6e769 |
 | 2026-09-27 | Re-enactment test of the cold open 01:36.6–01:59.3 in four methods (A photo, B stills, C drawn, D Blender), then A2 via the automatic fix loop. | "Børnene og bålet": https://claude.ai/artifact/3iJtsqAvHhtWE42YQdAmuu |
+| 2026-10-11 | Method E: four scenes (≈ 9 min) from Lasse's timecodes as maps, site sketches, findings, quotes, modelled objects — no generated images. | review page "Kort, spor og ord" (see tasks/T003) |
 
 ## The scene (cold open, 22.7 s)
 > Bålets flammer lokker de nysgerrige børn tættere på. Selvom regnen står ned i stænger,
@@ -32,7 +33,9 @@ film-language notes and the machine does the rest.
 1. No recognisable face — backs, hands, feet, silhouettes, objects, places.
 2. Never the victim, a body, limbs, blood or injury. The bundle is fabric, always.
 3. Nothing that can pass for archive (no fake police photos, news footage, text).
-4. No readable text in frame. Period-correct (Denmark, 1999).
+4. ~~No readable text in frame.~~ Readable text is allowed (2026-10-11): designed
+   graphics — names, places, times, findings, the speaker's words — never text that
+   imitates a document, paper or record (that is rule 3). Period-correct (Denmark, 1999).
 5. No AI voices of real people — narration is always the episode's own audio.
 6. **Nothing moves without a visible cause** (added 2026-09-27 after thrown logs/sticks).
 7. Mark as reconstruction on screen (see RESEARCH: APA guidelines, EU AI Act art. 50).
@@ -45,6 +48,10 @@ film-language notes and the machine does the rest.
   "B"). Default style for the next round unless Lasse says otherwise.
 - 2026-09-27 — Code and learnings live in this private repo; generic lessons also in
   workbench `context/LEARNINGS.md`.
+- 2026-10-11 — Lukas: lean less on generated pictures; carry the story with maps, motion,
+  models and real material, because generated images will almost always read as AI.
+  Method E (graphics rendered from code) built for this; must scale to a full 45-min episode.
+- 2026-10-11 — Lukas: readable text in frame is allowed (rule 4 changed).
 
 ## Status (2026-09-27)
 - A2 is the best photographic cut. Known defects left: S6 log swings in as if thrown

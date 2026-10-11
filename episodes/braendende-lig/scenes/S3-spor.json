@@ -1,0 +1,825 @@
+{
+ "id": "S3-spor",
+ "title": "Flasken og dæksporene",
+ "note": "Lasse's timecode 15:30–17:09 (lighter fluid, tyre tracks), started at 14:29 where the lighter fluid is introduced. The bottle and the plaster cast are models built in code and say so on screen.",
+ "audio": {
+  "from": "14:29.50",
+  "to": "17:08.10"
+ },
+ "bed": "rain",
+ "bed_db": -34,
+ "shots": [
+  {
+   "id": "1",
+   "at": "14:29.50",
+   "type": "object",
+   "fade_in": 0.6,
+   "credit": "Model, ikke den fundne flaske",
+   "p": {
+    "model": "bottle",
+    "flicker": true,
+    "shift": -0.06,
+    "orbit": [
+     {
+      "at": 0,
+      "az": -40,
+      "el": 16,
+      "dist": 1.3
+     },
+     {
+      "at": 7,
+      "az": -8,
+      "el": 12,
+      "dist": 1.2
+     }
+    ],
+    "caption": {
+     "h": "Tændvæske",
+     "s": "Til grillen eller petroleumslampen i haven",
+     "at": 0.8
+    }
+   }
+  },
+  {
+   "id": "2",
+   "at": {
+    "word": "Efterforskerne",
+    "near": "14:36.4",
+    "offset": -0.15
+   },
+   "type": "map",
+   "p": {
+    "cam": [
+     {
+      "at": 0,
+      "center": [
+       12.36,
+       55.575
+      ],
+      "zoom": 9.7
+     },
+     {
+      "at": 15.3,
+      "center": [
+       12.34,
+       55.565
+      ],
+      "zoom": 9.95
+     }
+    ],
+    "places": [
+     {
+      "name": "København",
+      "ll": "@kbh",
+      "cls": "big",
+      "at": 0.3
+     },
+     {
+      "name": "Køge",
+      "ll": "@koege",
+      "cls": "big",
+      "at": 0.3
+     },
+     {
+      "name": "Køge Bugt",
+      "ll": [
+       12.37,
+       55.52
+      ],
+      "cls": "sea",
+      "at": 0.8
+     }
+    ],
+    "routes": [
+     {
+      "coords": "@route:kbh-koege",
+      "color": "papir",
+      "width": 5,
+      "at": {
+       "word": "København",
+       "near": "14:49.2",
+       "offset": -0.6
+      },
+      "until": {
+       "word": "Køge",
+       "near": "14:50.0",
+       "offset": 0.6
+      }
+     }
+    ],
+    "caption": {
+     "h": "Mistænkelige køb af tændvæske?",
+     "at": {
+      "word": "mistænkelige",
+      "near": "14:39.5",
+      "offset": -0.4
+     },
+     "s": "Rigtig mange køb på tankstationerne fra København til Køge"
+    }
+   }
+  },
+  {
+   "id": "3",
+   "at": {
+    "word": "Kriminalteknikkerne",
+    "near": "14:51.5",
+    "offset": -0.15
+   },
+   "type": "siteplan",
+   "transition": "fade:0.5",
+   "p": {
+    "extent": [
+     -120,
+     -100,
+     120,
+     120
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": -10,
+      "y": 10,
+      "zoom": 12
+     },
+     {
+      "at": 15,
+      "x": 0,
+      "y": 0,
+      "zoom": 30
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -120,
+       -100,
+       120,
+       120
+      ],
+      "n": 420,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "road",
+      "points": "@site:road",
+      "width": 3.2,
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1,
+      "label": "Spor af brandbar væske",
+      "lx": 3,
+      "ly": -1.5,
+      "label_at": {
+       "word": "brandbare",
+       "near": "14:53.5",
+       "offset": -0.3
+      }
+     },
+     {
+      "type": "zone",
+      "points": [
+       [
+        -1.4,
+        0.8
+       ],
+       [
+        -0.2,
+        0.4
+       ],
+       [
+        0.2,
+        1.6
+       ],
+       [
+        -1.0,
+        2.0
+       ]
+      ],
+      "color": "papir",
+      "at": {
+       "word": "resterne",
+       "near": "15:03.1",
+       "offset": -0.3
+      },
+      "label": "Resterne af en flaske tændvæske",
+      "sub": "i bålet",
+      "lx": -1.4,
+      "ly": 2.2,
+      "lalign": "left"
+     }
+    ],
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "4",
+   "at": {
+    "word": "Og den var",
+    "near": "15:06.5",
+    "offset": -0.15
+   },
+   "type": "object",
+   "credit": "Model, ikke den fundne flaske",
+   "p": {
+    "model": "bottle",
+    "flicker": true,
+    "shift": -0.06,
+    "orbit": [
+     {
+      "at": 0,
+      "az": 30,
+      "el": 24,
+      "dist": 1.25
+     },
+     {
+      "at": 13,
+      "az": 6,
+      "el": 16,
+      "dist": 1.15
+     }
+    ],
+    "caption": {
+     "k": "Kan flasken føres tilbage til en tankstation?",
+     "h": "»Har nogen købt sådan en flaske?«",
+     "at": {
+      "word": "Er der nogen",
+      "near": "15:15.5",
+      "offset": -0.3
+     },
+     "size": 64
+    }
+   }
+  },
+  {
+   "id": "5",
+   "at": {
+    "word": "Ud på stedet",
+    "near": "15:19.4",
+    "offset": -0.15
+   },
+   "type": "facts",
+   "p": {
+    "heading": "Sikret på stedet",
+    "at": 0.1,
+    "items": [
+     {
+      "text": "Brandprøver fra bålet",
+      "at": {
+       "word": "brandprøver",
+       "near": "15:21.1",
+       "offset": -0.3
+      }
+     },
+     {
+      "text": "Forseglet i nylonposer",
+      "at": {
+       "word": "nylonposer",
+       "near": "15:24.2",
+       "offset": -0.4
+      }
+     },
+     {
+      "text": "Flasken med tændvæske",
+      "hot": true,
+      "at": {
+       "word": "flaske",
+       "near": "15:26.7",
+       "offset": -0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "6",
+   "at": {
+    "word": "Så sender",
+    "near": "15:29.2",
+    "offset": -0.15
+   },
+   "type": "map",
+   "p": {
+    "cam": [
+     {
+      "at": 0,
+      "center": [
+       12.235,
+       55.555
+      ],
+      "zoom": 10.05
+     },
+     {
+      "at": 11.6,
+      "center": [
+       12.25,
+       55.565
+      ],
+      "zoom": 10.3
+     }
+    ],
+    "rings": [
+     {
+      "center": "@skoven",
+      "radius": 2600,
+      "at": -1,
+      "fill": 0.06,
+      "dash": [
+       2,
+       2
+      ]
+     }
+    ],
+    "places": [
+     {
+      "name": "Køge",
+      "ll": "@koege",
+      "at": -1
+     },
+     {
+      "name": "Roskilde",
+      "ll": "@roskilde",
+      "at": 0.3
+     }
+    ],
+    "routes": [
+     {
+      "coords": "@route:koege-dti",
+      "color": "papir",
+      "width": 5,
+      "at": 0.4,
+      "until": 3.6
+     }
+    ],
+    "markers": [
+     {
+      "ll": "@dti",
+      "kind": "dot",
+      "label": "Dansk Teknologisk Institut",
+      "sub": "Taastrup",
+      "side": "right",
+      "at": {
+       "word": "teknologisk",
+       "near": "15:30.2",
+       "offset": -0.2
+      }
+     }
+    ],
+    "caption": {
+     "h": "Er det samme væske?",
+     "at": {
+      "word": "identisk",
+      "near": "15:36.8",
+      "offset": -0.6
+     }
+    }
+   }
+  },
+  {
+   "id": "7",
+   "at": {
+    "word": "Ud på",
+    "near": "15:40.8",
+    "offset": -0.15
+   },
+   "type": "siteplan",
+   "transition": "fade:0.5",
+   "p": {
+    "extent": [
+     -200,
+     -140,
+     200,
+     200
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": -40,
+      "y": 40,
+      "zoom": 6.5
+     },
+     {
+      "at": 5,
+      "x": -50,
+      "y": 50,
+      "zoom": 7.5
+     },
+     {
+      "at": 12.4,
+      "x": -40,
+      "y": 38,
+      "zoom": 12
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -200,
+       -140,
+       200,
+       200
+      ],
+      "n": 900,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "road",
+      "points": "@site:road",
+      "width": 3.2,
+      "at": {
+       "word": "vej",
+       "near": "15:42.8",
+       "offset": -0.3
+      },
+      "draw": 1.4,
+      "label": "En vej ind til stedet",
+      "lx": -100,
+      "ly": 95,
+      "lalign": "left"
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1,
+      "dim": 0.6
+     },
+     {
+      "type": "tracks",
+      "points": "@site:road",
+      "at": {
+       "word": "dækaftryk",
+       "near": "15:49.4",
+       "offset": -0.3
+      },
+      "draw": 2.2,
+      "label": "Dækaftryk i den våde skovbund",
+      "lx": -55,
+      "ly": 55,
+      "label_at": {
+       "word": "dækaftryk",
+       "near": "15:49.4",
+       "offset": 0.4
+      }
+     }
+    ],
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "8",
+   "at": {
+    "word": "Og der sikrer",
+    "near": "15:53.3",
+    "offset": -0.15
+   },
+   "type": "object",
+   "credit": "Model af en gipsafstøbning",
+   "p": {
+    "model": "cast",
+    "shift": -0.12,
+    "orbit": [
+     {
+      "at": 0,
+      "az": -8,
+      "el": 60,
+      "dist": 1.6
+     },
+     {
+      "at": 11.5,
+      "az": 6,
+      "el": 52,
+      "dist": 1.4
+     }
+    ],
+    "caption": {
+     "k": "Kriminalteknikerne",
+     "h": "Målestok, fotos og gips",
+     "s": "Aftrykkene fotograferes 1:1 og støbes i gips",
+     "at": {
+      "word": "motstok",
+      "near": "15:58.9",
+      "offset": -0.8
+     }
+    }
+   }
+  },
+  {
+   "id": "9",
+   "at": {
+    "word": "Og så havde",
+    "near": "16:04.7",
+    "offset": -0.1
+   },
+   "type": "facts",
+   "p": {
+    "layout": "chain",
+    "heading": "Hvilket dæk?",
+    "at": 0.1,
+    "items": [
+     {
+      "text": "Gipsafstøbningerne",
+      "at": 0.6
+     },
+     {
+      "text": "Dækimportørforeningen",
+      "sub": "kontakt fra en tidligere sag",
+      "at": {
+       "word": "Dækimperatørforeningen",
+       "near": "16:09.5",
+       "offset": -0.4
+      }
+     },
+     {
+      "text": "Dæktypen findes",
+      "at": {
+       "word": "type",
+       "near": "16:12.5",
+       "offset": -0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "10",
+   "at": {
+    "word": "Og der fandt",
+    "near": "16:18.8",
+    "offset": -0.1
+   },
+   "type": "title",
+   "p": {
+    "kicker": "Nogle af dækkene kunne være fra en",
+    "lines": [
+     "VW Golf",
+     "eller Polo"
+    ],
+    "size": 190,
+    "at": {
+     "word": "VW",
+     "near": "16:25.3",
+     "offset": -0.7
+    }
+   }
+  },
+  {
+   "id": "11",
+   "at": {
+    "word": "Og der var nogle",
+    "near": "16:28.9",
+    "offset": -0.1
+   },
+   "type": "siteplan",
+   "lt": {
+    "who": "isager",
+    "at": {
+     "word": "Husker",
+     "near": "16:40.2"
+    },
+    "until": 15.3
+   },
+   "p": {
+    "extent": [
+     -220,
+     -160,
+     220,
+     220
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": -60,
+      "y": 60,
+      "zoom": 6.0
+     },
+     {
+      "at": 15.3,
+      "x": -70,
+      "y": 70,
+      "zoom": 5.4
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -220,
+       -160,
+       220,
+       220
+      ],
+      "n": 1000,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "road",
+      "points": "@site:road",
+      "width": 3.2,
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1
+     },
+     {
+      "type": "tracks",
+      "points": "@site:road_out",
+      "color": "glod",
+      "at": {
+       "word": "køre",
+       "near": "16:32.2",
+       "offset": -0.4
+      },
+      "draw": 2.6,
+      "label": "Vidner ser en Golf eller Polo køre fra stedet",
+      "sub": "kort før bålet bliver opdaget",
+      "lx": -100,
+      "ly": 95,
+      "label_at": {
+       "word": "vidner",
+       "near": "16:29.7",
+       "offset": -0.2
+      }
+     }
+    ],
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "12",
+   "at": {
+    "word": "De fik",
+    "near": "16:44.2",
+    "offset": -0.1
+   },
+   "type": "facts",
+   "p": {
+    "heading": "Hvem kunne ellers have kørt der?",
+    "at": 0.1,
+    "items": [
+     {
+      "text": "Skovfogeden?",
+      "at": {
+       "word": "skovfrueden",
+       "near": "16:49.8",
+       "offset": -0.3
+      }
+     },
+     {
+      "text": "En jæger?",
+      "at": {
+       "word": "jæger",
+       "near": "16:51.2",
+       "offset": -0.3
+      }
+     },
+     {
+      "text": "Men sporene ligger lige der, hvor bålet er bygget",
+      "hot": true,
+      "at": {
+       "word": "arrangeret",
+       "near": "16:54.9",
+       "offset": -0.4
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "13",
+   "at": {
+    "word": "Det har noget",
+    "near": "16:57.6",
+    "offset": -0.1
+   },
+   "type": "siteplan",
+   "fade_out": 0.5,
+   "p": {
+    "extent": [
+     -80,
+     -60,
+     80,
+     80
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": -10,
+      "y": 10,
+      "zoom": 22
+     },
+     {
+      "at": 10.5,
+      "x": -4,
+      "y": 4,
+      "zoom": 34
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -80,
+       -60,
+       80,
+       80
+      ],
+      "n": 200,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "road",
+      "points": "@site:road",
+      "width": 3.2,
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "tracks",
+      "points": "@site:road",
+      "at": -1,
+      "draw": false,
+      "color": "papir"
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1,
+      "label": "Bilen har været helt oppe ved bålet",
+      "lx": 2.8,
+      "ly": -0.5,
+      "label_at": {
+       "word": "helt",
+       "near": "16:59.8",
+       "offset": -0.6
+      }
+     },
+     {
+      "type": "ring",
+      "x": 0,
+      "y": 0,
+      "r": 4.5,
+      "at": {
+       "word": "brandbare",
+       "near": "17:03.5",
+       "offset": -0.3
+      },
+      "label": "Meget brandbar væske",
+      "lx": 0,
+      "ly": -4.5,
+      "lalign": "up"
+     }
+    ],
+    "credit": "Skitse, ikke målfast"
+   }
+  }
+ ],
+ "summary": "Lasses tidskode 15:30–17:09: tændvæsken og dæksporene. Starter 14:29, hvor tændvæsken bliver nævnt første gang."
+}

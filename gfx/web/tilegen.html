@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<script src="vendor/maplibre-gl.js"></script>
+<script src="mapstyle.js"></script>
+<style>html,body{margin:0;background:#15242c}#m{position:absolute;left:0;top:0}</style>
+</head><body><div id="m"></div>
+<script>
+// Bakes an n×n block of 512-px tiles at zoom z, top-left tile (x0, y0), and returns a PNG.
+let map = null;
+window.renderBlock = async (base, z, x0, y0, n) => {
+  const px = 512 * n;
+  const div = document.getElementById("m");
+  div.style.width = px + "px"; div.style.height = px + "px";
+  const ws = 512 * Math.pow(2, z);
+  const cx = (x0 * 512 + px / 2) / ws, cy = (y0 * 512 + px / 2) / ws;
+  const lon = cx * 360 - 180;
+  const lat = (360 / Math.PI) * Math.atan(Math.exp((1 - 2 * cy) * Math.PI)) - 90;
+  if (!map) {
+    map = new maplibregl.Map({ container: div, style: makeMapStyle(base), center: [lon, lat], zoom: z,
+      interactive: false, attributionControl: false, fadeDuration: 0, pixelRatio: 1, renderWorldCopies: false,
+      canvasContextAttributes: { preserveDrawingBuffer: true, antialias: true } });
+    await new Promise((r) => map.once("load", r));
+  }
+  map.resize();
+  map.jumpTo({ center: [lon, lat], zoom: z });
+  await new Promise((r) => { if (map.loaded() && map.areTilesLoaded()) { map.once("render", () => r()); map.triggerRepaint(); } else map.once("idle", r); setTimeout(r, 30000); });
+  await new Promise((r) => { map.once("idle", r); map.triggerRepaint(); setTimeout(r, 5000); });
+  return map.getCanvas().toDataURL("image/png");
+};
+</script></body></html>

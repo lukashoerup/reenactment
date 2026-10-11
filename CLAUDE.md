@@ -14,7 +14,9 @@ House Media. Owner: Lukas. Private repo (real case, client pitch).
 - Every paid call appends to `spend.log`. Scripts stop at a spend cap; never raise a
   cap without Lukas. Danish credit = list price + 25 % VAT (≈ 8 kr per USD).
 - Series rules (docs/PROJECT.md §Rules) are hard: no faces, no body, nothing that can
-  pass for archive, no motion without a visible cause.
+  pass for archive, no motion without a visible cause. Readable text is allowed (2026-10-11).
+- Method E (graphics, `gfx/`): every on-screen fact comes from the episode or case.json;
+  schematic = "Skitse, ikke målfast", model = says it is a model; no invented precision.
 - Decisions from chat go into docs/PROJECT.md §Decisions or a task file.
 
 ## Document routing (read only what you need)
@@ -27,6 +29,7 @@ House Media. Owner: Lukas. Private repo (real case, client pitch).
 | Cost of a scene / an episode, quotas   | docs/COST.md                |
 | Review of A1 → A2 (defect list)        | docs/REVIEW-2026-09-27.md   |
 | Open work                              | tasks/, QUESTIONS.md        |
+| Method E: shot templates, scene format | gfx/CATALOG.md              |
 | Cross-project patterns                 | workbench: context/         |
 
 ## Files
@@ -45,8 +48,13 @@ House Media. Owner: Lukas. Private repo (real case, client pitch).
 | `scene.py`, `kid_meta.py`, `comp.py`, `post.py`, `postwatch.py`, `assemble.py`, `render_all.sh`, `fetch_stock.sh` | method D: Blender 3D + stock fire (bpy 4.5, CPU) |
 | `gen/generate.py` | untested fal.ai variant of the pipeline (Kling / nano-banana), kept for reference |
 | `page/` | source of the review page (Artifact "Børnene og bålet") |
+| `gfx/render.py` | method E: scene JSON → lint → per-shot frames (headless Chromium) → cut with narration; `--still`, `--preview` |
+| `gfx/web/` | runtime, design tokens (`style.css`), templates, map style; fonts/vendor via `gfx/fetch_assets.sh` |
+| `gfx/maptiles.py`, `gfx/server.py`, `gfx/geo.py`, `gfx/timing.py` | baked map tiles, local tile/asset server, geocoding + routes into case.json, episode clock + word anchors |
+| `gfx/review_page.py` | review page "Kort, spor og ord" (page/gfx/) from rendered scenes |
+| `episodes/<ep>/case.json`, `scenes/*.json` | facts with timecodes, places, routes, site layout; one file per scene |
 
-## Commands (from repo root, Python 3.11, ffmpeg)
+## Commands (from repo root, Python 3.11+, ffmpeg; method E also needs Playwright Chromium)
 ```
 export GKEY_FILE=/path/outside/repo/gkey
 python3 gen_image.py kf/S1.png "<prompt>" --ref kf/master.png
@@ -55,4 +63,10 @@ python3 qa/loop.py S2 S4 S8            # CAP_USD env caps spend
 python3 edit2.py out/reenact_A2.mp4
 python3 qa/judge.py out/A2_720.mp4 gemini-3.1-pro-preview qa/judge.json 6
 bvenv/bin/python qa/metrics.py out/reenact_A2.mp4
+# method E
+gfx/fetch_assets.sh
+python3 transcribe.py 03:15-06:15            # or --all
+python3 -m gfx.render episodes/braendende-lig/scenes/S1-fundet.json --lint
+python3 -m gfx.render episodes/braendende-lig/scenes/S1-fundet.json --preview
+python3 -m gfx.review_page episodes/braendende-lig/scenes/*.json
 ```

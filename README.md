@@ -10,4 +10,8 @@ then fixed by an automatic generate → judge → retry loop.
 - What we learned: `docs/LEARNINGS.md` · what others do: `docs/RESEARCH-2026-09.md`
 - What an episode costs: `docs/COST.md`
 
+**Method E (2026-10-11):** the same story told with maps, site sketches, findings, the
+speakers' own words and modelled objects — no generated images. Code in `gfx/`, scenes in
+`episodes/braendende-lig/`, see `gfx/CATALOG.md` and `tasks/T003-graphics-method.md`.
+
 Media and podcast audio are not stored here (see `.gitignore`).

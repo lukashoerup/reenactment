@@ -1,0 +1,293 @@
+{
+ "id": "S4-dommen",
+ "title": "Dommen, og hvad der bliver tilbage",
+ "note": "Lasse's timecode 36:40–39:36, first 85 seconds. The speaker after the host's question is not named in this stretch, so no name is put on him. 38:00–38:15 describes the burnt body and must stay off screen (black or a quiet frame) if that part is ever done.",
+ "audio": {
+  "from": "36:27.70",
+  "to": "37:49.20"
+ },
+ "bed": "none",
+ "shots": [
+  {
+   "id": "1",
+   "at": "36:27.70",
+   "type": "facts",
+   "fade_in": 0.5,
+   "p": {
+    "heading": "Gerningsmanden",
+    "at": -0.3,
+    "items": [
+     {
+      "text": "Han begik fejl",
+      "at": {
+       "word": "begik",
+       "near": "36:28.4",
+       "offset": -0.2
+      }
+     },
+     {
+      "text": "Dem, vi opdager, begår jo fejl",
+      "at": {
+       "word": "opdager",
+       "near": "36:32.6",
+       "offset": -0.5
+      }
+     },
+     {
+      "text": "Men det var velorganiseret",
+      "at": {
+       "word": "organiseret",
+       "near": "36:39.1",
+       "offset": -0.9
+      }
+     },
+     {
+      "text": "Og han havde en god forklaring parat",
+      "hot": true,
+      "at": {
+       "word": "forklaring",
+       "near": "36:41.0",
+       "offset": -0.6
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "2",
+   "at": {
+    "word": "Men da han",
+    "near": "36:42.6",
+    "offset": -0.1
+   },
+   "type": "map",
+   "transition": "fade:0.5",
+   "p": {
+    "cam": [
+     {
+      "at": 0,
+      "center": [
+       12.085,
+       55.64
+      ],
+      "zoom": 11.4
+     },
+     {
+      "at": 9.3,
+      "center": [
+       12.075,
+       55.645
+      ],
+      "zoom": 11.9
+     }
+    ],
+    "places": [
+     {
+      "name": "Roskilde",
+      "ll": "@roskilde",
+      "cls": "big",
+      "at": 0.2
+     },
+     {
+      "name": "Roskilde Fjord",
+      "ll": [
+       12.05,
+       55.665
+      ],
+      "cls": "sea",
+      "at": 0.6
+     }
+    ],
+    "markers": [
+     {
+      "ll": "@scthans",
+      "kind": "dot",
+      "label": "Sct. Hans",
+      "sub": "psykiatrisk hospital",
+      "side": "left",
+      "at": {
+       "word": "St.",
+       "near": "36:46.1",
+       "offset": -0.4
+      }
+     }
+    ],
+    "caption": {
+     "k": "Gerningsmanden var skizofren",
+     "h": "Dømt",
+     "s": "Mange år på Sct. Hans, senere en behandlingsdom",
+     "at": {
+      "word": "dømt",
+      "near": "36:44.8",
+      "offset": -0.5
+     }
+    }
+   }
+  },
+  {
+   "id": "3",
+   "at": {
+    "word": "Når du tænker",
+    "near": "36:51.9",
+    "offset": -0.15
+   },
+   "type": "quote",
+   "p": {
+    "text": "Når du tænker tilbage på den her sag, hvad tænker du så?",
+    "who": "Stine Bolther",
+    "role": "Vært"
+   }
+  },
+  {
+   "id": "4",
+   "at": {
+    "word": "Desværre",
+    "near": "36:55.3",
+    "offset": -0.15
+   },
+   "type": "quote",
+   "p": {
+    "text": "Desværre er jo langt over halvdelen af alle drabssager mænd, der slår deres kærester ihjel. Så på den måde er den jo en af bunken af sager, hvor mænd slår kvinder ihjel.",
+    "hl": [
+     "langt over halvdelen"
+    ]
+   }
+  },
+  {
+   "id": "5",
+   "at": {
+    "word": "Som kvinde",
+    "near": "37:08.0",
+    "offset": -0.15
+   },
+   "type": "facts",
+   "p": {
+    "heading": "Hvem slår kvinder ihjel?",
+    "at": 0.0,
+    "items": [
+     {
+      "text": "En fremmed",
+      "sub": "Det skal man normalt slet ikke bekymre sig om",
+      "at": {
+       "word": "fremmed",
+       "near": "37:11.8",
+       "offset": -0.4
+      }
+     },
+     {
+      "text": "Hendes mand",
+      "sub": "Her er risikoen klart størst",
+      "hot": true,
+      "at": {
+       "word": "risikoen",
+       "near": "37:14.5",
+       "offset": -0.2
+      }
+     },
+     {
+      "text": "Ekskæresten eller eksmanden",
+      "hot": true,
+      "at": {
+       "word": "ekskæreste",
+       "near": "37:20.4",
+       "offset": -0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "6",
+   "at": {
+    "word": "Det er",
+    "near": "37:23.9",
+    "offset": -0.1
+   },
+   "type": "siteplan",
+   "transition": "fade:0.6",
+   "note": "Breather on the fire: the words here are unclear in the transcript, so nothing is written.",
+   "rain": 0.35,
+   "p": {
+    "extent": [
+     -80,
+     -60,
+     80,
+     60
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": 0,
+      "y": 0,
+      "zoom": 34
+     },
+     {
+      "at": 8.3,
+      "x": 0,
+      "y": 0,
+      "zoom": 46
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -80,
+       -60,
+       80,
+       60
+      ],
+      "n": 160,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1
+     }
+    ]
+   }
+  },
+  {
+   "id": "7",
+   "at": {
+    "word": "Det eneste",
+    "near": "37:32.2",
+    "offset": -0.15
+   },
+   "type": "quote",
+   "transition": "fade:0.4",
+   "p": {
+    "text": "Det eneste, der var lidt spektakulært, det var, at hun var blevet brændt. Men ellers var det en fuldstændig klassiker. Hun var træt af ham, og hun ville gerne have sit eget liv. Og det ville han ikke finde sig i, og så slog han hende ihjel.",
+    "to": "37:44.30",
+    "hl": [
+     "hun ville gerne have sit eget liv."
+    ]
+   }
+  },
+  {
+   "id": "8",
+   "at": {
+    "word": "På den måde",
+    "near": "37:45.1",
+    "offset": -0.2
+   },
+   "type": "quote",
+   "fade_out": 0.8,
+   "p": {
+    "text": "På den måde er det desværre en helt almindelig sag."
+   }
+  }
+ ],
+ "summary": "Lasses tidskode 36:40–39:36, de første halvandet minut: dommen, og hvad sagen siger om drab på kvinder."
+}

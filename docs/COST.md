@@ -45,3 +45,21 @@ A fully moving episode needs ≈ 1,400 video generations. The Gemini API project
 up to 4 videos per request, audio can be switched off — cheaper), Gemini API tier
 upgrade (Tier 2 after $100 paid + 3 days) plus the increase form, or a reseller (fal,
 Replicate) at similar prices. See RESEARCH §5.
+
+## Method E — graphics from code (2026-10-11)
+| Item | Cost |
+|---|---|
+| Image/video generation | 0 kr — nothing is generated |
+| Map data, tiles, geocoding, routes | 0 kr — OpenStreetMap / OpenFreeMap (attribution on screen); Nominatim and OSRM demo only at author time |
+| Fonts, MapLibre, three.js | 0 kr — OFL / BSD / MIT |
+| 1999 aerial photos (SDFI) | 0 kr — free token from dataforsyningen.dk |
+| Licensed press photos (Ritzau Scanpix), if wanted | per photo, not priced |
+
+Machine time on the 2-CPU cloud container (720p preview): ≈ 0.08 s per frame with two
+workers, i.e. ≈ 2.8× real time including assembly. One 45-minute episode ≈ 2 h preview,
+≈ 3 h at 1080p with grain; a normal 8-core laptop ≈ 4× faster. First use of a map area
+also bakes its tiles (≈ 1–2 s per 512-px tile, once).
+
+The real cost is authoring: ≈ 30–60 min of Claude session time per 2–3-minute scene
+(read transcript, write scene, lint, look at stills, fix), plus a person checking names,
+facts and taste. A full episode ≈ 15 scenes.

@@ -1,0 +1,1238 @@
+{
+ "id": "S1-fundet",
+ "title": "Fundet i skoven",
+ "note": "Lasse's timecode 03:30–06:00 (children, bonfire, emergency services). Starts at the children (02:59.6) and ends before the pathologist arrives.",
+ "audio": {
+  "from": "02:59.30",
+  "to": "05:27.40"
+ },
+ "bed": "rain",
+ "rain": 0.55,
+ "shots": [
+  {
+   "id": "1",
+   "at": "02:59.30",
+   "type": "map",
+   "fade_in": 0.8,
+   "p": {
+    "cam": [
+     {
+      "at": 0,
+      "center": [
+       11.95,
+       55.58
+      ],
+      "zoom": 8.3
+     },
+     {
+      "at": 3.4,
+      "center": "@skoven",
+      "zoom": 10.6,
+      "ease": "inOut"
+     }
+    ],
+    "places": [
+     {
+      "name": "Roskilde",
+      "ll": "@roskilde",
+      "at": 0.2,
+      "until": 3.0
+     },
+     {
+      "name": "København",
+      "ll": "@kbh",
+      "cls": "big",
+      "at": 0.2
+     },
+     {
+      "name": "Køge Bugt",
+      "ll": [
+       12.33,
+       55.5
+      ],
+      "cls": "sea",
+      "at": 0.6
+     }
+    ],
+    "rings": [
+     {
+      "center": "@skoven",
+      "radius": 4200,
+      "at": 2.0,
+      "grow": 1.4,
+      "fill": 0.07,
+      "dash": [
+       2,
+       2
+      ]
+     }
+    ],
+    "caption": {
+     "k": "September 1999",
+     "h": "En skov nær Køge",
+     "at": 1.6
+    }
+   }
+  },
+  {
+   "id": "2",
+   "at": {
+    "word": "kæmpe",
+    "near": "03:03.7",
+    "offset": -0.2
+   },
+   "type": "siteplan",
+   "note": "Sketch, not to scale: the episode gives no layout of the site.",
+   "p": {
+    "extent": [
+     -160,
+     -120,
+     160,
+     140
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": 4,
+      "y": -6,
+      "zoom": 13
+     },
+     {
+      "at": 11.5,
+      "x": 18,
+      "y": -14,
+      "zoom": 9.5
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -160,
+       -120,
+       160,
+       140
+      ],
+      "n": 520,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ],
+       [
+        70,
+        -40,
+        6
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "path",
+      "points": "@site:path",
+      "at": -1,
+      "draw": false,
+      "color": "#4b5a61"
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": 0.15,
+      "label": "Et bål med høje flammer",
+      "lx": 2.6,
+      "ly": 0,
+      "label_at": 0.6
+     },
+     {
+      "type": "steps",
+      "points": "@site:children_in",
+      "at": 2.6,
+      "draw_until": 5.6,
+      "color": "papir",
+      "label": "To børn leger i regnen",
+      "lx": 60,
+      "ly": -28,
+      "label_at": 3.0,
+      "until": 9.0
+     },
+     {
+      "type": "steps",
+      "points": "@site:children_out",
+      "at": 7.4,
+      "draw_until": 11.0,
+      "color": "taage",
+      "label": "Børnene henter voksne",
+      "lx": 70,
+      "ly": -40,
+      "lalign": "up",
+      "label_at": 8.6
+     }
+    ],
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "3",
+   "at": {
+    "word": "alarm",
+    "near": "03:15.2",
+    "offset": -0.25
+   },
+   "type": "map",
+   "transition": "fade:0.5",
+   "p": {
+    "cam": [
+     {
+      "at": 0,
+      "center": "@skoven",
+      "zoom": 11.2
+     },
+     {
+      "at": 6.4,
+      "center": [
+       12.16,
+       55.468
+      ],
+      "zoom": 11.6
+     }
+    ],
+    "rings": [
+     {
+      "center": "@skoven",
+      "radius": 2600,
+      "at": -1,
+      "fill": 0.06,
+      "dash": [
+       2,
+       2
+      ]
+     }
+    ],
+    "markers": [
+     {
+      "ll": "@koege",
+      "kind": "dot",
+      "label": "Køge Politi",
+      "sub": "rykker ud",
+      "side": "right",
+      "at": 1.9
+     }
+    ],
+    "places": [
+     {
+      "name": "Ejby",
+      "ll": "@ejby",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "4",
+   "at": {
+    "word": "Og kan man",
+    "near": "03:21.7"
+   },
+   "type": "facts",
+   "p": {
+    "heading": "Det første politiet ser",
+    "at": 0.1,
+    "items": [
+     {
+      "text": "Der ligger noget inde i bålet",
+      "at": {
+       "word": "ligger",
+       "near": "03:24.1"
+      }
+     },
+     {
+      "text": "Et dyr? Et menneske?",
+      "at": {
+       "word": "mennesker",
+       "near": "03:26.2"
+      }
+     },
+     {
+      "text": "Bålet er bygget med vilje",
+      "hot": true,
+      "at": {
+       "word": "arrangeret",
+       "near": "03:28.8"
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "5",
+   "at": {
+    "word": "Politiet bliver tilkaldt",
+    "near": "03:31.0",
+    "offset": -0.15
+   },
+   "type": "map",
+   "lt": {
+    "who": "isager",
+    "at": {
+     "word": "Jeg er drabchef",
+     "near": "03:33.6"
+    },
+    "until": {
+     "word": "kriminalchefen",
+     "near": "03:37.6"
+    }
+   },
+   "p": {
+    "cam": [
+     {
+      "at": 0,
+      "center": [
+       12.27,
+       55.55
+      ],
+      "zoom": 9.4
+     },
+     {
+      "at": 12.0,
+      "center": [
+       12.33,
+       55.565
+      ],
+      "zoom": 9.6
+     }
+    ],
+    "markers": [
+     {
+      "ll": "@kbh",
+      "kind": "dot",
+      "label": "Rigspolitiets Rejsehold",
+      "sub": "København",
+      "side": "right",
+      "at": {
+       "word": "drabchef",
+       "near": "03:33.6"
+      }
+     },
+     {
+      "ll": "@koege",
+      "kind": "dot",
+      "label": "Kriminalchefen i Køge",
+      "side": "left",
+      "at": {
+       "word": "kriminalchefen",
+       "near": "03:37.6"
+      }
+     }
+    ],
+    "routes": [
+     {
+      "coords": [
+       [
+        12.1819,
+        55.4565
+       ],
+       [
+        12.3,
+        55.58
+       ],
+       [
+        12.57,
+        55.6867
+       ]
+      ],
+      "color": "taage",
+      "dash": [
+       1,
+       1.5
+      ],
+      "width": 3,
+      "casing": false,
+      "head": false,
+      "at": {
+       "word": "ringet",
+       "near": "03:36.3"
+      },
+      "until": {
+       "word": "hjælp",
+       "near": "03:41.1"
+      }
+     }
+    ],
+    "rings": [
+     {
+      "center": "@skoven",
+      "radius": 2600,
+      "at": -1,
+      "fill": 0.06,
+      "dash": [
+       2,
+       2
+      ]
+     }
+    ],
+    "caption": {
+     "h": "»Vi har brug for hjælp«",
+     "at": {
+      "word": "brug",
+      "near": "03:40.8"
+     }
+    },
+    "places": [
+     {
+      "name": "København",
+      "ll": "@kbh",
+      "cls": "big",
+      "at": 0.2
+     },
+     {
+      "name": "Køge Bugt",
+      "ll": [
+       12.36,
+       55.5
+      ],
+      "cls": "sea",
+      "at": 0.5
+     }
+    ]
+   }
+  },
+  {
+   "id": "6",
+   "at": {
+    "word": "Det var sådan set",
+    "near": "03:43.5",
+    "offset": -0.15
+   },
+   "type": "map",
+   "transition": "fade:0.6",
+   "p": {
+    "cam": [
+     {
+      "at": 0,
+      "center": [
+       12.12,
+       55.475
+      ],
+      "zoom": 11.0
+     },
+     {
+      "at": 8.5,
+      "center": [
+       12.1,
+       55.482
+      ],
+      "zoom": 11.7
+     }
+    ],
+    "rings": [
+     {
+      "center": "@skoven",
+      "radius": 2600,
+      "at": -1,
+      "fill": 0.06,
+      "dash": [
+       2,
+       2
+      ]
+     }
+    ],
+    "markers": [
+     {
+      "ll": "@ejby",
+      "kind": "dot",
+      "label": "Ejby",
+      "sub": "en kollega fra Rejseholdet boede her",
+      "side": "up",
+      "leader": 60,
+      "at": {
+       "word": "boede",
+       "near": "03:48.2"
+      }
+     }
+    ],
+    "places": [
+     {
+      "name": "Køge",
+      "ll": "@koege",
+      "at": 0.2
+     }
+    ]
+   }
+  },
+  {
+   "id": "7",
+   "at": {
+    "word": "Og ham ringede",
+    "near": "03:52.5",
+    "offset": -0.1
+   },
+   "type": "siteplan",
+   "p": {
+    "extent": [
+     -200,
+     -120,
+     200,
+     200
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": -40,
+      "y": 60,
+      "zoom": 6.0
+     },
+     {
+      "at": 12,
+      "x": -18,
+      "y": 28,
+      "zoom": 8.0
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -200,
+       -120,
+       200,
+       200
+      ],
+      "n": 650,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "road",
+      "points": "@site:road",
+      "width": 3.2,
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1,
+      "dim": 0.55
+     },
+     {
+      "type": "steps",
+      "points": "@site:investigator_in",
+      "step": 0.9,
+      "at": 7.2,
+      "draw_until": 11.6,
+      "label": "En efterforsker fra Rejseholdet",
+      "sub": "med fra de første timer",
+      "lx": -60,
+      "ly": 62,
+      "lalign": "left",
+      "label_at": 7.6
+     }
+    ],
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "8",
+   "at": {
+    "word": "Det, der går langt",
+    "near": "04:04.7",
+    "offset": -0.1
+   },
+   "type": "title",
+   "transition": "dip:0.6",
+   "rain": 1.0,
+   "p": {
+    "lines": [
+     "September 1999"
+    ],
+    "sub": "Regnen står ned over skoven",
+    "at": {
+     "word": "regnværdstunge",
+     "near": "04:08.0",
+     "offset": -0.4
+    },
+    "size": 210
+   }
+  },
+  {
+   "id": "9",
+   "at": {
+    "word": "Der får man",
+    "near": "04:10.8",
+    "offset": -0.1
+   },
+   "type": "siteplan",
+   "p": {
+    "extent": [
+     -120,
+     -100,
+     120,
+     120
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": 0,
+      "y": 6,
+      "zoom": 22
+     },
+     {
+      "at": 8.4,
+      "x": 0,
+      "y": 2,
+      "zoom": 26
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -120,
+       -100,
+       120,
+       120
+      ],
+      "n": 300,
+      "clear": [
+       [
+        0,
+        0,
+        11
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "road",
+      "points": "@site:road",
+      "width": 3.2,
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1,
+      "label": "Bålet",
+      "lx": 3,
+      "ly": 0
+     },
+     {
+      "type": "zone",
+      "points": [
+       [
+        -7,
+        -6
+       ],
+       [
+        8,
+        -7
+       ],
+       [
+        9,
+        7
+       ],
+       [
+        -6,
+        8
+       ]
+      ],
+      "at": {
+       "word": "overdække",
+       "near": "04:15.9"
+      },
+      "label": "Overdækket",
+      "sub": "Beredskab og Falck",
+      "lx": 9,
+      "ly": -7,
+      "label_at": {
+       "word": "overdække",
+       "near": "04:15.9"
+      }
+     },
+     {
+      "type": "zone",
+      "points": [
+       [
+        -30,
+        -24
+       ],
+       [
+        30,
+        -26
+       ],
+       [
+        32,
+        28
+       ],
+       [
+        -28,
+        30
+       ]
+      ],
+      "color": "papir",
+      "at": {
+       "word": "spor",
+       "near": "04:18.4",
+       "offset": -0.4
+      },
+      "label": "Spor sikres",
+      "lx": 31,
+      "ly": 26
+     }
+    ],
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "10",
+   "at": {
+    "word": "Sporne bliver",
+    "near": "04:19.2",
+    "offset": -0.1
+   },
+   "type": "quote",
+   "p": {
+    "text": "Et udendørs gerningssted er altid noget, Fanden har skabt, undskyld udtrykket, i modsætning til et indendørs gerningssted, som er mere overskueligt og overkommeligt for politi og kriminalteknikere.",
+    "from": "04:22.40",
+    "to": "04:33.20",
+    "speaker": "isager",
+    "hl": [
+     "Fanden har skabt"
+    ]
+   }
+  },
+  {
+   "id": "11",
+   "at": {
+    "word": "Så her er",
+    "near": "04:33.4",
+    "offset": -0.1
+   },
+   "type": "siteplan",
+   "p": {
+    "extent": [
+     -520,
+     -420,
+     520,
+     420
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": 0,
+      "y": 0,
+      "zoom": 24
+     },
+     {
+      "at": 3.5,
+      "x": 0,
+      "y": 0,
+      "zoom": 14
+     },
+     {
+      "at": 9.5,
+      "x": 0,
+      "y": 0,
+      "zoom": 3.6,
+      "ease": "inOut"
+     },
+     {
+      "at": 17,
+      "x": 0,
+      "y": 0,
+      "zoom": 1.9
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -520,
+       -420,
+       520,
+       420
+      ],
+      "n": 2600,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1
+     },
+     {
+      "type": "ring",
+      "x": 0,
+      "y": 0,
+      "r": 10,
+      "at": {
+       "word": "Hvor",
+       "near": "04:36.2"
+      }
+     },
+     {
+      "type": "ring",
+      "x": 0,
+      "y": 0,
+      "r": 30,
+      "at": {
+       "word": "langt",
+       "near": "04:36.4",
+       "offset": 0.4
+      }
+     },
+     {
+      "type": "ring",
+      "x": 0,
+      "y": 0,
+      "r": 80,
+      "at": {
+       "word": "gå",
+       "near": "04:37.0",
+       "offset": 0.3
+      }
+     },
+     {
+      "type": "ring",
+      "x": 0,
+      "y": 0,
+      "r": 200,
+      "at": {
+       "word": "tabt",
+       "near": "04:43.4"
+      }
+     }
+    ],
+    "caption": {
+     "h": "Hvor langt skal man gå ud?",
+     "at": {
+      "word": "Hvor",
+      "near": "04:36.2",
+      "offset": -0.3
+     }
+    },
+    "credit": "Skitse, ikke målfast"
+   },
+   "note": "Rings are illustrative: the episode gives no search radius, so they carry no numbers. The scale bar is the only measure."
+  },
+  {
+   "id": "12",
+   "at": {
+    "word": "Hvad skal man",
+    "near": "04:50.7",
+    "offset": -0.15
+   },
+   "type": "siteplan",
+   "p": {
+    "extent": [
+     -140,
+     -100,
+     140,
+     100
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": 0,
+      "y": 0,
+      "zoom": 9
+     },
+     {
+      "at": 15.4,
+      "x": 4,
+      "y": 2,
+      "zoom": 10.5
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -140,
+       -100,
+       140,
+       100
+      ],
+      "n": 600,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1,
+      "dim": 0.5
+     },
+     {
+      "type": "scatter",
+      "box": [
+       -90,
+       -50,
+       90,
+       50
+      ],
+      "n": 140,
+      "at": {
+       "word": "kondomer",
+       "near": "04:53.7"
+      },
+      "until": {
+       "word": "muligt",
+       "near": "04:59.8"
+      },
+      "color": "papir"
+     },
+     {
+      "type": "scatter",
+      "box": [
+       -90,
+       -50,
+       90,
+       50
+      ],
+      "n": 140,
+      "at": {
+       "word": "hver",
+       "near": "05:01.3"
+      },
+      "until": {
+       "word": "gærenhedsmanden",
+       "near": "05:05.3"
+      },
+      "color": "glod"
+     }
+    ],
+    "words": [
+     {
+      "text": "kondomer",
+      "x": -52,
+      "y": -26,
+      "at": {
+       "word": "kondomer",
+       "near": "04:53.7"
+      }
+     },
+     {
+      "text": "kapsler",
+      "x": 38,
+      "y": -34,
+      "at": {
+       "word": "kapsler",
+       "near": "04:54.6"
+      }
+     },
+     {
+      "text": "plastikposer",
+      "x": -68,
+      "y": 22,
+      "at": {
+       "word": "plastikposer",
+       "near": "04:55.2"
+      }
+     },
+     {
+      "text": "sodavandsflasker",
+      "x": 50,
+      "y": 18,
+      "at": {
+       "word": "totovandsflasker",
+       "near": "04:56.2"
+      }
+     },
+     {
+      "text": "skrald",
+      "x": -10,
+      "y": 38,
+      "at": {
+       "word": "skralde",
+       "near": "04:57.6"
+      }
+     },
+     {
+      "text": "cigaretskodder",
+      "x": 18,
+      "y": -46,
+      "at": {
+       "word": "cigaretskødder",
+       "near": "04:58.3"
+      }
+     }
+    ],
+    "words_until": {
+     "word": "Og hver",
+     "near": "05:01.2"
+    },
+    "caption": {
+     "h": "Alt kan komme fra gerningsmanden",
+     "at": {
+      "word": "teoretisk",
+      "near": "05:02.8",
+      "offset": -0.3
+     }
+    },
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "13",
+   "at": {
+    "word": "Det var også",
+    "near": "05:06.1",
+    "offset": -0.1
+   },
+   "type": "siteplan",
+   "p": {
+    "extent": [
+     -160,
+     -110,
+     160,
+     110
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": 0,
+      "y": 0,
+      "zoom": 7.5
+     },
+     {
+      "at": 9.6,
+      "x": -6,
+      "y": 4,
+      "zoom": 8.4
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -160,
+       -110,
+       160,
+       110
+      ],
+      "n": 650,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "road",
+      "points": "@site:road",
+      "width": 3.2,
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1,
+      "dim": 0.5
+     },
+     {
+      "type": "steps",
+      "points": [
+       [
+        160,
+        -60
+       ],
+       [
+        80,
+        -30
+       ],
+       [
+        20,
+        -6
+       ]
+      ],
+      "step": 2.2,
+      "color": "taage",
+      "at": {
+       "word": "heste",
+       "near": "05:11.3",
+       "offset": -0.3
+      },
+      "draw": 1.4,
+      "label": "heste",
+      "lx": 95,
+      "ly": -40,
+      "lalign": "left"
+     },
+     {
+      "type": "steps",
+      "points": [
+       [
+        -160,
+        -80
+       ],
+       [
+        -90,
+        -50
+       ],
+       [
+        -30,
+        -18
+       ],
+       [
+        -12,
+        -8
+       ]
+      ],
+      "step": 0.8,
+      "color": "taage",
+      "at": {
+       "word": "ydene",
+       "near": "05:12.2",
+       "offset": -0.2
+      },
+      "draw": 1.4,
+      "label": "gående",
+      "lx": -100,
+      "ly": -56,
+      "lalign": "up"
+     },
+     {
+      "type": "path",
+      "points": [
+       [
+        60,
+        110
+       ],
+       [
+        40,
+        60
+       ],
+       [
+        20,
+        25
+       ],
+       [
+        8,
+        8
+       ]
+      ],
+      "color": "taage",
+      "at": {
+       "word": "løbene",
+       "near": "05:12.6",
+       "offset": -0.2
+      },
+      "draw": 1.2,
+      "label": "løbende",
+      "lx": 46,
+      "ly": 70
+     },
+     {
+      "type": "tracks",
+      "points": "@site:road",
+      "at": {
+       "word": "kørende",
+       "near": "05:13.9",
+       "offset": -0.3
+      },
+      "draw": 1.6,
+      "label": "kørende",
+      "lx": -100,
+      "ly": 95,
+      "lalign": "left"
+     }
+    ],
+    "caption": {
+     "h": "Mange spor",
+     "at": {
+      "word": "mange",
+      "near": "05:06.7",
+      "offset": -0.3
+     }
+    },
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "14",
+   "at": {
+    "word": "Men i hvert fald",
+    "near": "05:15.7",
+    "offset": -0.1
+   },
+   "type": "facts",
+   "fade_out": 0.4,
+   "p": {
+    "heading": "De første timer",
+    "at": 0.1,
+    "items": [
+     {
+      "text": "Bålet dæmmes ind og slukkes",
+      "at": {
+       "word": "dæmmet",
+       "near": "05:18.7",
+       "offset": -0.3
+      }
+     },
+     {
+      "text": "Sporene sikres",
+      "at": {
+       "word": "sikret",
+       "near": "05:21.3",
+       "offset": -0.2
+      }
+     },
+     {
+      "text": "Kriminalteknikerne gennemgår skovbunden",
+      "hot": true,
+      "at": {
+       "word": "kriminelle",
+       "near": "05:23.2",
+       "offset": -0.1
+      }
+     }
+    ]
+   }
+  }
+ ],
+ "summary": "Lasses tidskode 03:30–06:00: børnene, bålet og beredskabet. Fra børnenes fund til kriminalteknikerne i skovbunden."
+}

@@ -70,3 +70,49 @@ bloom, grain; `assemble.py` cuts. Looked like a game — see LEARNINGS and RESEA
 - `qa/loop.py`: per shot → generate → judge only the window that will be used (12 fps)
   → pass: keep; fail: retry once with the judge's `fix` appended → fail: method B.
   Per-shot brief; reference image only for shots that contain the object.
+
+# Method E — graphics rendered from code (2026-10-11)
+
+No generated images. The picture is built from real geography, real place names and
+dates, the speakers' own words, schematic site plans and modelled objects, cut to the
+episode's narration. Code: `gfx/`. Authoring contract: `gfx/CATALOG.md`.
+
+## Run
+```
+gfx/fetch_assets.sh                                   # fonts (OFL) + MapLibre + three.js, once
+python3 fetch_audio.py && python3 transcribe.py --all # or windows: transcribe.py 03:15-06:15 …
+python3 -m gfx.geo episodes/<ep>/case.json            # geocode places, road routes (OSM), once
+python3 -m gfx.render episodes/<ep>/scenes/<s>.json --lint
+python3 -m gfx.render episodes/<ep>/scenes/<s>.json --still 5@3.2,7@1   # look before rendering
+python3 -m gfx.render episodes/<ep>/scenes/<s>.json --preview           # 720p: _clean, _web, _sheet, _cues
+python3 -m gfx.render episodes/<ep>/scenes/<s>.json                     # 1080p deliverable with grain
+```
+Outputs in `out/gfx/`: `<scene>.mp4` (graded deliverable, 1080p), `_clean.mp4` (no
+grain, for an editor), `_web.mp4` (small review copy), `_sheet.jpg` (one frame per shot),
+`_cues.json` (cue sheet: shot, timecode, template, sources, generated_by_ai=false).
+
+## How it works
+1. **Episode clock.** Every time in a scene file is episode time or a spoken word
+   (`{"word": "Køge", "near": "03:18"}`), resolved against `audio/transcript.json`
+   (faster-whisper medium, word timings). Corrected Danish in the scene file is aligned to
+   Whisper's misspellings with a fuzzy matcher, so quotes light up word by word on time.
+2. **Case file.** `episodes/<ep>/case.json` holds people, places (Nominatim), road routes
+   (OSRM), the schematic site layout and every on-screen fact with the timecode where it
+   is said. Scenes refer to it (`@koege`, `@route:kbh-koege`, `@site:road`).
+3. **Templates** (`gfx/web/templates/`): map, siteplan, facts, quote, title, card,
+   timeline, photo, object. One design system (`gfx/web/style.css`): night palette,
+   Archivo for facts and places, Newsreader italic for spoken words, one ember colour for
+   the fire and the fact that matters.
+4. **Frames.** Headless Chromium renders one deterministic frame per 1/25 s
+   (`setupShot(spec)`, `renderFrame(t)`), captured over CDP and piped to ffmpeg.
+   Software rendering (`--disable-gpu`) is ~8× faster than SwiftShader GPU emulation for
+   2D; only `object` (three.js) uses WebGL.
+5. **Maps.** The MapLibre style (`mapstyle.js`, OpenFreeMap vector tiles) is baked once
+   into 512-px raster tiles (`gfx/maptiles.py`, cache keyed by the style's hash); map
+   shots composite those tiles on a canvas with a van Wijk fly camera and trilinear zoom.
+   Aerial imagery (Esri now; SDFI orthophotos incl. 1999 with a free token: `GFX_SAT=sdfi:<layer>`,
+   `DF_TOKEN`) uses the same path.
+6. **Cache.** Each shot is cached by a hash of its resolved spec + the code of its template;
+   editing one shot or one template re-renders only what changed.
+7. **Assembly.** Cuts, crossfades and dips on the episode clock (numpy), narration from the
+   episode untouched, a quiet procedural rain bed, grain + vignette on the deliverable only.

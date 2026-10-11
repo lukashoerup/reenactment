@@ -1,0 +1,437 @@
+{
+ "id": "S2-obduktionen",
+ "title": "Obduktionen",
+ "note": "Lasse's timecode 09:34–13:00 (forensic pathologist). Findings are shown as words only — never a body, never an injury. Ends on the identification problem: nobody is missing.",
+ "audio": {
+  "from": "10:44.70",
+  "to": "13:05.40"
+ },
+ "bed": "none",
+ "shots": [
+  {
+   "id": "1",
+   "at": "10:44.70",
+   "type": "facts",
+   "fade_in": 0.5,
+   "lt": {
+    "who": "hougen",
+    "at": 0.6,
+    "until": 6.0,
+    "top": true
+   },
+   "p": {
+    "heading": "Obduktionen",
+    "at": -0.5,
+    "items": [
+     {
+      "text": "Flere kraniebrud",
+      "at": {
+       "word": "flere",
+       "near": "10:46.8",
+       "offset": -0.1
+      }
+     },
+     {
+      "text": "Svære skader på hjernen",
+      "at": {
+       "word": "svære",
+       "near": "10:50.5",
+       "offset": -0.1
+      }
+     },
+     {
+      "text": "Allerede her: en dødsårsag",
+      "hot": true,
+      "at": {
+       "word": "allerede",
+       "near": "10:55.3",
+       "offset": -0.1
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "2",
+   "at": {
+    "word": "Og heldigvis",
+    "near": "10:58.6",
+    "offset": -0.15
+   },
+   "type": "facts",
+   "p": {
+    "layout": "chain",
+    "heading": "Luftvejene",
+    "at": 0.1,
+    "items": [
+     {
+      "text": "Luftvejene kan undersøges",
+      "sub": "de er ikke helt brændt",
+      "at": {
+       "word": "undersøge",
+       "near": "11:01.8",
+       "offset": -0.2
+      }
+     },
+     {
+      "text": "Ingen spor af sod",
+      "at": {
+       "word": "spor",
+       "near": "11:09.6",
+       "offset": -0.5
+      }
+     },
+     {
+      "text": "Hun trak ikke vejret under ilden",
+      "at": {
+       "word": "trukket",
+       "near": "11:13.6",
+       "offset": -0.6
+      }
+     },
+     {
+      "text": "Hun var død, da hun blev lagt på bålet",
+      "at": {
+       "word": "død",
+       "near": "11:18.5",
+       "offset": -0.3
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "3",
+   "at": {
+    "word": "Det tyder",
+    "near": "11:20.4",
+    "offset": -0.1
+   },
+   "type": "siteplan",
+   "note": "Breather: the words here are unclear in the transcript, so nothing is written on screen.",
+   "rain": 0.4,
+   "p": {
+    "extent": [
+     -80,
+     -60,
+     80,
+     60
+    ],
+    "cam": [
+     {
+      "at": 0,
+      "x": 0,
+      "y": 0,
+      "zoom": 30
+     },
+     {
+      "at": 10.5,
+      "x": 0,
+      "y": 0,
+      "zoom": 44
+     }
+    ],
+    "items": [
+     {
+      "type": "trees",
+      "box": [
+       -80,
+       -60,
+       80,
+       60
+      ],
+      "n": 160,
+      "clear": [
+       [
+        0,
+        0,
+        9
+       ]
+      ],
+      "at": -1,
+      "draw": false
+     },
+     {
+      "type": "fire",
+      "x": 0,
+      "y": 0,
+      "r": 2.2,
+      "at": -1
+     }
+    ],
+    "credit": "Skitse, ikke målfast"
+   }
+  },
+  {
+   "id": "4",
+   "at": {
+    "word": "Hun var død af",
+    "near": "11:30.8",
+    "offset": -0.15
+   },
+   "type": "facts",
+   "p": {
+    "heading": "Et tungt instrument",
+    "at": 0.0,
+    "items": [
+     {
+      "text": "Voldsomme kvæstelser i hovedet",
+      "at": {
+       "word": "voldsomme",
+       "near": "11:32.0",
+       "offset": -0.2
+      }
+     },
+     {
+      "text": "Slået med noget tungt",
+      "at": {
+       "word": "slået",
+       "near": "11:37.8",
+       "offset": -0.3
+      }
+     },
+     {
+      "text": "Fx et baseballbat eller lignende",
+      "at": {
+       "word": "baseballbad",
+       "near": "11:41.0",
+       "offset": -0.3
+      }
+     },
+     {
+      "text": "Aftryk i kraniet efter slagene",
+      "hot": true,
+      "at": {
+       "word": "impressioner",
+       "near": "11:44.2",
+       "offset": -0.2
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "5",
+   "at": {
+    "word": "Og det vil sige",
+    "near": "11:50.8",
+    "offset": -0.15
+   },
+   "type": "quote",
+   "p": {
+    "text": "Det var en kvinde, og hun var dræbt med stump vold, som vi kalder det. Altså slag i hovedet med et tungt instrument, og hun var lagt på bålet, efter at hun var død.",
+    "from": "11:52.30",
+    "to": "12:08.40",
+    "speaker": "hougen",
+    "hl": [
+     "efter at hun var død."
+    ]
+   }
+  },
+  {
+   "id": "6",
+   "at": {
+    "word": "En ting til",
+    "near": "12:08.5",
+    "offset": -0.15
+   },
+   "type": "facts",
+   "transition": "fade:0.6",
+   "p": {
+    "heading": "Det første spor til politiet",
+    "at": 0.2,
+    "items": [
+     {
+      "text": "Ud fra organerne",
+      "at": {
+       "word": "organer",
+       "near": "12:13.1",
+       "offset": -0.4
+      }
+     },
+     {
+      "text": "og den del af ansigtet, der er nogenlunde intakt",
+      "at": {
+       "word": "intakte",
+       "near": "12:17.5",
+       "offset": -0.6
+      }
+     },
+     {
+      "text": "En yngre kvinde",
+      "hot": true,
+      "size": 96,
+      "at": {
+       "word": "yngre",
+       "near": "12:21.5",
+       "offset": -0.5
+      }
+     }
+    ]
+   }
+  },
+  {
+   "id": "7",
+   "at": {
+    "word": "I alle",
+    "near": "12:28.6",
+    "offset": -0.15
+   },
+   "type": "title",
+   "transition": "dip:0.5",
+   "p": {
+    "lines": [
+     "Hvem er hun?"
+    ],
+    "size": 200,
+    "pos": "center",
+    "at": {
+     "word": "hvem",
+     "near": "12:33.1",
+     "offset": -0.6
+    },
+    "sub": "Sværere end normalt at finde ud af",
+    "sub_at": {
+     "word": "besværligt",
+     "near": "12:36.6",
+     "offset": -0.4
+    }
+   }
+  },
+  {
+   "id": "8",
+   "at": {
+    "word": "Allerede det",
+    "near": "12:37.9",
+    "offset": -0.15
+   },
+   "type": "map",
+   "p": {
+    "cam": [
+     {
+      "at": 0,
+      "center": [
+       12.16,
+       55.47
+      ],
+      "zoom": 9.6
+     },
+     {
+      "at": 6.8,
+      "center": [
+       12.16,
+       55.47
+      ],
+      "zoom": 9.2
+     },
+     {
+      "at": 10.6,
+      "center": [
+       10.5,
+       56.1
+      ],
+      "zoom": 6.9,
+      "ease": "inOut"
+     },
+     {
+      "at": 15.6,
+      "center": [
+       10.5,
+       56.1
+      ],
+      "zoom": 6.8
+     }
+    ],
+    "markers": [
+     {
+      "ll": "@koege",
+      "kind": "dot",
+      "label": "Køge Politikreds",
+      "side": "right",
+      "at": {
+       "word": "køge",
+       "near": "12:46.4",
+       "offset": -0.4
+      }
+     }
+    ],
+    "places": [
+     {
+      "name": "København",
+      "ll": "@kbh",
+      "cls": "big",
+      "at": 7.5
+     },
+     {
+      "name": "Aarhus",
+      "ll": [
+       10.2039,
+       56.1629
+      ],
+      "cls": "big",
+      "at": 9.0
+     },
+     {
+      "name": "Odense",
+      "ll": [
+       10.3883,
+       55.3959
+      ],
+      "at": 9.0
+     },
+     {
+      "name": "Aalborg",
+      "ll": [
+       9.9217,
+       57.0488
+      ],
+      "at": 9.4
+     },
+     {
+      "name": "Esbjerg",
+      "ll": [
+       8.4521,
+       55.4765
+      ],
+      "at": 9.4
+     }
+    ],
+    "caption": {
+     "k": "Savnede og efterlyste",
+     "h": "Ingen er meldt savnet",
+     "at": {
+      "word": "hele",
+      "near": "12:48.2",
+      "offset": -0.2
+     },
+     "s": "Hverken i Køge Politikreds eller i resten af landet"
+    }
+   }
+  },
+  {
+   "id": "9",
+   "at": {
+    "word": "politiet mangler",
+    "near": "12:53.5",
+    "offset": -0.35
+   },
+   "type": "quote",
+   "fade_out": 0.4,
+   "lt": {
+    "who": "isager",
+    "at": 0.4,
+    "until": 5.5,
+    "top": true
+   },
+   "p": {
+    "text": "Politiet mangler hjælp. Vi har noget, vi tror, er drab. Vi fortæller om det her bål. Vi har noget, vi tror, at resterne er et menneske. Hvem kan sige noget? Ingen kunne sige noget.",
+    "from": "12:53.30",
+    "to": "13:05.20",
+    "hl": [
+     "Ingen kunne sige noget."
+    ]
+   }
+  }
+ ],
+ "summary": "Lasses tidskode 09:34–13:00: retsmedicineren. Fundene fra obduktionen står som ord, uden billeder af kroppen. Slutter med, at ingen savner hende."
+}

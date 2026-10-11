@@ -33,3 +33,10 @@ postwatch.log
 *.key
 gkey*
 .env
+# method E (graphics): caches and fetched assets (recreate with gfx/fetch_assets.sh)
+cache/
+gfx/web/fonts/
+gfx/web/vendor/
+__pycache__/
+page/gfx/*.mp4
+page/gfx/*.jpg
