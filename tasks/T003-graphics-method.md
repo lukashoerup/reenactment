@@ -1,6 +1,6 @@
 # T003 — Method E: graphics instead of generated pictures
 
-Status: first test done 2026-10-11 · Branch `task/T003-graphics-method`
+Status: first test done 2026-10-11 · Branch `task/T003-graphics-method` · Review page: https://claude.ai/artifact/R3ctHUypFYzMS7zeUR1bJH
 
 ## Why
 Lukas (2026-10-11): generated images will almost always read as AI. Carry the story with

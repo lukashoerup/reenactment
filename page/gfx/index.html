@@ -1,0 +1,128 @@
+<title>Kort, spor og ord</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..600&display=swap">
+<style>
+/* Layout: one screening column; each scene is a video with its shot list beneath, like a cue sheet. */
+:root {
+  color-scheme: dark;
+  --nat: #0f1b22;      /* night: page */
+  --nat-2: #15242c;    /* raised surfaces */
+  --line: #253841;     /* rules and borders */
+  --papir: #e8e3d7;    /* text */
+  --taage: #95a2a8;    /* secondary text */
+  --glod: #ff7a33;     /* ember: the one thing that matters on each screen */
+  --f-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --f-body: "Archivo", system-ui, sans-serif;
+  --f-voice: "Newsreader", Georgia, serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--nat); color: var(--papir); font-family: var(--f-body); font-size: 17px; line-height: 1.5;
+  font-variant-numeric: tabular-nums lining-nums; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 1000px; margin: 0 auto; padding-inline: 20px; padding-block: 48px 96px; display: grid; gap: 72px; }
+h1, h2, h3 { margin: 0; font-family: var(--f-display); text-wrap: balance; }
+h1 { font-size: clamp(44px, 8vw, 84px); font-weight: 640; font-stretch: 72%; line-height: .95; letter-spacing: -.01em; }
+h2 { font-size: clamp(30px, 4.6vw, 44px); font-weight: 620; font-stretch: 76%; line-height: 1; }
+h3 { font-size: 22px; font-weight: 600; font-stretch: 88%; }
+p { margin: 0; max-width: 66ch; }
+.lede { font-family: var(--f-voice); font-style: italic; font-weight: 340; font-size: clamp(21px, 2.6vw, 26px); line-height: 1.35; max-width: 34em; }
+.meta { color: var(--taage); font-size: 15px; display: flex; flex-wrap: wrap; gap: 6px 22px; }
+header { display: grid; gap: 22px; }
+.scene { display: grid; gap: 18px; }
+.scene-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; }
+.tc { font-family: var(--f-display); font-stretch: 80%; font-weight: 560; font-size: 22px; color: var(--glod); }
+.note { color: #c8c4ba; }
+video { display: block; width: 100%; max-width: 100%; aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--line); border-radius: 3px; }
+.shots { overflow-x: auto; border-top: 1px solid var(--line); }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th { text-align: left; font-weight: 500; color: var(--taage); font-stretch: 90%; padding: 10px 12px 6px 0; }
+td { padding: 7px 12px 7px 0; border-top: 1px solid var(--line); vertical-align: top; }
+td.t { white-space: nowrap; color: var(--taage); width: 1%; }
+td.k { white-space: nowrap; width: 1%; color: var(--taage); font-stretch: 88%; }
+td.w { min-width: 16em; }
+td.s { color: var(--taage); font-size: 13px; min-width: 10em; }
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 32px 40px; }
+.cols > div { display: grid; gap: 10px; align-content: start; min-width: 0; }
+.cols ul, ol { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; }
+.figure { font-family: var(--f-display); font-stretch: 72%; font-weight: 640; font-size: 52px; line-height: 1; }
+.figure small { display: block; font-family: var(--f-body); font-stretch: 100%; font-weight: 400; font-size: 15px; color: var(--taage); margin-top: 8px; line-height: 1.4; }
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 28px; }
+section > h2 + * { margin-top: 20px; }
+section { display: grid; gap: 20px; }
+.hot { color: var(--glod); }
+a { color: var(--papir); text-decoration-color: var(--glod); text-underline-offset: 3px; }
+a:focus-visible, video:focus-visible { outline: 2px solid var(--glod); outline-offset: 3px; }
+@media (max-width: 560px) { td.s { display: none; } th.s { display: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Kort, spor og ord</h1>
+    <p class="lede">Fire scener fra »Det Brændende Lig« uden et eneste genereret billede: de rigtige steder på kort, skitser af fundstedet, fundene som tekst, ordene i det øjeblik de bliver sagt, og to genstande bygget som modeller. Lyden er episodens egen.</p>
+    <div class="meta"><span>Danske Drabssager, sæson 6, afsnit 5</span><span>Metode E, test 11. oktober 2026</span><span>Lasses tidskoder</span></div>
+  </header>
+
+  <div id="scenes" style="display:grid;gap:80px"></div>
+
+  <section>
+    <h2>Hvad der er ægte</h2>
+    <div class="cols">
+      <div><h3>Fra virkeligheden</h3><ul>
+        <li>Alle steder, veje og kystlinjer er OpenStreetMap. Ruterne følger de rigtige veje.</li>
+        <li>Navne, datoer, fund og citater står i episoden. Hvert faktum har sin tidskode i sagsfilen.</li>
+        <li>Citaterne er talerens egne ord og lyser op i takt med stemmen.</li>
+      </ul></div>
+      <div><h3>Tegnet eller bygget, og skrevet på</h3><ul>
+        <li>Skitserne af fundstedet er opfundet til forklaring. Episoden giver intet kort over stedet, så de siger »Skitse, ikke målfast«.</li>
+        <li>Flasken og gipsafstøbningen er modeller. De siger det selv på skærmen.</li>
+        <li>Episoden nævner ingen skov, så fundstedet er en stiplet zone mellem Køge og Ejby, ikke et punkt.</li>
+      </ul></div>
+      <div><h3>Holdt væk fra billedet</h3><ul>
+        <li>Ingen krop, ingen skader, intet ansigt. Obduktionens fund er ord.</li>
+        <li>Ingen falske dokumenter, avissider eller politifotos.</li>
+        <li>Hvor transskriptionen er utydelig, står der ingen tekst. Billedet hviler på bålet.</li>
+      </ul></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Til en hel episode</h2>
+    <div class="figures">
+      <div class="figure">0 kr<small>til billed- og videogenerering. Kort, skrift og modeller tegnes af kode.</small></div>
+      <div class="figure" id="fig-render">~2 t<small>at rendere 45 minutter på den lille 2-kerners maskine. En almindelig bærbar er hurtigere.</small></div>
+      <div class="figure">1 gang<small>bliver et sted tegnet. Kortfliser og hver færdig indstilling gemmes, så en rettelse kun gentegner det, der er ændret.</small></div>
+    </div>
+    <ol>
+      <li>Hele episoden transskriberes med ordtider, så hvert billede kan sættes på et bestemt ord.</li>
+      <li>En sagsfil samler personer, steder, ruter og fakta med tidskoder. Et navn rettes ét sted.</li>
+      <li>Episoden deles i 12 til 15 scener. Claude skriver et udkast til hver scene ud fra transskriptionen; et menneske tjekker navne, fakta og tone.</li>
+      <li>Hver scene kontrolleres automatisk for timing, læsehastighed og manglende kilder, før den renderes.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Spørgsmål til Lasse</h2>
+    <ol>
+      <li>Hvem taler efter dit spørgsmål i den sidste scene? Han har ingen navneskilt endnu.</li>
+      <li>Hvordan staver kriminalteknikeren sit efternavn? Han er ikke navngivet på skærmen.</li>
+      <li>Må vi bruge luftfotos fra 1999? De er gratis fra Styrelsen for Dataforsyning, men kræver en adgangsnøgle.</li>
+      <li>Skal de to-tre stærkeste øjeblikke, som børnene ved bålet, være tegnet rekonstruktion klippet ind i grafikken?</li>
+    </ol>
+  </section>
+</div>
+
+<script>
+const SCENES = [{"id": "S1-fundet", "title": "Fundet i skoven", "from": "02:59.30", "to": "05:27.40", "note": "Lasses tidskode 03:30–06:00: børnene, bålet og beredskabet. Fra børnenes fund til kriminalteknikerne i skovbunden.", "shots": [{"id": "1", "tc": "02:59.30", "dur": 4.2, "type": "map", "what": "Kort: En skov nær Køge, zone", "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"}, {"id": "2", "tc": "03:03.46", "dur": 11.5, "type": "siteplan", "what": "Skitse af fundstedet: Et bål med høje flammer, To børn leger i regnen, Børnene henter voksne", "src": ""}, {"id": "3", "tc": "03:14.99", "dur": 6.7, "type": "map", "what": "Kort: Køge Politi, zone", "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"}, {"id": "4", "tc": "03:21.68", "dur": 9.2, "type": "facts", "what": "Det første politiet ser: Der ligger noget inde i bålet · Et dyr? Et menneske? · Bålet er bygget med vilje", "src": ""}, {"id": "5", "tc": "03:30.87", "dur": 12.5, "type": "map", "what": "Kort: »Vi har brug for hjælp«, Rigspolitiets Rejsehold, Kriminalchefen i Køge, rute, zone", "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"}, {"id": "6", "tc": "03:43.39", "dur": 9.0, "type": "map", "what": "Kort: Ejby, zone", "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"}, {"id": "7", "tc": "03:52.38", "dur": 12.2, "type": "siteplan", "what": "Skitse af fundstedet: En efterforsker fra Rejseholdet", "src": ""}, {"id": "8", "tc": "04:04.62", "dur": 6.1, "type": "title", "what": "September 1999", "src": ""}, {"id": "9", "tc": "04:10.68", "dur": 8.5, "type": "siteplan", "what": "Skitse af fundstedet: Bålet, Overdækket, Spor sikres", "src": ""}, {"id": "10", "tc": "04:19.14", "dur": 14.2, "type": "quote", "what": "Citat (Bent Isager-Nielsen): »Et udendørs gerningssted er altid noget, Fanden har skabt, undskyld udtrykket, i modsætning til et indendørs g…«", "src": ""}, {"id": "11", "tc": "04:33.30", "dur": 17.3, "type": "siteplan", "what": "Skitse af fundstedet: Hvor langt skal man gå ud?", "src": ""}, {"id": "12", "tc": "04:50.59", "dur": 15.4, "type": "siteplan", "what": "Skitse af fundstedet: Alt kan komme fra gerningsmanden, kondomer, kapsler, plastikposer", "src": ""}, {"id": "13", "tc": "05:06.02", "dur": 9.6, "type": "siteplan", "what": "Skitse af fundstedet: Mange spor, heste, gående, løbende, kørende", "src": ""}, {"id": "14", "tc": "05:15.62", "dur": 11.8, "type": "facts", "what": "De første timer: Bålet dæmmes ind og slukkes · Sporene sikres · Kriminalteknikerne gennemgår skovbunden", "src": ""}]}, {"id": "S2-obduktionen", "title": "Obduktionen", "from": "10:44.70", "to": "13:05.40", "note": "Lasses tidskode 09:34–13:00: retsmedicineren. Fundene fra obduktionen står som ord, uden billeder af kroppen. Slutter med, at ingen savner hende.", "shots": [{"id": "1", "tc": "10:44.70", "dur": 13.7, "type": "facts", "what": "Obduktionen: Flere kraniebrud · Svære skader på hjernen · Allerede her: en dødsårsag", "src": ""}, {"id": "2", "tc": "10:58.43", "dur": 21.9, "type": "facts", "what": "Luftvejene: Luftvejene kan undersøges · Ingen spor af sod · Hun trak ikke vejret under ilden · Hun var død, da hun blev lagt på bålet", "src": ""}, {"id": "3", "tc": "11:20.32", "dur": 10.3, "type": "siteplan", "what": "Skitse af fundstedet (ingen tekst)", "src": ""}, {"id": "4", "tc": "11:30.63", "dur": 20.0, "type": "facts", "what": "Et tungt instrument: Voldsomme kvæstelser i hovedet · Slået med noget tungt · Fx et baseballbat eller lignende · Aftryk i kraniet efter slagene", "src": ""}, {"id": "5", "tc": "11:50.65", "dur": 17.7, "type": "quote", "what": "Citat (Hans Petter Hougen): »Det var en kvinde, og hun var dræbt med stump vold, som vi kalder det. Altså slag i hovedet med et tungt instr…«", "src": ""}, {"id": "6", "tc": "12:08.39", "dur": 20.1, "type": "facts", "what": "Det første spor til politiet: Ud fra organerne · og den del af ansigtet, der er nogenlunde intakt · En yngre kvinde", "src": ""}, {"id": "7", "tc": "12:28.47", "dur": 9.3, "type": "title", "what": "Hvem er hun?", "src": ""}, {"id": "8", "tc": "12:37.77", "dur": 15.3, "type": "map", "what": "Kort: Ingen er meldt savnet, Køge Politikreds", "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"}, {"id": "9", "tc": "12:53.11", "dur": 12.3, "type": "quote", "what": "Citat: »Politiet mangler hjælp. Vi har noget, vi tror, er drab. Vi fortæller om det her bål. Vi har noget, vi tror, at…«", "src": ""}]}, {"id": "S3-spor", "title": "Flasken og dæksporene", "from": "14:29.50", "to": "17:08.10", "note": "Lasses tidskode 15:30–17:09: tændvæsken og dæksporene. Starter 14:29, hvor tændvæsken bliver nævnt første gang.", "shots": [{"id": "1", "tc": "14:29.50", "dur": 6.7, "type": "object", "what": "Model: flaske tændvæske", "src": "Model, ikke den fundne flaske"}, {"id": "2", "tc": "14:36.23", "dur": 15.1, "type": "map", "what": "Kort: Mistænkelige køb af tændvæske?, rute", "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"}, {"id": "3", "tc": "14:51.37", "dur": 15.0, "type": "siteplan", "what": "Skitse af fundstedet: Spor af brandbar væske, Resterne af en flaske tændvæske", "src": ""}, {"id": "4", "tc": "15:06.35", "dur": 12.9, "type": "object", "what": "Model: flaske tændvæske", "src": "Model, ikke den fundne flaske"}, {"id": "5", "tc": "15:19.25", "dur": 9.8, "type": "facts", "what": "Sikret på stedet: Brandprøver fra bålet · Forseglet i nylonposer · Flasken med tændvæske", "src": ""}, {"id": "6", "tc": "15:29.01", "dur": 11.7, "type": "map", "what": "Kort: Er det samme væske?, Dansk Teknologisk Institut, rute, zone", "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"}, {"id": "7", "tc": "15:40.67", "dur": 12.4, "type": "siteplan", "what": "Skitse af fundstedet: En vej ind til stedet, Dækaftryk i den våde skovbund", "src": ""}, {"id": "8", "tc": "15:53.11", "dur": 11.5, "type": "object", "what": "Model: gipsafstøbning af dækspor", "src": "Model af en gipsafstøbning"}, {"id": "9", "tc": "16:04.64", "dur": 14.1, "type": "facts", "what": "Hvilket dæk?: Gipsafstøbningerne · Dækimportørforeningen · Dæktypen findes", "src": ""}, {"id": "10", "tc": "16:18.74", "dur": 10.1, "type": "title", "what": "VW Golf eller Polo", "src": ""}, {"id": "11", "tc": "16:28.84", "dur": 15.3, "type": "siteplan", "what": "Skitse af fundstedet: Vidner ser en Golf eller Polo køre fra stedet", "src": ""}, {"id": "12", "tc": "16:44.12", "dur": 13.4, "type": "facts", "what": "Hvem kunne ellers have kørt der?: Skovfogeden? · En jæger? · Men sporene ligger lige der, hvor bålet er bygget", "src": ""}, {"id": "13", "tc": "16:57.54", "dur": 10.6, "type": "siteplan", "what": "Skitse af fundstedet: Bilen har været helt oppe ved bålet, Meget brandbar væske", "src": ""}]}, {"id": "S4-dommen", "title": "Dommen, og hvad der bliver tilbage", "from": "36:27.70", "to": "37:49.20", "note": "Lasses tidskode 36:40–39:36, de første halvandet minut: dommen, og hvad sagen siger om drab på kvinder.", "shots": [{"id": "1", "tc": "36:27.70", "dur": 14.8, "type": "facts", "what": "Gerningsmanden: Han begik fejl · Dem, vi opdager, begår jo fejl · Men det var velorganiseret · Og han havde en god forklaring parat", "src": ""}, {"id": "2", "tc": "36:42.52", "dur": 9.2, "type": "map", "what": "Kort: Dømt, Sct. Hans", "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"}, {"id": "3", "tc": "36:51.77", "dur": 3.4, "type": "quote", "what": "Citat (Stine Bolther): »Når du tænker tilbage på den her sag, hvad tænker du så?«", "src": ""}, {"id": "4", "tc": "36:55.15", "dur": 12.7, "type": "quote", "what": "Citat: »Desværre er jo langt over halvdelen af alle drabssager mænd, der slår deres kærester ihjel. Så på den måde er …«", "src": ""}, {"id": "5", "tc": "37:07.81", "dur": 16.0, "type": "facts", "what": "Hvem slår kvinder ihjel?: En fremmed · Hendes mand · Ekskæresten eller eksmanden", "src": ""}, {"id": "6", "tc": "37:23.82", "dur": 8.2, "type": "siteplan", "what": "Skitse af fundstedet (ingen tekst)", "src": ""}, {"id": "7", "tc": "37:32.05", "dur": 12.8, "type": "quote", "what": "Citat: »Det eneste, der var lidt spektakulært, det var, at hun var blevet brændt. Men ellers var det en fuldstændig kl…«", "src": ""}, {"id": "8", "tc": "37:44.90", "dur": 4.3, "type": "quote", "what": "Citat: »På den måde er det desværre en helt almindelig sag.«", "src": ""}]}];
+const kind = { map: "kort", siteplan: "skitse", facts: "fund", quote: "citat", title: "titel", object: "model", card: "kapitel", timeline: "tidslinje", photo: "foto" };
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+document.getElementById("scenes").innerHTML = SCENES.map((s, i) => `
+  <article class="scene" id="${esc(s.id)}">
+    <div class="scene-head"><h2>${esc(s.title)}</h2><span class="tc">${esc(s.from.slice(0, 5))}–${esc(s.to.slice(0, 5))}</span></div>
+    <p class="note">${esc(s.note)}</p>
+    <video controls preload="metadata" playsinline poster="${esc(s.id)}.jpg" src="${esc(s.id)}.mp4" aria-label="${esc(s.title)}"></video>
+    <div class="shots"><table>
+      <thead><tr><th>Tid</th><th>Billede</th><th>Indhold</th><th class="s">Kilde</th></tr></thead>
+      <tbody>${s.shots.map((x) => `<tr><td class="t">${esc(x.tc.slice(0, 5))}</td><td class="k">${esc(kind[x.type] || x.type)}</td><td class="w">${esc(x.what)}</td><td class="s">${esc(x.src)}</td></tr>`).join("")}</tbody>
+    </table></div>
+  </article>`).join("");
+</script>

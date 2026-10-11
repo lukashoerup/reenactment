@@ -1,0 +1,390 @@
+[
+ {
+  "id": "S1-fundet",
+  "title": "Fundet i skoven",
+  "from": "02:59.30",
+  "to": "05:27.40",
+  "note": "Lasses tidskode 03:30–06:00: børnene, bålet og beredskabet. Fra børnenes fund til kriminalteknikerne i skovbunden.",
+  "shots": [
+   {
+    "id": "1",
+    "tc": "02:59.30",
+    "dur": 4.2,
+    "type": "map",
+    "what": "Kort: En skov nær Køge, zone",
+    "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"
+   },
+   {
+    "id": "2",
+    "tc": "03:03.46",
+    "dur": 11.5,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: Et bål med høje flammer, To børn leger i regnen, Børnene henter voksne",
+    "src": ""
+   },
+   {
+    "id": "3",
+    "tc": "03:14.99",
+    "dur": 6.7,
+    "type": "map",
+    "what": "Kort: Køge Politi, zone",
+    "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"
+   },
+   {
+    "id": "4",
+    "tc": "03:21.68",
+    "dur": 9.2,
+    "type": "facts",
+    "what": "Det første politiet ser: Der ligger noget inde i bålet · Et dyr? Et menneske? · Bålet er bygget med vilje",
+    "src": ""
+   },
+   {
+    "id": "5",
+    "tc": "03:30.87",
+    "dur": 12.5,
+    "type": "map",
+    "what": "Kort: »Vi har brug for hjælp«, Rigspolitiets Rejsehold, Kriminalchefen i Køge, rute, zone",
+    "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"
+   },
+   {
+    "id": "6",
+    "tc": "03:43.39",
+    "dur": 9.0,
+    "type": "map",
+    "what": "Kort: Ejby, zone",
+    "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"
+   },
+   {
+    "id": "7",
+    "tc": "03:52.38",
+    "dur": 12.2,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: En efterforsker fra Rejseholdet",
+    "src": ""
+   },
+   {
+    "id": "8",
+    "tc": "04:04.62",
+    "dur": 6.1,
+    "type": "title",
+    "what": "September 1999",
+    "src": ""
+   },
+   {
+    "id": "9",
+    "tc": "04:10.68",
+    "dur": 8.5,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: Bålet, Overdækket, Spor sikres",
+    "src": ""
+   },
+   {
+    "id": "10",
+    "tc": "04:19.14",
+    "dur": 14.2,
+    "type": "quote",
+    "what": "Citat (Bent Isager-Nielsen): »Et udendørs gerningssted er altid noget, Fanden har skabt, undskyld udtrykket, i modsætning til et indendørs g…«",
+    "src": ""
+   },
+   {
+    "id": "11",
+    "tc": "04:33.30",
+    "dur": 17.3,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: Hvor langt skal man gå ud?",
+    "src": ""
+   },
+   {
+    "id": "12",
+    "tc": "04:50.59",
+    "dur": 15.4,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: Alt kan komme fra gerningsmanden, kondomer, kapsler, plastikposer",
+    "src": ""
+   },
+   {
+    "id": "13",
+    "tc": "05:06.02",
+    "dur": 9.6,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: Mange spor, heste, gående, løbende, kørende",
+    "src": ""
+   },
+   {
+    "id": "14",
+    "tc": "05:15.62",
+    "dur": 11.8,
+    "type": "facts",
+    "what": "De første timer: Bålet dæmmes ind og slukkes · Sporene sikres · Kriminalteknikerne gennemgår skovbunden",
+    "src": ""
+   }
+  ]
+ },
+ {
+  "id": "S2-obduktionen",
+  "title": "Obduktionen",
+  "from": "10:44.70",
+  "to": "13:05.40",
+  "note": "Lasses tidskode 09:34–13:00: retsmedicineren. Fundene fra obduktionen står som ord, uden billeder af kroppen. Slutter med, at ingen savner hende.",
+  "shots": [
+   {
+    "id": "1",
+    "tc": "10:44.70",
+    "dur": 13.7,
+    "type": "facts",
+    "what": "Obduktionen: Flere kraniebrud · Svære skader på hjernen · Allerede her: en dødsårsag",
+    "src": ""
+   },
+   {
+    "id": "2",
+    "tc": "10:58.43",
+    "dur": 21.9,
+    "type": "facts",
+    "what": "Luftvejene: Luftvejene kan undersøges · Ingen spor af sod · Hun trak ikke vejret under ilden · Hun var død, da hun blev lagt på bålet",
+    "src": ""
+   },
+   {
+    "id": "3",
+    "tc": "11:20.32",
+    "dur": 10.3,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet (ingen tekst)",
+    "src": ""
+   },
+   {
+    "id": "4",
+    "tc": "11:30.63",
+    "dur": 20.0,
+    "type": "facts",
+    "what": "Et tungt instrument: Voldsomme kvæstelser i hovedet · Slået med noget tungt · Fx et baseballbat eller lignende · Aftryk i kraniet efter slagene",
+    "src": ""
+   },
+   {
+    "id": "5",
+    "tc": "11:50.65",
+    "dur": 17.7,
+    "type": "quote",
+    "what": "Citat (Hans Petter Hougen): »Det var en kvinde, og hun var dræbt med stump vold, som vi kalder det. Altså slag i hovedet med et tungt instr…«",
+    "src": ""
+   },
+   {
+    "id": "6",
+    "tc": "12:08.39",
+    "dur": 20.1,
+    "type": "facts",
+    "what": "Det første spor til politiet: Ud fra organerne · og den del af ansigtet, der er nogenlunde intakt · En yngre kvinde",
+    "src": ""
+   },
+   {
+    "id": "7",
+    "tc": "12:28.47",
+    "dur": 9.3,
+    "type": "title",
+    "what": "Hvem er hun?",
+    "src": ""
+   },
+   {
+    "id": "8",
+    "tc": "12:37.77",
+    "dur": 15.3,
+    "type": "map",
+    "what": "Kort: Ingen er meldt savnet, Køge Politikreds",
+    "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"
+   },
+   {
+    "id": "9",
+    "tc": "12:53.11",
+    "dur": 12.3,
+    "type": "quote",
+    "what": "Citat: »Politiet mangler hjælp. Vi har noget, vi tror, er drab. Vi fortæller om det her bål. Vi har noget, vi tror, at…«",
+    "src": ""
+   }
+  ]
+ },
+ {
+  "id": "S3-spor",
+  "title": "Flasken og dæksporene",
+  "from": "14:29.50",
+  "to": "17:08.10",
+  "note": "Lasses tidskode 15:30–17:09: tændvæsken og dæksporene. Starter 14:29, hvor tændvæsken bliver nævnt første gang.",
+  "shots": [
+   {
+    "id": "1",
+    "tc": "14:29.50",
+    "dur": 6.7,
+    "type": "object",
+    "what": "Model: flaske tændvæske",
+    "src": "Model, ikke den fundne flaske"
+   },
+   {
+    "id": "2",
+    "tc": "14:36.23",
+    "dur": 15.1,
+    "type": "map",
+    "what": "Kort: Mistænkelige køb af tændvæske?, rute",
+    "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"
+   },
+   {
+    "id": "3",
+    "tc": "14:51.37",
+    "dur": 15.0,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: Spor af brandbar væske, Resterne af en flaske tændvæske",
+    "src": ""
+   },
+   {
+    "id": "4",
+    "tc": "15:06.35",
+    "dur": 12.9,
+    "type": "object",
+    "what": "Model: flaske tændvæske",
+    "src": "Model, ikke den fundne flaske"
+   },
+   {
+    "id": "5",
+    "tc": "15:19.25",
+    "dur": 9.8,
+    "type": "facts",
+    "what": "Sikret på stedet: Brandprøver fra bålet · Forseglet i nylonposer · Flasken med tændvæske",
+    "src": ""
+   },
+   {
+    "id": "6",
+    "tc": "15:29.01",
+    "dur": 11.7,
+    "type": "map",
+    "what": "Kort: Er det samme væske?, Dansk Teknologisk Institut, rute, zone",
+    "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"
+   },
+   {
+    "id": "7",
+    "tc": "15:40.67",
+    "dur": 12.4,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: En vej ind til stedet, Dækaftryk i den våde skovbund",
+    "src": ""
+   },
+   {
+    "id": "8",
+    "tc": "15:53.11",
+    "dur": 11.5,
+    "type": "object",
+    "what": "Model: gipsafstøbning af dækspor",
+    "src": "Model af en gipsafstøbning"
+   },
+   {
+    "id": "9",
+    "tc": "16:04.64",
+    "dur": 14.1,
+    "type": "facts",
+    "what": "Hvilket dæk?: Gipsafstøbningerne · Dækimportørforeningen · Dæktypen findes",
+    "src": ""
+   },
+   {
+    "id": "10",
+    "tc": "16:18.74",
+    "dur": 10.1,
+    "type": "title",
+    "what": "VW Golf eller Polo",
+    "src": ""
+   },
+   {
+    "id": "11",
+    "tc": "16:28.84",
+    "dur": 15.3,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: Vidner ser en Golf eller Polo køre fra stedet",
+    "src": ""
+   },
+   {
+    "id": "12",
+    "tc": "16:44.12",
+    "dur": 13.4,
+    "type": "facts",
+    "what": "Hvem kunne ellers have kørt der?: Skovfogeden? · En jæger? · Men sporene ligger lige der, hvor bålet er bygget",
+    "src": ""
+   },
+   {
+    "id": "13",
+    "tc": "16:57.54",
+    "dur": 10.6,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet: Bilen har været helt oppe ved bålet, Meget brandbar væske",
+    "src": ""
+   }
+  ]
+ },
+ {
+  "id": "S4-dommen",
+  "title": "Dommen, og hvad der bliver tilbage",
+  "from": "36:27.70",
+  "to": "37:49.20",
+  "note": "Lasses tidskode 36:40–39:36, de første halvandet minut: dommen, og hvad sagen siger om drab på kvinder.",
+  "shots": [
+   {
+    "id": "1",
+    "tc": "36:27.70",
+    "dur": 14.8,
+    "type": "facts",
+    "what": "Gerningsmanden: Han begik fejl · Dem, vi opdager, begår jo fejl · Men det var velorganiseret · Og han havde en god forklaring parat",
+    "src": ""
+   },
+   {
+    "id": "2",
+    "tc": "36:42.52",
+    "dur": 9.2,
+    "type": "map",
+    "what": "Kort: Dømt, Sct. Hans",
+    "src": "Kort: © OpenStreetMap-bidragydere, OpenMapTiles"
+   },
+   {
+    "id": "3",
+    "tc": "36:51.77",
+    "dur": 3.4,
+    "type": "quote",
+    "what": "Citat (Stine Bolther): »Når du tænker tilbage på den her sag, hvad tænker du så?«",
+    "src": ""
+   },
+   {
+    "id": "4",
+    "tc": "36:55.15",
+    "dur": 12.7,
+    "type": "quote",
+    "what": "Citat: »Desværre er jo langt over halvdelen af alle drabssager mænd, der slår deres kærester ihjel. Så på den måde er …«",
+    "src": ""
+   },
+   {
+    "id": "5",
+    "tc": "37:07.81",
+    "dur": 16.0,
+    "type": "facts",
+    "what": "Hvem slår kvinder ihjel?: En fremmed · Hendes mand · Ekskæresten eller eksmanden",
+    "src": ""
+   },
+   {
+    "id": "6",
+    "tc": "37:23.82",
+    "dur": 8.2,
+    "type": "siteplan",
+    "what": "Skitse af fundstedet (ingen tekst)",
+    "src": ""
+   },
+   {
+    "id": "7",
+    "tc": "37:32.05",
+    "dur": 12.8,
+    "type": "quote",
+    "what": "Citat: »Det eneste, der var lidt spektakulært, det var, at hun var blevet brændt. Men ellers var det en fuldstændig kl…«",
+    "src": ""
+   },
+   {
+    "id": "8",
+    "tc": "37:44.90",
+    "dur": 4.3,
+    "type": "quote",
+    "what": "Citat: »På den måde er det desværre en helt almindelig sag.«",
+    "src": ""
+   }
+  ]
+ }
+]

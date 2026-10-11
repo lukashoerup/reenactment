@@ -383,12 +383,6 @@
     },
     "places": [
      {
-      "name": "København",
-      "ll": "@kbh",
-      "cls": "big",
-      "at": 0.2
-     },
-     {
       "name": "Køge Bugt",
       "ll": [
        12.36,

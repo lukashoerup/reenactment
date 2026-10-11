@@ -20,7 +20,7 @@ film-language notes and the machine does the rest.
 |---|---|---|
 | 2026-08-20 | Visual test "Våd aske": 24 mood stills + 4 clips for Lasse's 5 timecodes, **no people**. Lukas: missed the brief — it should have been re-enactment. | https://claude.ai/code/artifact/680baded-fbae-4dc3-940c-6cf7c3eca4af · list: https://claude.ai/code/artifact/964a1bfc-7103-4ac4-9e06-8534e2b6e769 |
 | 2026-09-27 | Re-enactment test of the cold open 01:36.6–01:59.3 in four methods (A photo, B stills, C drawn, D Blender), then A2 via the automatic fix loop. | "Børnene og bålet": https://claude.ai/artifact/3iJtsqAvHhtWE42YQdAmuu |
-| 2026-10-11 | Method E: four scenes (≈ 9 min) from Lasse's timecodes as maps, site sketches, findings, quotes, modelled objects — no generated images. | review page "Kort, spor og ord" (see tasks/T003) |
+| 2026-10-11 | Method E: four scenes (≈ 9 min) from Lasse's timecodes as maps, site sketches, findings, quotes, modelled objects — no generated images. | "Kort, spor og ord": https://claude.ai/artifact/R3ctHUypFYzMS7zeUR1bJH |
 
 ## The scene (cold open, 22.7 s)
 > Bålets flammer lokker de nysgerrige børn tættere på. Selvom regnen står ned i stænger,
@@ -60,3 +60,8 @@ film-language notes and the machine does the rest.
   blend where they touch. See docs/REVIEW-2026-09-27.md.
 - Gemini credits used up (~79 kr); Veo Lite hit a daily cap of 10 videos.
 - Next: tasks/T001 (fix the scene, drawn style first), tasks/T002 (pipeline v2).
+
+## Status (2026-10-11)
+- Method E rendered four scenes (≈ 9 min, 720p preview) with no generated images; review
+  page "Kort, spor og ord". Open: names to confirm with Lasse, SDFI token for 1999 aerials,
+  licensed photos, whether the drawn re-enactment goes in for the peaks. See tasks/T003.
